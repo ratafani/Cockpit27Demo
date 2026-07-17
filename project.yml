@@ -1,0 +1,26 @@
+name: Cockpit27
+options:
+  bundleIdPrefix: IL.Spatial
+packages:
+  RealityKitContent:
+    path: Packages/RealityKitContent
+  Cockpit27Shared:
+    path: Packages/Cockpit27Shared
+targets:
+  Cockpit27:
+    type: application
+    platform: visionOS
+    deploymentTarget: "2.0"
+    sources: 
+      - path: Cockpit27
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: IL.Spatial.Cockpit27
+      INFOPLIST_FILE: Cockpit27/Info.plist
+      GENERATE_INFOPLIST_FILE: YES
+      ENABLE_PREVIEWS: YES
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      CODE_SIGN_STYLE: Automatic
+      DEVELOPMENT_TEAM: C7M2QQ2D3A
+    dependencies:
+      - package: RealityKitContent
+      - package: Cockpit27Shared

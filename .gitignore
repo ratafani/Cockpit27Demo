@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcworkspace/
+xcuserdata/
+
+# XcodeGen
+# We use XcodeGen, so the generated .xcodeproj should not be tracked in Git.
+# Only project.yml needs to be tracked.
+*.xcodeproj/
+
+# Swift Package Manager
+.swiftpm/
+Packages/*/DerivedData/

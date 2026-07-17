@@ -1,0 +1,19 @@
+__type: "tm_entity"
+__uuid: "42950c7f-e5be-4e4f-189f-4942f11788f1"
+name: "world"
+components: [
+	{
+		__type: "tm_transform_component"
+		__uuid: "20a9dcba-452d-be57-44fd-34e0c8c1f620"
+		local_position_double: {
+			__uuid: "2a721e0b-d6f0-8487-c49f-50edc5d5ac99"
+		}
+		local_rotation: {
+			__uuid: "72e0e963-0fea-b871-dc78-e06c454fd3b7"
+		}
+		local_scale: {
+			__uuid: "06d498d7-be67-c87b-515f-0b78339f3728"
+		}
+	}
+]
+__asset_uuid: "a32a8cca-5ad1-3444-b40a-77d3dd2bd508"
