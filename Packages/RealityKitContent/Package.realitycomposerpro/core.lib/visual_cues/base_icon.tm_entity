@@ -32,16 +32,16 @@ components: [
 					__prototype_uuid: "51ec67f0-79c9-ff74-c29e-a9b7d5c655a8"
 					cached_node_result__instantiated: [
 						{
-							__uuid: "376f4106-4492-1e4e-fcec-3067fc3ff30c"
+							__uuid: "afed610b-f222-5402-5c92-dd4b6900310a"
 							__prototype_type: "tm_graph_cached_node_result"
 							__prototype_uuid: "33df733c-b227-06d5-832f-802b37639ad4"
 							node: "6e0eda40-8d75-b8cc-75a9-825ead478630"
-							validity_hash: "156e29ce28ff69b4"
+							validity_hash: "28cee73ad12e5a60"
 							object: {
 								__type: "tm_shader_system_compiled_result"
-								__uuid: "380af671-16bf-e776-9744-dd415da564d6"
-								name: "156e29ce28ff69b4"
-								buffer: "8c9c66e9-9ae7-92cb-b32e-c2c74f59575d"
+								__uuid: "59fe70bf-20c9-97da-234b-d0ff7353b49d"
+								name: "28cee73ad12e5a60"
+								buffer: "f8e310ad-f9e8-82ef-0f87-e481f78f33e6"
 							}
 						}
 					]

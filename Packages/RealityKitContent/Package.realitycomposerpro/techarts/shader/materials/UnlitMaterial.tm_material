@@ -1,0 +1,124 @@
+__type: "tm_material"
+__uuid: "1d598214-a0bc-0a61-3a46-fbad3fc1d0fe"
+shader: {
+	__uuid: "af0995ef-bf86-ce50-8f02-babad84e9daf"
+}
+shader_graph: {
+	__uuid: "353a454c-da5a-7700-8dfa-ee2a2bf9c66f"
+	graph: {
+		__uuid: "9d0fc7ad-68c3-4be6-f216-7e9c71d7c641"
+		nodes: [
+			{
+				__uuid: "1605b202-46b0-f5c3-2c33-11f8cebb620f"
+				type: "tm_input_node"
+				position: {
+					__uuid: "52ee8d4c-7a19-577d-2518-ec945ec4cbcb"
+					x: -375
+					y: 136
+				}
+			}
+			{
+				__uuid: "70a2b402-3c17-28fa-8e43-239f8a363541"
+				type: "tm_output_node"
+				position: {
+					__uuid: "83cce386-4712-a8da-87fb-1437ee7c93af"
+					x: -125
+					y: 128
+				}
+			}
+			{
+				__uuid: "87cb1abd-4d6c-eac4-c9ed-73483257a987"
+				type: "ND_realitykit_unlit_surfaceshader"
+				label: "UnlitSurface"
+				position: {
+					__uuid: "db9db067-ddb1-6019-b5e9-4c9a0647be6b"
+					x: 125
+					y: 88
+				}
+			}
+			{
+				__uuid: "49d6dffb-4c45-74d4-4198-753386278c03"
+				type: "ND_RealityKitTexture2D_color3"
+				label: "Image2D"
+				position: {
+					__uuid: "98c4f90d-18c8-f76b-12e2-d6154ab1f6e3"
+					x: 375
+				}
+			}
+		]
+		connections: [
+			{
+				__uuid: "8890d738-634a-3554-0848-859be8a3ffb9"
+				from_node: "1605b202-46b0-f5c3-2c33-11f8cebb620f"
+				to_node: "49d6dffb-4c45-74d4-4198-753386278c03"
+				from_connector_hash: "2bea4655bc6d6e71"
+				to_connector_hash: "63d525adf27fd749"
+			}
+			{
+				__uuid: "5b342e1f-df29-2a4f-e4d6-c423d2ec172d"
+				from_node: "49d6dffb-4c45-74d4-4198-753386278c03"
+				to_node: "87cb1abd-4d6c-eac4-c9ed-73483257a987"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "06776ddaf0290228"
+			}
+			{
+				__uuid: "11c2f306-1d99-db50-1d2b-e35087df788a"
+				from_node: "87cb1abd-4d6c-eac4-c9ed-73483257a987"
+				to_node: "70a2b402-3c17-28fa-8e43-239f8a363541"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "c1549ebf90daa052"
+			}
+		]
+		data: [
+			{
+				__uuid: "9e5e6db2-0bcd-8dc0-7b5f-f87925e549cd"
+				to_node: "49d6dffb-4c45-74d4-4198-753386278c03"
+				to_connector_hash: "38a79de7eac20d9c"
+				data: {
+					__type: "tm_bool"
+					__uuid: "1ccd3b1d-d901-00d5-6518-08e96e368fc2"
+					bool: true
+				}
+			}
+		]
+		interface: {
+			__uuid: "cf129d9c-15b3-9e7b-372a-dfbd20ff0229"
+			inputs: [
+				{
+					__uuid: "f33fb9fa-f3e2-f203-6cac-f93e7abdba26"
+					name: "inputs:BakedTexture"
+					display_name: "BakedTexture"
+					id: "inputs:BakedTexture"
+					type_hash: "c0f0b0d37d0844de"
+					edit_type_hash: "c0f0b0d37d0844de"
+					public: true
+				}
+			]
+			outputs: [
+				{
+					__uuid: "c7c4c804-fb5d-e1bb-e3b3-261e027060e5"
+					name: "outputs:mtlx:surface"
+					display_name: "surface"
+					id: "outputs:mtlx:surface"
+					type_hash: "c3f642cf65c817b8"
+					edit_type_hash: "c3f642cf65c817b8"
+				}
+				{
+					__uuid: "1e8ec317-6f7a-2567-a196-f4bbc341e2fd"
+					name: "outputs:realitykit:vertex"
+					display_name: "vertex"
+					id: "outputs:realitykit:vertex"
+					type_hash: "84dbff90ce229699"
+					edit_type_hash: "84dbff90ce229699"
+				}
+			]
+		}
+	}
+}
+descriptor: {
+	__uuid: "b514f766-2658-ce8d-3550-9c6e3d33b120"
+}
+__asset_uuid: "1c796ed9-4aa4-b436-6088-a7d4ea610655"
+__asset_thumbnail: {
+	__uuid: "b443bb25-9e1d-d628-056c-3060a177c74d"
+}

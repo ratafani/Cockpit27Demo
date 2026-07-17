@@ -70,16 +70,138 @@ children: [
 			}
 		]
 	}
+	{
+		__uuid: "c6acbaad-6fd3-b517-ee92-aa18f3e960bc"
+		__prototype_type: "tm_entity"
+		__prototype_uuid: "171e057d-4784-b4e1-f923-6e689d3594ed"
+		name: "dl"
+		components__instantiated: [
+			{
+				__type: "tm_transform_component"
+				__uuid: "b1195668-0be9-fe0e-3d5f-3a4ad80f2191"
+				__prototype_type: "tm_transform_component"
+				__prototype_uuid: "4b8af188-4b5e-edb2-d55a-b0afa36fb9e3"
+				local_position_double: {
+					__uuid: "bb79ea6a-305a-b0b5-2f32-9280260c590e"
+					__prototype_type: "tm_position_double"
+					__prototype_uuid: "2541d283-01e8-6e94-b3e0-2dd75f5d3ebb"
+					y: 0.8320000171661377
+				}
+				local_rotation: {
+					__uuid: "daf14025-7935-727a-64ed-905f826b6901"
+					__prototype_type: "tm_rotation"
+					__prototype_uuid: "36381ab4-014c-fd71-3108-919fabb0a0b6"
+				}
+				local_scale: {
+					__uuid: "0b62d562-a948-acab-a7f2-8559cce04168"
+					__prototype_type: "tm_scale"
+					__prototype_uuid: "20f09a63-ac38-7d3f-c227-c55180b262a0"
+				}
+			}
+		]
+	}
+]
+children__instantiated: [
+	{
+		__uuid: "f2d613b3-b78d-653b-ecdb-4e22e5a190ee"
+		__prototype_type: "tm_entity"
+		__prototype_uuid: "0a4ec12d-3e43-aaa3-8ffe-bc33e263ba82"
+		components__instantiated: [
+			{
+				__type: "tm_transform_component"
+				__uuid: "4da039dd-fb22-5890-8e9c-3ec3181515e1"
+				__prototype_type: "tm_transform_component"
+				__prototype_uuid: "66949980-cb0e-1c5d-6b7a-0e68158f05ee"
+				local_position_double: {
+					__uuid: "e4098fab-7eb2-0e04-4ede-6aead3fd711e"
+					__prototype_type: "tm_position_double"
+					__prototype_uuid: "34310479-4506-c977-1e26-e53c75e44141"
+					y: 0
+				}
+				local_rotation: {
+					__uuid: "b5b4e97b-647a-ac2e-6044-a815f23b4407"
+					__prototype_type: "tm_rotation"
+					__prototype_uuid: "ea07edf9-9f58-4c65-8fde-4214261f60db"
+				}
+				local_scale: {
+					__uuid: "cce0ab1e-15c6-2a76-9143-98e9cd1f0b88"
+					__prototype_type: "tm_scale"
+					__prototype_uuid: "8ee4dd21-6149-d527-d613-e16eafdd1ff1"
+				}
+			}
+		]
+		children__instantiated: [
+			{
+				__uuid: "ce38ad61-2c95-1ce0-6646-86cdc3dba1cc"
+				__prototype_type: "tm_entity"
+				__prototype_uuid: "992d83a9-cda5-91e6-886c-5ae569fff01e"
+				children__instantiated: [
+					{
+						__uuid: "f165f035-42cb-8cfd-e0a5-87decb1e5552"
+						__prototype_type: "tm_entity"
+						__prototype_uuid: "71e3f1a1-6ca9-71b7-3f4c-38600d197b94"
+						children__instantiated: [
+							{
+								__uuid: "6649b2bd-6fca-c0fb-c71a-b32c5900c127"
+								__prototype_type: "tm_entity"
+								__prototype_uuid: "1c4fb00e-4f18-d73c-7668-88cf72c68839"
+								components__instantiated: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "0d6129de-4f61-2145-500a-be0da08253cc"
+										__prototype_type: "tm_transform_component"
+										__prototype_uuid: "b214060a-1832-9465-259b-e08769e83f92"
+										local_position_double: {
+											__uuid: "298bc78a-17e7-2262-b174-d34f345e9c8b"
+											__prototype_type: "tm_position_double"
+											__prototype_uuid: "2adc6bd0-14a9-3cf6-5367-b0dec84d0e83"
+											x: 0
+										}
+										local_rotation: {
+											__uuid: "a8126472-deb1-89e0-d6cb-616bddb8ed21"
+											__prototype_type: "tm_rotation"
+											__prototype_uuid: "95101045-ba06-f8e7-b5c4-bff9fc96272d"
+										}
+										local_scale: {
+											__uuid: "9e0210e8-d3f9-24c6-3b6b-a0123209d192"
+											__prototype_type: "tm_scale"
+											__prototype_uuid: "e38524dd-39a5-e9fa-b5ad-eb6f356b7120"
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+		child_sort_values: [
+			{
+				__uuid: "3a25aec9-7031-f62d-6187-db2ba2f55f38"
+				child: "93680c2a-cb96-4d9c-66ac-f5b85e60d2de"
+			}
+			{
+				__uuid: "0c9e3899-bcb2-29ce-01c3-0d546cb83e6f"
+				child: "ce38ad61-2c95-1ce0-6646-86cdc3dba1cc"
+				value: 1
+			}
+		]
+	}
 ]
 child_sort_values: [
 	{
-		__uuid: "5b06eb46-985b-18fc-9862-9f1d576678e6"
-		child: "0a4ec12d-3e43-aaa3-8ffe-bc33e263ba82"
+		__uuid: "918f473e-57cb-81fd-cdc7-0964dc4f14a4"
+		child: "f2d613b3-b78d-653b-ecdb-4e22e5a190ee"
 	}
 	{
-		__uuid: "c525d811-03eb-7b43-421f-919a414fd4aa"
+		__uuid: "bded819b-1161-3fb9-88b7-dddfd8d8e63d"
 		child: "964c84bd-d541-9f83-523f-e5be56a46ee8"
 		value: 1
+	}
+	{
+		__uuid: "afdca658-d368-d3bf-a96f-b4e1b017c13b"
+		child: "c6acbaad-6fd3-b517-ee92-aa18f3e960bc"
+		value: 2
 	}
 ]
 __asset_uuid: "4c2889c2-b018-07c5-1ce9-bbe9945ffdb4"

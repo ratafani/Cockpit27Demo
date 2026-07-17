@@ -523,8 +523,6 @@ shader_graph: {
 					value: {
 						__type: "tm_material_resource"
 						__uuid: "48e673ad-cd51-de5f-0a29-0d466070a3a4"
-						resource: "bb8bc0c5-2f0e-e887-deb5-679104799952"
-						resource__type: "tm_texture"
 					}
 					public: true
 				}

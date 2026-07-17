@@ -391,11 +391,11 @@ graph: {
 			{
 				__uuid: "33df733c-b227-06d5-832f-802b37639ad4"
 				node: "6e0eda40-8d75-b8cc-75a9-825ead478630"
-				validity_hash: "156e29ce28ff69b4"
+				validity_hash: "28cee73ad12e5a60"
 				object: {
 					__type: "tm_shader_system_compiled_result"
-					__uuid: "739025c9-0379-e478-b5ca-b46dc73bd752"
-					name: "156e29ce28ff69b4"
+					__uuid: "201698bd-000f-6442-1786-644aab6c2c11"
+					name: "28cee73ad12e5a60"
 					buffer: "4e1f4187-081f-4362-6a05-ade7060ddc99"
 				}
 			}
