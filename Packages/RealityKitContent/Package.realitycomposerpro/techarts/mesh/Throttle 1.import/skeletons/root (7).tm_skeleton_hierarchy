@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "1397f9d0-54a5-33e1-daba-dcbd2097ee90"
+name: "root/CP_ENG2_Switch_Rig_V01/CP_ENG2_Switch_RigRoot_V01"
+joints: [
+	{
+		__uuid: "8727056b-4561-4344-1035-782504953b05"
+		name: "CP_ENG2_Switch_RigSwitch_V01"
+		local_rest_pose: {
+			__uuid: "db3ed1b8-b0a4-7006-1c38-152091895e6d"
+			position: {
+				__uuid: "d40212c7-4e38-ef84-4164-41179561052b"
+			}
+			rotation: {
+				__uuid: "757e116e-a28d-0c3e-f7e9-cdf180a9809f"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "8fb895e7-c886-31f8-e035-c171abf1041d"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "7dad6f67-9042-0cdd-9939-c6523a72da2d"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "4bd66381-59ca-616d-a32e-2725fedb94a1"

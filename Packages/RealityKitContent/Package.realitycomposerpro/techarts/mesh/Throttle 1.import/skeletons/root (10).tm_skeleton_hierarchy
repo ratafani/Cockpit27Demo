@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "591d24a3-098f-7924-c93a-7f2e6fe25b60"
+name: "root/CP_FireFaultR_Button_Rig_V01/CP_FireFaultR_Button_RigRoot_V01"
+joints: [
+	{
+		__uuid: "15d2eb34-bcce-04a9-aba8-b3c8ee5abc38"
+		name: "CP_FireFaultR_Button_RigButton_V01"
+		local_rest_pose: {
+			__uuid: "60e4ce1b-cdc7-c910-ab06-c8d1ed4a2d1a"
+			position: {
+				__uuid: "1b12d57f-13c2-c2ac-d5cc-52047c8a17cc"
+			}
+			rotation: {
+				__uuid: "f18bee34-bba4-1fd3-dc5f-0ebf0d4b2d8a"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "684bd57e-4669-564a-74b2-a4e460b19eb4"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "de8b6269-b4f7-c645-fb51-3c1ba7fa1920"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "36ffd010-8378-32b5-edc7-aafb8b18373e"

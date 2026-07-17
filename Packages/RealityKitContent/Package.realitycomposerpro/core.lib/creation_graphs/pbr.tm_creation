@@ -2436,11 +2436,12 @@ graph: {
 			{
 				__uuid: "69aafcc9-87d2-0c82-46fb-b8e70907373b"
 				node: "aab01768-cf27-fa0f-3cf4-b653bd1927a9"
-				validity_hash: "2f5b9ac0203b9560"
+				validity_hash: "f7e2170a715549f3"
 				object: {
 					__type: "tm_shader_system_compiled_result"
-					__uuid: "d9428d08-cca6-1815-360f-bfc688163233"
-					name: "2f5b9ac0203b9560"
+					__uuid: "eccbeebd-0db1-b32e-4887-0edb3c3f1d36"
+					name: "f7e2170a715549f3"
+					buffer: "d200c669-6b75-2004-5250-9175897aaa9e"
 				}
 			}
 		]

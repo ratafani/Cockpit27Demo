@@ -1,0 +1,70 @@
+__type: "tm_usd_asset"
+__uuid: "c8ab831d-ecf0-1cb3-0e36-82699e3ce98e"
+source_path: "../../../../CockpitComponentDemo/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TechArt/Mesh/SC_Sidestick_controller_L 3.usdc"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "3ad0b210-0a46-a6cf-c47a-be7c3a74037c"
+		settings: {
+			__uuid: "c5322212-246f-e58a-b885-2ae7c016678e"
+			graph: {
+				__uuid: "7f837100-6755-de51-ce42-7b1ee051fd00"
+				interface: {
+					__uuid: "2815fc15-540d-5c51-bf08-1bc35f7ee456"
+					inputs: [
+						{
+							__uuid: "5cf3ae05-a70c-afd5-f003-0f3634f997dc"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "8b3bf4a6-7d5d-837d-2218-0bd79ab2c734"
+							}
+							public: true
+						}
+						{
+							__uuid: "497b9a5d-21fa-5f72-928b-fafa84a75409"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "c7057ba9-f7db-3af6-165b-d7d5749928d2"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+		output: "8e1ca313-3f64-dfab-9c67-6943c32145e2"
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "6070f157-9575-981e-9aad-b33d9080e185"
+	}
+	{
+		__type: "tm_usd_animation_settings"
+		__uuid: "39fc696f-ddbe-8186-91e3-0bb32ac6ca41"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "cfe4a98f-2970-8ab1-5b20-fcc176465544"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "1eee60f6-e44a-acef-3f20-3993d6afe653"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "33547f48-d4ea-c51f-2fdf-ee29e562e483"
+		name: "Default"
+		root_entity: "5630cddf-2dd4-fbe8-c1dc-6bf943c9cce7"
+		proxy_entity: "1969b627-11b5-4657-73e0-306899863dcd"
+		session: "9f78a73f-692d-bbe9-4f03-139d1275692b"
+	}
+]
+__asset_uuid: "6a224d6a-adf7-8949-3db2-2666d6af1d20"
