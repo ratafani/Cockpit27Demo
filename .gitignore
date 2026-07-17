@@ -1,17 +1,42 @@
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
 
 # Xcode
 build/
-DerivedData/
-*.xcworkspace/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace/
 
 # XcodeGen
-# We use XcodeGen, so the generated .xcodeproj should not be tracked in Git.
-# Only project.yml needs to be tracked.
+# The generated .xcodeproj should not be tracked since it's built from project.yml
 *.xcodeproj/
 
 # Swift Package Manager
+.build/
 .swiftpm/
 Packages/*/DerivedData/
+Packages/*/.build/
+Packages/*/.swiftpm/
+
+# Carthage
+Carthage/Build/
+
+# CocoaPods
+Pods/
