@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "1dc74cf6-07fd-2998-93f5-a7439737f7e2"
+name: "root/Throttle_1/CP_PitchTrimWheelR_Rotate_Rig_V01/CP_PitchTrimWheelR_Rotate_RigRoot_V01"
+joints: [
+	{
+		__uuid: "e13d81ac-f654-7c53-1b48-5001b32bd95e"
+		name: "CP_PitchTrimWheelR_Rotate_RigBase_V01"
+		local_rest_pose: {
+			__uuid: "76446b74-5bab-4c32-04fc-595c94e5ead9"
+			position: {
+				__uuid: "cc109b81-d00a-b740-67f7-152ebcbcc433"
+			}
+			rotation: {
+				__uuid: "2d0de9b3-0574-dbae-f410-70be16ca44bd"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "361c50e8-6e30-751d-0563-1aec0e5d927a"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "76c5a8c5-3d8a-a928-c23b-969d0dc9f6b6"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "1f0a0c4e-2e20-c625-1e4f-889ba6331456"

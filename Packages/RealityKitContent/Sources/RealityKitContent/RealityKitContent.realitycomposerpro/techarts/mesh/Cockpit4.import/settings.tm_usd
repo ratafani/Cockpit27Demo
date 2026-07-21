@@ -1,0 +1,70 @@
+__type: "tm_usd_asset"
+__uuid: "7e6d2395-3613-a1c2-7d6c-9788610cf0eb"
+source_path: "../../../../CockpitComponentDemo/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TechArt/Mesh/Cockpit4.usdc"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "7b47e2f5-397b-3c04-babb-8ebb446f59d0"
+		settings: {
+			__uuid: "2a8d5641-9816-3669-6a26-f786ab3e3b87"
+			graph: {
+				__uuid: "0976c3cb-020c-21e2-6507-a7a0d85112ad"
+				interface: {
+					__uuid: "b12a6b36-9e04-0d8d-34b6-5d7dda631647"
+					inputs: [
+						{
+							__uuid: "1c4b4896-4282-3ec3-12a8-8a6d9f697cb6"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "e7c37464-1b28-55f5-2f35-8a7e13a55e9f"
+							}
+							public: true
+						}
+						{
+							__uuid: "f8954e13-3d8f-01d0-5283-aab355eff943"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "c295ddbc-2bfc-4419-f112-a79c4aafcdad"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+		output: "006cba98-1081-5cc2-698a-e7309afdf45f"
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "574fb7dd-49bf-ddc5-c0ad-bcd779a079ff"
+	}
+	{
+		__type: "tm_usd_animation_settings"
+		__uuid: "77126eca-a432-721e-ab03-c447c0e1191e"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "d05e0424-3add-ba07-8b1d-efc0b5ead939"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "62f0ac24-5e74-bb71-4366-2cfc3e3ed3e4"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "445d576a-4677-bd88-72f3-8643fc75b254"
+		name: "Default"
+		root_entity: "e9077849-ab26-a16b-00d9-efc71336ea7b"
+		proxy_entity: "b0889b12-3648-fca1-71d0-26691a08ce63"
+		session: "448f41ed-c0c8-a228-4914-eb204244be2f"
+	}
+]
+__asset_uuid: "aeda639d-9d48-e9af-8418-550192fe31a1"

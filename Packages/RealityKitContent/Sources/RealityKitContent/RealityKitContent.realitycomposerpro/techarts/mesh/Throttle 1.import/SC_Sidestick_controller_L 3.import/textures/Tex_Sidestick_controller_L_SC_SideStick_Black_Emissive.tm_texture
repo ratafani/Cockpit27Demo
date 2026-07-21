@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "318ad64f-e844-860e-bb54-c66e2c6c39f8"
+source_filename: "../../../../CockpitComponentDemo/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TechArt/Texture/SC_Sidestick/Tex_Sidestick_controller_L_SC_SideStick_Black_Emissive.png"
+source_texture: "e9caf7bd-36c0-0407-fae6-8d1b5302a162"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "b42ff76f-c3aa-bab5-3eba-e5a871bc5de4"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "b4dc27df-c07e-9e78-035e-2a0569582f99"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "417242e5-9e51-ae7a-3dad-98a08b54885d"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "12863d2b-4618-ab59-1de1-e91c896dcf2f"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "aba26a07-17c0-b907-088e-de440624661e"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "8bdf5b4a-8f92-eb99-0a54-125d9309ca73"
+}

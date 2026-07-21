@@ -1,0 +1,16 @@
+__type: "tm_mesh_resource"
+__uuid: "15228448-e503-1744-a44f-fc521ffb6cd9"
+models: [
+	{
+		__uuid: "e4d1642b-b602-2774-8704-fa8e7192d6a3"
+		name: "Object_53"
+		geometry: "f66eefaf-5094-4cec-52e3-da576496e47a"
+		bounds_min: {
+			__uuid: "fabc7fa3-70ec-b765-cd3f-d3205773fa55"
+		}
+		bounds_max: {
+			__uuid: "351d1070-a71e-f934-1226-7ee5101948c2"
+		}
+	}
+]
+__asset_uuid: "0bda5e8d-e89c-82a7-6f92-5aaa2057321e"

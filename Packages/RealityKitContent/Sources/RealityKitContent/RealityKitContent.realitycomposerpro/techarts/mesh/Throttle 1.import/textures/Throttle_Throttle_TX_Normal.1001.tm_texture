@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "8d984297-22f2-487b-68c2-e92070b3cd8f"
+source_filename: "../../../../CockpitComponentDemo/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TechArt/Texture/Throttle/Throttle_Throttle_TX_Normal.1001.png"
+source_texture: "98347ee0-99ab-38c7-9c43-fee1d610dc8e"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "c2cde790-92e7-ee96-6edd-e0d7587ef929"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "fad7477b-bcbd-1efc-c868-d6255a72b3ef"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "f36bf2f6-0f04-a27b-ea20-10dd96c43a9b"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "09a99692-414d-3020-90ee-fb76276e4ce4"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "9a1a6945-a764-d660-fa93-51f8df0b2047"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "13090787-8f13-2ced-1078-1db8e51d579f"
+}

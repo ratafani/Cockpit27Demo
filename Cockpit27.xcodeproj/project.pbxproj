@@ -3,20 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		38810C57BDB2DCB8BF817491 /* Cockpit27App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B838B69C5ACB773EFA15C /* Cockpit27App.swift */; };
-		7885461E2E245B3167043CBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE2603BB085556C54C77CE /* ContentView.swift */; };
 		D0893637554F8FEF4D9031D1 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = FA6BF3943883551B92537B7E /* RealityKitContent */; };
 		ED9C5440E8FCB23CD473FD94 /* Cockpit27Shared in Frameworks */ = {isa = PBXBuildFile; productRef = F2680DB0C5F429C87610354A /* Cockpit27Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		154CDB69743B5A3A1284300A /* Cockpit27Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cockpit27Shared; path = Packages/Cockpit27Shared; sourceTree = SOURCE_ROOT; };
-		1D0E2C67776DAB8814058702 /* Cockpit27.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cockpit27.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		35AE2603BB085556C54C77CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D0E2C67776DAB8814058702 /* Cockpit27.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cockpit27.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483B838B69C5ACB773EFA15C /* Cockpit27App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cockpit27App.swift; sourceTree = "<group>"; };
 		673F21CA4FC4898A40BDFB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		97EE20E1FC5B170338D75EED /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RealityKitContent; path = Packages/RealityKitContent; sourceTree = SOURCE_ROOT; };
@@ -56,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				483B838B69C5ACB773EFA15C /* Cockpit27App.swift */,
-				35AE2603BB085556C54C77CE /* ContentView.swift */,
 				673F21CA4FC4898A40BDFB0F /* Info.plist */,
 			);
 			path = Cockpit27;
@@ -104,7 +101,6 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					3AC5515AA642C442C6BBDAD7 = {
-						DevelopmentTeam = C7M2QQ2D3A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,7 +119,6 @@
 				631E9296F57896B85179466F /* XCLocalSwiftPackageReference "Packages/Cockpit27Shared" */,
 				8A1B5A122C0DDFB2A16642CD /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */,
 			);
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -138,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38810C57BDB2DCB8BF817491 /* Cockpit27App.swift in Sources */,
-				7885461E2E245B3167043CBD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +144,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7M2QQ2D3A;
+				DEVELOPMENT_TEAM = S8QWSSL8FP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cockpit27/Info.plist;
@@ -170,7 +164,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7M2QQ2D3A;
+				DEVELOPMENT_TEAM = S8QWSSL8FP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cockpit27/Info.plist;

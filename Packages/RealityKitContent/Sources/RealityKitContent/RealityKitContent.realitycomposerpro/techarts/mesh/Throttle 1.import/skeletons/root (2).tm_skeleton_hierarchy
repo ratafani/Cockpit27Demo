@@ -1,0 +1,79 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "fbeb9b82-bf99-51ed-9a02-720c7c529488"
+name: "root/CP_ThrottleL_Lever_Rig_V01/CP_ThrottleL_Lever_RigRoot_V01"
+joints: [
+	{
+		__uuid: "a9375a54-f43e-b4c2-3dcc-3bdb6689d140"
+		name: "CP_ThrottleL_Lever_RigBase_V01"
+		local_rest_pose: {
+			__uuid: "bbb34f4b-5fb8-4ad1-d52b-e69298f049d9"
+			position: {
+				__uuid: "22919152-1b8d-e1e5-52d5-7e90aa66d6c2"
+			}
+			rotation: {
+				__uuid: "9e11a29f-f57d-16c9-37e3-49e4c65487e0"
+				x: 0.72702908515930176
+				y: 8.1849918842635816e-08
+				z: 8.6668649146304233e-08
+				w: 0.68660664558410645
+			}
+			scale: {
+				__uuid: "423467a7-3005-230e-68cd-ca986a89ff63"
+				z: 1.0000001192092896
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "974f97dd-8b00-ee1f-4bf5-79139c4bc9be"
+			xy: 3.9968018722110268e-14
+			xz: 2.3841863594498136e-07
+			yx: 2.3802908799552824e-07
+			yy: -0.057142719626426697
+			yz: -0.99836587905883789
+			zx: 1.3623852268551673e-08
+			zy: 0.99836587905883789
+			zz: -0.057142548263072968
+		}
+		parent_index: 4294967295
+	}
+	{
+		__uuid: "28f1d434-c079-35cd-c22f-05b017e3a9dc"
+		name: "CP_ThrottleL_Lever_RigBase_V01/CP_ThrottleL_Lever_RigLock_V01"
+		index: 1
+		local_rest_pose: {
+			__uuid: "3800f647-f579-159a-7a62-3ab384733bdc"
+			position: {
+				__uuid: "962cfc19-4797-c01d-6a83-985df6b16adf"
+				x: -7.4587831022654427e-08
+				y: 3.2171046733856201
+				z: 0.62789314985275269
+			}
+			rotation: {
+				__uuid: "a37553ec-5579-f4f5-c282-99c3dc62d6d7"
+				x: 0.84224408864974976
+				y: 4.498568273447745e-07
+				z: 9.0362988203196437e-07
+				w: 0.53909629583358765
+			}
+			scale: {
+				__uuid: "0a29599d-8f7d-47d7-054a-0636ba6bb41a"
+				y: 0.99999988079071045
+				z: 0.99999982118606567
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "b2650ca4-07de-3fcf-bba0-4e7531542236"
+			xy: -3.4106045895473946e-13
+			xz: 1.9073484054388246e-06
+			yx: -8.9637262590258615e-07
+			yy: -0.88268893957138062
+			yz: 0.46995756030082703
+			zx: 1.6835952010296751e-06
+			zy: -0.46995726227760315
+			zz: -0.88268899917602539
+			wx: -6.1488494793593418e-06
+			wy: 0.77697288990020752
+			wz: 3.1843876838684082
+		}
+	}
+]
+__asset_uuid: "845b4bf7-021a-7855-effd-cf95c108d3a7"

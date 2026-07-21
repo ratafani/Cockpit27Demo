@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "8516a78a-0385-3159-a625-7b4e0a9a7dda"
+source_filename: "../../../../CockpitComponentDemo/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TechArt/Texture/Cockpit4/m1mat.001_baseColor.jpg"
+source_texture: "433cad0f-1695-5093-070c-8e6897e35274"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "82985248-b85b-d259-db15-05880454d2e5"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "9ebcc901-9ded-ac31-eb34-355982b11f48"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "f62a9426-4014-0289-3027-65c4e748c06d"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "c7513915-ee67-053a-5d52-9e7e55870df8"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "8b2c3b4f-db85-470e-5c96-f5280451f4a1"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "73ff632c-cd99-d3e0-d71f-1e93d82b46af"
+}
