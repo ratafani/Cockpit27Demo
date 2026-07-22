@@ -2,6 +2,8 @@ __type: "tm_entity"
 __uuid: "48dac135-de17-8200-dd1c-45cfd5a44c0e"
 __prototype_type: "tm_entity"
 __prototype_uuid: "bdc9b98c-df95-b1af-eb53-c821f8b8ddbb"
+components: [
+]
 components__instantiated: [
 	{
 		__type: "tm_transform_component"
@@ -109,7 +111,8 @@ children: [
 				__uuid: "56277ba1-f8fd-e078-4124-2c71c56d48a6"
 				local_position_double: {
 					__uuid: "dc1214bd-d0e1-a09f-c0c7-586bdb2c4bbb"
-					z: 0.95099997520446777
+					y: 0.16099999845027924
+					z: 0.63099998235702515
 				}
 				local_rotation: {
 					__uuid: "9ac67b1d-a54e-9223-f8cb-6db2efe5620f"
@@ -139,6 +142,94 @@ children: [
 					shadow_cascades: {
 						__type: "tm_re_directional_light_shadows_component_shadow_cascades_fixed"
 						__uuid: "8d6d7c32-ba5e-4607-ec4a-96898dfe090a"
+					}
+				}
+			}
+			{
+				__type: "tm_re_spot_light_component"
+				__uuid: "689b53fa-53c1-284d-41b0-7fb5af8ed045"
+				color: {
+					__uuid: "96718d55-5293-28b8-fe7d-15130ffbb05c"
+					g: 0.99999988079071045
+					b: 1.0000001192092896
+				}
+				attenuation_radius: 1
+				shadow_component: {
+					__uuid: "4701e062-2b14-5cff-c22a-9df4498ea0a4"
+					depth_bias: 1
+					light_size: 0.10000000149011612
+					z_near: {
+						__type: "tm_re_spot_light_shadows_component_clipping_plane_automatic"
+						__uuid: "d3d7efce-f2aa-0173-2627-2e62d1da298c"
+					}
+					z_far: {
+						__type: "tm_re_spot_light_shadows_component_clipping_plane_automatic"
+						__uuid: "e1520ba4-bc67-e675-2b17-9990718e103f"
+					}
+				}
+				cookie_map: {
+					__uuid: "32330a7a-89b1-57c2-eea4-c8897e246068"
+					cookie_scale: {
+						__uuid: "2e3b7bc2-4ac8-52e4-cd60-59d22455fca0"
+						x: 1
+						y: 1
+					}
+					cookie_offset: {
+						__uuid: "72fa03c9-5656-40db-c8ae-973fdfc5fd4d"
+					}
+				}
+			}
+		]
+	}
+	{
+		__uuid: "659be036-456d-4337-7b60-16737ee26e59"
+		name: "Entity (1)"
+		components: [
+			{
+				__type: "tm_transform_component"
+				__uuid: "291cda8a-bbe7-9415-0fe8-8326a22bb30a"
+				local_position_double: {
+					__uuid: "b07401d0-4053-b9aa-09a0-111af81c0912"
+				}
+				local_rotation: {
+					__uuid: "f340644d-462d-a255-1fcb-ca5171f94355"
+					x: -0.70710676908493042
+					w: 0.70710676908493042
+				}
+				local_scale: {
+					__uuid: "ec978166-5382-3275-a6a2-750640291519"
+				}
+			}
+			{
+				__type: "tm_re_spot_light_component"
+				__uuid: "af389f9d-1c66-576e-68dc-8e6dd4bd45ac"
+				color: {
+					__uuid: "a65d7790-558a-2912-533f-1f65970d0848"
+					g: 0.99999988079071045
+					b: 1.0000001192092896
+				}
+				shadow_component: {
+					__uuid: "24ff5e37-a752-e4ea-d098-b894121419d8"
+					depth_bias: 1
+					light_size: 0.10000000149011612
+					z_near: {
+						__type: "tm_re_spot_light_shadows_component_clipping_plane_automatic"
+						__uuid: "0c2f9b48-bec1-e51e-db78-aad5f92baaad"
+					}
+					z_far: {
+						__type: "tm_re_spot_light_shadows_component_clipping_plane_automatic"
+						__uuid: "523ace76-41fc-524e-53df-481bfddfb3cc"
+					}
+				}
+				cookie_map: {
+					__uuid: "a6d0ed41-ca25-3c28-9b2a-c65e2d9d38cf"
+					cookie_scale: {
+						__uuid: "6aa4f91f-5579-5185-5675-123021e61c0c"
+						x: 1
+						y: 1
+					}
+					cookie_offset: {
+						__uuid: "12f6c4bf-d328-6e7c-b979-1dd11cb00622"
 					}
 				}
 			}
@@ -646,23 +737,28 @@ children__instantiated: [
 ]
 child_sort_values: [
 	{
-		__uuid: "b046e0d4-799c-a02a-2644-9f49f6c2b00b"
+		__uuid: "acd61c75-1cb7-7155-53b9-78de0d95a2a8"
 		child: "f9edb00a-5dbc-526d-336b-769774041840"
 	}
 	{
-		__uuid: "269152fd-9c58-c894-5bba-e2c05d673ce6"
+		__uuid: "18463a9f-c1c8-913b-3212-48ccb0d2200b"
 		child: "c10c1d04-f5c5-3f19-cab3-a94e9b91f641"
 		value: 1
 	}
 	{
-		__uuid: "304fa5fa-ea93-6e46-d5e8-03d706a53caf"
+		__uuid: "e7459463-04fa-a148-b90d-09cc55538ad9"
 		child: "4ccfad84-a7e5-1f62-4233-874ce73bce30"
 		value: 2
 	}
 	{
-		__uuid: "9c7c0406-b921-39ec-5a34-2f1f9563a514"
+		__uuid: "a07b6298-2e00-a34e-2fb8-f8b63c66e123"
 		child: "38b20379-35ea-042d-9f24-5f4dabcaa027"
 		value: 3
+	}
+	{
+		__uuid: "9d82e5e1-195f-4d7b-c716-3fac6cd76dfc"
+		child: "659be036-456d-4337-7b60-16737ee26e59"
+		value: 4
 	}
 ]
 __asset_uuid: "e528b247-6bf2-e205-7fc3-aa29152e2acb"
