@@ -13,8 +13,6 @@ let package = Package(
     targets: [
         .target(
             name: "RealityKitContent",
-            dependencies: [],
-            resources: [.process("Resources")]
-        )
+            dependencies: [])
     ]
 )
