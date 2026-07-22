@@ -21,8 +21,44 @@ shader_graph: {
 				type: "ND_image_vector3"
 				position: {
 					__uuid: "b712921a-6f76-8a6d-4355-f393cd1ee643"
-					x: 620.73773193359375
-					y: 642.74859619140625
+					x: 331.33514404296875
+					y: 1152.0400390625
+				}
+			}
+			{
+				__uuid: "dba67457-4c26-7088-82cc-a8140fa10469"
+				type: "ND_normalize_vector3"
+				position: {
+					__uuid: "7941f78d-de86-eaf5-6be2-499576069dc9"
+					x: 673.73773193359375
+					y: 1079.5400390625
+				}
+			}
+			{
+				__uuid: "b71e4abf-9297-0a16-3035-a432a93cfa2d"
+				type: "ND_normalmap"
+				position: {
+					__uuid: "09e08840-10e2-aa19-4b15-c1be7a511041"
+					x: 673.73773193359375
+					y: 1217.9251708984375
+				}
+			}
+			{
+				__uuid: "acf9b772-dce3-91ce-a0b1-a813b7832c14"
+				type: "ND_invert_vector3"
+				position: {
+					__uuid: "8295148b-2a1b-78c5-180e-ec104e5f4d43"
+					x: 678.23773193359375
+					y: 1397.8006591796875
+				}
+			}
+			{
+				__uuid: "767837d6-909c-d848-6a58-9c966dbfaacc"
+				type: "ND_transformnormal_vector3"
+				position: {
+					__uuid: "c0bc1754-d134-addc-3ef2-4215b56dc89d"
+					x: 627.63128662109375
+					y: 1548.77294921875
 				}
 			}
 		]
@@ -39,8 +75,8 @@ shader_graph: {
 					__uuid: "d3395d35-5368-c85c-8735-ade9be6c64c9"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "e060f269-fe52-c58b-1e8a-cc6cbf032e57"
-					x: 994.08642578125
-					y: 400.74859619140625
+					x: 1000.2554321289063
+					y: 1074.4251708984375
 				}
 			}
 			{
@@ -63,8 +99,8 @@ shader_graph: {
 					__uuid: "de9a094c-f57b-62b2-9445-1f82973394fe"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "943c889c-8ff7-e180-51df-74a7f340cb59"
-					x: -750.407470703125
-					y: 437.24859619140625
+					x: -186.51828002929688
+					y: 371.75418090820313
 				}
 			}
 			{
@@ -75,8 +111,8 @@ shader_graph: {
 					__uuid: "a564ef62-5427-af13-cb7a-56372f84b295"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "a03ec8b1-1b57-bec6-ecae-8144c0bc5a4c"
-					x: -575
-					y: -400.24359130859375
+					x: -222.5
+					y: -216.63883972167969
 				}
 			}
 			{
@@ -87,8 +123,8 @@ shader_graph: {
 					__uuid: "564821e6-954b-a1a1-2ced-2bd5c618eba5"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "bd60b3cf-18f8-8bf1-1787-82771d7c75e3"
-					x: -78.5
-					y: -154.40592956542969
+					x: 227.82553100585938
+					y: -149.1339111328125
 				}
 			}
 			{
@@ -99,8 +135,8 @@ shader_graph: {
 					__uuid: "de0be12c-918b-35bf-1557-a646f17ea59e"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "dcd0a9bb-c557-8ade-dc37-56132982c71a"
-					x: -432.65948486328125
-					y: -46.905929565429688
+					x: -34.5
+					y: 93.754180908203125
 				}
 				settings: {
 					__type: "tm_subgraph_node_settings"
@@ -116,6 +152,20 @@ shader_graph: {
 							__uuid: "660996ae-6aa0-65ea-5298-fa321e69e65c"
 							__prototype_type: "tm_graph"
 							__prototype_uuid: "a5e4ba03-8aa9-0857-e2b2-79c9f8bd767e"
+							nodes__instantiated: [
+								{
+									__uuid: "157a0f4d-8fa1-5106-958c-ff50b923fce2"
+									__prototype_type: "tm_graph_node"
+									__prototype_uuid: "93cf2129-5b18-f33e-a3f1-7ffc481e41da"
+									position: {
+										__uuid: "208a04a0-b549-f6b7-c354-d2f674c79009"
+										__prototype_type: "tm_vec2_t"
+										__prototype_uuid: "87b535d8-8016-4a7b-6706-94ff194c459a"
+										x: 673.934814453125
+										y: 26
+									}
+								}
+							]
 							interface: {
 								__uuid: "fc09488c-61d2-9f94-5cf5-a0aac58964ef"
 								__prototype_type: "tm_graph_interface"
@@ -133,8 +183,8 @@ shader_graph: {
 					__uuid: "7e88cbba-c987-14a9-cd5b-3dabade0d7e9"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "6c930941-5f26-5928-1af6-26851a8706f5"
-					x: 199.30229187011719
-					y: 300.25418090820313
+					x: 264.83514404296875
+					y: 840.59136962890625
 				}
 			}
 			{
@@ -146,7 +196,7 @@ shader_graph: {
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "ada6cd20-b8bb-b387-baf5-643dc0045ae9"
 					x: 559.73773193359375
-					y: 426.74859619140625
+					y: 743.09136962890625
 				}
 			}
 			{
@@ -157,8 +207,8 @@ shader_graph: {
 					__uuid: "008590d6-72a1-dffb-5918-dae50a641b66"
 					__prototype_type: "tm_vec2_t"
 					__prototype_uuid: "c9f7c27b-84f4-b775-e93a-458b10723ac7"
-					x: 219.83282470703125
-					y: 700.318603515625
+					x: -927.73077392578125
+					y: 371.75418090820313
 				}
 			}
 		]
@@ -171,11 +221,32 @@ shader_graph: {
 				to_connector_hash: "63d525adf27fd749"
 			}
 			{
-				__uuid: "4ac44bc7-1afc-66a7-be6f-b8c43f702a0c"
+				__uuid: "31b31ec9-22a8-894a-6081-a1bca3b15973"
 				from_node: "b43a49a7-11b7-786f-d89e-4b76a8763146"
-				to_node: "0b5566f5-8be1-7f9f-465d-3141645fdc1d"
+				to_node: "dba67457-4c26-7088-82cc-a8140fa10469"
 				from_connector_hash: "685a9889b8402b60"
-				to_connector_hash: "caed6cd644ec6ba7"
+				to_connector_hash: "4b08db74701cd3c7"
+			}
+			{
+				__uuid: "43b0d3c2-dfc4-c6d2-0d12-0b51c79fa569"
+				from_node: "b43a49a7-11b7-786f-d89e-4b76a8763146"
+				to_node: "b71e4abf-9297-0a16-3035-a432a93cfa2d"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "4b08db74701cd3c7"
+			}
+			{
+				__uuid: "312c765a-af96-05e5-a776-56fe7b42eb64"
+				from_node: "b43a49a7-11b7-786f-d89e-4b76a8763146"
+				to_node: "acf9b772-dce3-91ce-a0b1-a813b7832c14"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "4b08db74701cd3c7"
+			}
+			{
+				__uuid: "cfd3b604-7684-1551-f226-538aa70667d3"
+				from_node: "b43a49a7-11b7-786f-d89e-4b76a8763146"
+				to_node: "767837d6-909c-d848-6a58-9c966dbfaacc"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "4b08db74701cd3c7"
 			}
 		]
 		connections__removed: [
@@ -204,6 +275,28 @@ shader_graph: {
 					__uuid: "e330ba2a-f184-a434-5950-3e77b4e71aad"
 					enum_type: "4ef730b38709ac8e"
 					enum_value: "clamp"
+				}
+			}
+			{
+				__uuid: "761245e0-d009-ea4e-a4b4-2e8e9101c720"
+				to_node: "767837d6-909c-d848-6a58-9c966dbfaacc"
+				to_connector_hash: "ce6b45f4ee3d141b"
+				data: {
+					__type: "sg_enum"
+					__uuid: "b2b69fb2-38a8-10b0-902a-122baba08ac4"
+					enum_type: "f83b457e704899f7"
+					enum_value: "world"
+				}
+			}
+			{
+				__uuid: "449a1d97-073a-c66e-4f71-b7ac305a13a7"
+				to_node: "767837d6-909c-d848-6a58-9c966dbfaacc"
+				to_connector_hash: "aacd3c3f72d0a90e"
+				data: {
+					__type: "sg_enum"
+					__uuid: "e1e62ed0-415c-5126-0827-3a60059dd10a"
+					enum_type: "f83b457e704899f7"
+					enum_value: "world"
 				}
 			}
 		]

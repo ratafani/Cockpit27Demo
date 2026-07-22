@@ -431,6 +431,9 @@ shader_graph: {
 						__uuid: "d7d08bb3-e758-7a51-9863-27e015fe7d51"
 						blend_mode: 1
 						opacity_scale: 0.40454500913619995
+						opacity_texture: {
+							__uuid: "16a73d11-025d-de86-2275-602f80d9e5f7"
+						}
 					}
 					public: true
 					order: 18
@@ -452,3 +455,6 @@ descriptor: {
 	__uuid: "40aea771-b99c-d6a9-7d72-e6be45411b4c"
 }
 __asset_uuid: "7d07d5e5-a63b-0b40-4dbf-b0b4aec35b6c"
+__asset_thumbnail: {
+	__uuid: "67ce6da6-bf92-21a9-4138-7453f0c8d180"
+}

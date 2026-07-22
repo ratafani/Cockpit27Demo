@@ -11328,8 +11328,6 @@
 				type: "uint64_t"
 			}
 		]
-		default: {
-		}
 	}
 	{
 		name: "tm_graph_data"

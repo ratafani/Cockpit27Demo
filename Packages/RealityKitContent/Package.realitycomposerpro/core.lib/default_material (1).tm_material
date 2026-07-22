@@ -1,0 +1,92 @@
+__type: "tm_material"
+__uuid: "89dd5eda-94ec-4dc0-b3b2-4ba215dfb0e7"
+shader: {
+	__uuid: "cfc7e24c-636a-461e-979a-9ed5439fcd4e"
+}
+shader_graph: {
+	__uuid: "6ba61b26-2f28-eb72-eced-33de3297de5f"
+	graph: {
+		__uuid: "5b9d93ee-abe7-861d-1cb5-91644e544d43"
+		nodes: [
+			{
+				__uuid: "74b15126-15b1-59bf-4c08-46e1670e236d"
+				type: "tm_output_node"
+				position: {
+					__uuid: "c1f91bfd-b75a-76a3-1ddd-d3608ec285c7"
+					x: 162.5
+					y: -36.5
+				}
+			}
+			{
+				__uuid: "669d1621-6e3d-c9c5-731e-8a81a36263f1"
+				type: "ND_UsdPreviewSurface_surfaceshader"
+				position: {
+					__uuid: "4ad65fb6-5bb4-29d2-196f-75cb3f1adb1e"
+					x: -67.65234375
+					y: -60.20703125
+				}
+				width: 265
+			}
+		]
+		connections: [
+			{
+				__uuid: "ada3042c-317d-0a62-b70f-1e0e8c4e0466"
+				from_node: "669d1621-6e3d-c9c5-731e-8a81a36263f1"
+				to_node: "74b15126-15b1-59bf-4c08-46e1670e236d"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "c324f3a437be79e3"
+			}
+		]
+		data: [
+			{
+				__uuid: "ee03d62b-7af4-54a7-b320-aae1fe083fcf"
+				to_node: "669d1621-6e3d-c9c5-731e-8a81a36263f1"
+				to_connector_hash: "cb836048226639e6"
+				data: {
+					__type: "tm_color_aces2065_rgb"
+					__uuid: "52219438-257c-a71a-991a-5e9a9bce48bc"
+					r: 0.32955831289291382
+					g: 0.3556365966796875
+					b: 0.10084286332130432
+				}
+			}
+			{
+				__uuid: "4ea90690-9338-c977-24c5-1d6809c74674"
+				to_node: "669d1621-6e3d-c9c5-731e-8a81a36263f1"
+				to_connector_hash: "ea2298b545b7e617"
+				data: {
+					__type: "tm_float"
+					__uuid: "8be6a8f7-ed6f-7871-14a4-2ba56f366091"
+					float: 1
+				}
+			}
+		]
+		interface: {
+			__uuid: "a8e58603-f3b2-96e2-5ff6-0dcb5b91a148"
+			outputs: [
+				{
+					__uuid: "7ded2e2f-c7dd-6f0f-932a-a7f0bc7722de"
+					name: "surface"
+					display_name: "Surface Shader"
+					id: "output__surface__0"
+					type_hash: "c3f642cf65c817b8"
+				}
+				{
+					__uuid: "3a13ff41-c748-4fb0-0e0d-8ce4606babfb"
+					name: "vertex"
+					display_name: "Geometry Modifier"
+					id: "output__vertex__1"
+					type_hash: "84dbff90ce229699"
+					order: 1
+				}
+			]
+		}
+	}
+}
+descriptor: {
+	__uuid: "8105ff56-1cf3-3756-fe1f-b5ddae8eaaab"
+}
+__asset_uuid: "0dfebe09-8430-45e3-15eb-198010ae8fa1"
+__asset_thumbnail: {
+	__uuid: "2b9ffc9a-a7b3-d721-d40e-3dd57a0a75b7"
+}

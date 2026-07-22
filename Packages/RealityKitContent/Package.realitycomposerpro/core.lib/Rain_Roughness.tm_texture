@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "3f034d45-9152-7362-c323-b1cb35d8b09e"
+source_filename: "../../../../../../Downloads/Rain_Roughness.png"
+source_texture: "679f3e85-0559-9b3f-0384-048509d7adcc"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "10a29e88-6114-88d9-8061-202b3492e348"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "9eee8001-52a4-671e-193e-13b33cb6c233"
+	graph: {
+		__uuid: "48d98695-6e7b-d617-f476-f4584db306dd"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "311e84c2-053c-4beb-0569-d8aac8083cd2"
+		interface: {
+			__uuid: "36203daf-5b4b-525f-42af-f56e5d9e5a06"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "80ed42b0-003f-1504-072c-3ea14241dccf"
+		}
+	}
+}
+color_space: {
+	__uuid: "6cdae15c-b3cb-f043-94ee-22df5aedf64e"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "72400cbc-4512-bb59-8427-662e2dff6a55"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "13fcc4bf-810f-ba54-8c04-864b3540c74c"
+}

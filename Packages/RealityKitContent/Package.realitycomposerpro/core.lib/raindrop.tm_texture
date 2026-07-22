@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "b5621cdb-615f-38d7-9107-302e457bb9f1"
+source_filename: "../../../../../../Downloads/raindrop.png"
+source_texture: "b5cc3534-492c-5fb3-6e5c-c2188d31cd9c"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "1d5bf08d-458f-acd3-0118-fd298cacf7ae"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "00adb769-4052-e855-08da-7c751e1511ab"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "e9f4e8f5-19f7-950d-c22d-8e5db7a3c013"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "545ab74a-7235-0b7c-e561-64b7ea6e94b5"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "ea3f3100-98e8-9854-03e5-c828f5702fd0"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "e3cea1f1-b4c2-b1a0-5628-0abb390e5a5f"
+}

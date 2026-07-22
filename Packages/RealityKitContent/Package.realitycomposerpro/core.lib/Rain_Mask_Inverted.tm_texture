@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "ad4f3fce-b041-11a9-0157-7060b798cd8b"
+source_filename: "../../../../../../Downloads/Rain_Mask_Inverted.png"
+source_texture: "e4b11f77-a282-63b4-f47d-69a7b2a5c45d"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "9bc06533-ffd7-55fe-273e-e5fd34600988"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "9eee8001-52a4-671e-193e-13b33cb6c233"
+	graph: {
+		__uuid: "23963622-e577-0862-6b9e-702fff1f02cc"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "311e84c2-053c-4beb-0569-d8aac8083cd2"
+		interface: {
+			__uuid: "4bdfc15c-25cb-43cf-103e-6c800df7487c"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "80ed42b0-003f-1504-072c-3ea14241dccf"
+		}
+	}
+}
+color_space: {
+	__uuid: "ce54789e-a271-4677-4199-e35a447b6e41"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "f271474b-a7fb-f1e0-97d2-525c4b096d4e"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "529b37cd-453c-d7eb-67d3-93e03ce4ae47"
+}

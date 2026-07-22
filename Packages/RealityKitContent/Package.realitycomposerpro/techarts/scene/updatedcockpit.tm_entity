@@ -1,0 +1,58 @@
+__type: "tm_entity"
+__uuid: "9880d683-bae9-1fdd-6cff-adc0fa09d054"
+name: ""
+components: [
+	{
+		__type: "tm_transform_component"
+		__uuid: "aa075cc4-6754-e23c-be54-24bc22fb17c2"
+		local_position_double: {
+			__uuid: "f29f8f35-a4c4-ef1c-14e5-ccf64514cdaf"
+		}
+		local_rotation: {
+			__uuid: "737aee6f-ad94-99b2-1f48-c393bd20a6ff"
+		}
+		local_scale: {
+			__uuid: "0d0e30d1-64c8-b2a9-8d42-72b5400df583"
+		}
+	}
+]
+children: [
+	{
+		__uuid: "4718e61c-e6c0-a4a4-19a2-3668704978e9"
+		__prototype_type: "tm_entity"
+		__prototype_uuid: "48dac135-de17-8200-dd1c-45cfd5a44c0e"
+		name: "Cockpit_A320"
+		components__instantiated: [
+			{
+				__type: "tm_transform_component"
+				__uuid: "e71671c5-6c49-330c-0656-2e4f5bf8839e"
+				__prototype_type: "tm_transform_component"
+				__prototype_uuid: "57c0707c-0e15-04aa-c9cd-4411d5c797b9"
+				local_position_double: {
+					__uuid: "3768ac1d-688c-7113-f699-5745241bdb3d"
+					__prototype_type: "tm_position_double"
+					__prototype_uuid: "cd3236f6-6710-939f-7754-4f4ce02be3f1"
+					y: 0.14399999380111694
+					z: -0.74199998378753662
+				}
+				local_rotation: {
+					__uuid: "f2160e94-b775-fa4f-21d7-b308a650533c"
+					__prototype_type: "tm_rotation"
+					__prototype_uuid: "b09efea6-5660-5fc5-7792-46a93c7743d9"
+				}
+				local_scale: {
+					__uuid: "d9961624-e96e-ec1b-decc-ebd82af16765"
+					__prototype_type: "tm_scale"
+					__prototype_uuid: "c0aa7dc6-bac7-4af0-f461-f12da16e6bbb"
+				}
+			}
+		]
+	}
+]
+child_sort_values: [
+	{
+		__uuid: "fa640350-6239-3a35-8f41-d62dd339d27e"
+		child: "4718e61c-e6c0-a4a4-19a2-3668704978e9"
+	}
+]
+__asset_uuid: "575c8606-83d3-9664-c68a-53c4f4db5712"
