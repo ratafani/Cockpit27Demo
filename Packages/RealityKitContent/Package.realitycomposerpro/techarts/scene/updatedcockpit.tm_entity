@@ -32,8 +32,9 @@ children: [
 					__uuid: "3768ac1d-688c-7113-f699-5745241bdb3d"
 					__prototype_type: "tm_position_double"
 					__prototype_uuid: "cd3236f6-6710-939f-7754-4f4ce02be3f1"
+					x: 0.094999998807907105
 					y: 0.14399999380111694
-					z: -0.74199998378753662
+					z: -0.85000002384185791
 				}
 				local_rotation: {
 					__uuid: "f2160e94-b775-fa4f-21d7-b308a650533c"
@@ -44,6 +45,9 @@ children: [
 					__uuid: "d9961624-e96e-ec1b-decc-ebd82af16765"
 					__prototype_type: "tm_scale"
 					__prototype_uuid: "c0aa7dc6-bac7-4af0-f461-f12da16e6bbb"
+					x: 1.3500000238418579
+					y: 1.3500000238418579
+					z: 1.3500000238418579
 				}
 			}
 		]
