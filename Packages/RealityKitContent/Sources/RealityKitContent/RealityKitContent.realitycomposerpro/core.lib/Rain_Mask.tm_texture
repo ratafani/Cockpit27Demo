@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "2f0a8f2f-f211-b3eb-7718-e7a0a52c0cf9"
+source_filename: "../../../../../../Downloads/Rain_Mask.png"
+source_texture: "1aa58cc8-a153-acd1-e24f-7a7873b34411"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "598e434e-fb85-f1e3-2ede-57dc7063d183"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "9eee8001-52a4-671e-193e-13b33cb6c233"
+	graph: {
+		__uuid: "17629df8-8f5a-105a-5c88-5928bf091e18"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "311e84c2-053c-4beb-0569-d8aac8083cd2"
+		interface: {
+			__uuid: "aece40f2-ff7b-b7b7-5655-36a16ea02086"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "80ed42b0-003f-1504-072c-3ea14241dccf"
+		}
+	}
+}
+color_space: {
+	__uuid: "db03cfe8-6a26-bd2f-e231-ff44d49a8c77"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "411f3ff7-bc14-805f-05e7-85c665276102"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "166dd36a-1549-8497-b5f8-4efc4f959957"
+}

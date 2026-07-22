@@ -1,0 +1,70 @@
+__type: "tm_usd_asset"
+__uuid: "3faa66b5-fead-cf96-b7c5-7e87f087729f"
+source_path: "../../../../../../Downloads/Sidestick/Sidestick.usdc"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "f0a8cca0-9eaf-c0e6-3072-ca6a24a2fdc9"
+		settings: {
+			__uuid: "4b11a874-04b5-dbb5-c845-72c851885851"
+			graph: {
+				__uuid: "03173d2e-61ec-6336-82cc-0b87f11ac2a6"
+				interface: {
+					__uuid: "0d7192a7-1f98-08ed-1ffb-280649ba304a"
+					inputs: [
+						{
+							__uuid: "681c782c-9964-7248-0b7b-09a4519e4926"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "c9be1f9f-571a-c436-76e0-8f9d35412a8f"
+							}
+							public: true
+						}
+						{
+							__uuid: "5c91d681-0c8f-ffcf-a6ed-9269ce64f5a4"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "d482a71c-8323-36d7-9672-aafeb11fe64c"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+		output: "2561a97e-e3e7-db7f-97ea-c0f56ce1ed12"
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "bcc961b4-d679-2a19-3763-c5436a1f7ab9"
+	}
+	{
+		__type: "tm_usd_animation_settings"
+		__uuid: "ad7eb7a6-892c-9381-e3b4-7743eefa8aaa"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "aab063bc-a97a-d86a-d07e-669cb238069a"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "229e3ebc-0fca-b002-417d-2a32e8ada822"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "0bbc1553-d4ad-6f28-3e98-36b7aefd1161"
+		name: "Default"
+		root_entity: "cbfd95d3-2724-c988-8618-c3ced72091ea"
+		proxy_entity: "22a029a8-3951-6e0e-833a-4e7a939ccdb0"
+		session: "229c4b3e-41a9-3e6e-43cf-f625df198337"
+	}
+]
+__asset_uuid: "2e74562f-9562-79e9-778d-21048daedacd"

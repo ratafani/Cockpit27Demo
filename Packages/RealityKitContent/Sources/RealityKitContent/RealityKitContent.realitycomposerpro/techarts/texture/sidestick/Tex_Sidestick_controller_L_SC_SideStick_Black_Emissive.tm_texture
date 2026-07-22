@@ -1,33 +1,33 @@
 __type: "tm_texture"
-__uuid: "9284a06e-2bc1-73e1-89c1-d0cf2781afb5"
-source_filename: "../../../../CockpitComponentDemo/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TechArt/Texture/SC_Sidestick/Tex_Sidestick_controller_L_SC_SideStick_Black_Emissive.png"
+__uuid: "226034ad-0b53-2452-738f-e825dd1997b9"
+source_filename: "../../../../../../Downloads/Sidestick/Tex_Sidestick_controller_L_SC_SideStick_Black_Emissive.png"
 source_texture: "f6e1cfe0-2af8-7f8e-e04e-cf4676cf5574"
 transform: "6b5fd8e4eec2cf5b"
 transform_settings: {
-	__uuid: "d00f1d8f-beec-51e8-832c-38c662adf166"
+	__uuid: "e7804dce-1759-4f22-1326-fc6ce415cf1e"
 	__prototype_type: "tm_creation_graph"
 	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
 	graph: {
-		__uuid: "e084579e-695b-3d8b-6903-89bdfac7eb08"
+		__uuid: "d40ed545-686e-6600-86cf-6a579e32b8cc"
 		__prototype_type: "tm_graph"
 		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
 		interface: {
-			__uuid: "02b02ebd-b125-4849-5c04-4fc42b4510af"
+			__uuid: "66f2e682-e7a0-546d-40c2-2aad1ed96ed0"
 			__prototype_type: "tm_graph_interface"
 			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
 		}
 	}
 }
 color_space: {
-	__uuid: "1d133904-6e96-13de-fd61-f807323f3a97"
+	__uuid: "b0f0000b-abe0-e896-3022-58159529b5e2"
 	color_primary: 1
 	transfer_function: 2
 	color_model: 1
 }
-__asset_uuid: "79bd7471-1c0f-b62f-dbbf-50a961556d17"
+__asset_uuid: "dd45e64d-b1d8-29a0-5267-a6e9f3918d34"
 __asset_labels: [
 	"e4bec38d8f73f423"
 ]
 __asset_thumbnail: {
-	__uuid: "6b00e4aa-2219-58a8-f60d-c867022bdc4a"
+	__uuid: "32320864-6a25-2d0b-d269-55020bbd5050"
 }

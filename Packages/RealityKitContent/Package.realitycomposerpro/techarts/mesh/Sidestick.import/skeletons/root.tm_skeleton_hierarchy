@@ -1,0 +1,42 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "5e16f011-3834-7dcd-e81d-bc7dffa62a72"
+name: "root/SC_SideStickL_Rig_V01_001/SC_SideStickL_Rig_V01_001"
+joints: [
+	{
+		__uuid: "dbee7915-7a3f-d6ad-f17b-1f104e14cfa9"
+		name: "Bone_002"
+		local_rest_pose: {
+			__uuid: "bdce26f7-679b-8776-2ca0-351543f4ecca"
+			position: {
+				__uuid: "6e70b0c7-a2f1-faac-0f1e-23a4da09dc2e"
+				x: 0.043069437146186829
+				y: 0.30054330825805664
+				z: 1.1898645162582397
+			}
+			rotation: {
+				__uuid: "21a7339a-0d13-a629-b8af-2a82a4ca957c"
+				x: 0.70710676908493042
+				y: 8.4293681368308171e-08
+				z: 8.4293681368308171e-08
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "9f7408c5-af27-3305-7b58-c8d9e7d50ece"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "488c1533-e138-0448-60ea-c080a30d4e36"
+			xz: 2.3841853646899836e-07
+			yx: 2.3841853646899836e-07
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+			wx: -0.043069507926702499
+			wy: -1.1898645162582397
+			wz: 0.30054330825805664
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "e594bbd1-1bf5-00f9-3b01-34f24dbd453e"

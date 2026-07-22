@@ -1,0 +1,132 @@
+__type: "tm_material"
+__uuid: "de28cb2c-eeb9-cd77-3bd6-dd96adf56e34"
+shader: {
+	__uuid: "2e6b3ede-0e30-290d-8a2c-5f87ea6a6b4d"
+}
+shader_graph: {
+	__uuid: "e88c146d-102d-f052-a528-597cead97a8d"
+	graph: {
+		__uuid: "b0da2b10-0f9e-3927-9e1d-f8129225a507"
+		nodes: [
+			{
+				__uuid: "272764a6-c543-68c4-a5c1-3d8a5f33c79b"
+				type: "tm_output_node"
+				position: {
+					__uuid: "aa349e0d-0406-1729-70de-66faf86450dd"
+					x: 616.74774169921875
+					y: -256.09429931640625
+				}
+			}
+			{
+				__uuid: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				type: "ND_realitykit_pbr_surfaceshader"
+				position: {
+					__uuid: "54dd98bd-0123-fa09-84ba-0c76501b8f11"
+					x: 344.09710693359375
+					y: -277.31890869140625
+				}
+			}
+		]
+		connections: [
+			{
+				__uuid: "a7f5efed-abb5-dea5-31b0-ff0f5b4bf630"
+				from_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_node: "272764a6-c543-68c4-a5c1-3d8a5f33c79b"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "c324f3a437be79e3"
+			}
+		]
+		data: [
+			{
+				__uuid: "ffaf0d71-6b8a-1ae3-c62c-bc3800da0717"
+				to_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_connector_hash: "b043861ba01513f5"
+				data: {
+					__type: "tm_float"
+					__uuid: "6645dc24-35c1-8087-394e-8e09f96ff3ee"
+					float: 0.80000001192092896
+				}
+			}
+			{
+				__uuid: "cd477077-1d02-d628-0195-e81b0f9df24a"
+				to_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_connector_hash: "eaa02bddffa7ad4d"
+				data: {
+					__type: "tm_float"
+					__uuid: "f6c4bc41-f67b-07f6-910b-96f1b2e4482d"
+					float: 0.029999999329447746
+				}
+			}
+			{
+				__uuid: "bbfc28d4-2a76-b2b1-0ded-d125032c5c7e"
+				to_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_connector_hash: "b25bebfe670e1bb3"
+				data: {
+					__type: "tm_color_aces2065_rgb"
+					__uuid: "581c3f58-10e5-f334-6299-0c1af3658842"
+					r: 0.01595953106880188
+					g: 0.015878913924098015
+					b: 0.016090035438537598
+				}
+			}
+			{
+				__uuid: "5a7f4256-f4a3-7a1a-8de6-1ce20e2abd1e"
+				to_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_connector_hash: "ea2298b545b7e617"
+				data: {
+					__type: "tm_float"
+					__uuid: "a0825b79-6f64-e6bc-c431-7a4a0fd078c4"
+					float: 0.079999998211860657
+				}
+			}
+			{
+				__uuid: "9932035a-7b6b-dc11-b939-2f0a629f5d4a"
+				to_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_connector_hash: "2bbe599c6c8fe881"
+				data: {
+					__type: "tm_float"
+					__uuid: "e1aad523-97cd-47ad-8015-61daec2b8bd5"
+					float: 0.15000000596046448
+				}
+			}
+			{
+				__uuid: "f7d3124d-a6ae-5bcf-7998-6df096aef953"
+				to_node: "74ec1cb1-7aed-6b4b-3015-409bea4d7cb9"
+				to_connector_hash: "f7f9e94981b63d28"
+				data: {
+					__type: "tm_float"
+					__uuid: "c7ee6642-3376-6c6e-bfea-bbb9ff4b1bc4"
+					float: 1
+				}
+			}
+		]
+		interface: {
+			__uuid: "2db1db59-172e-a67a-36e4-909fe0eab294"
+			outputs: [
+				{
+					__uuid: "874dac5a-a7ff-3278-f0b1-008d8788d4db"
+					name: "surface"
+					display_name: "Surface Shader"
+					id: "output__surface__0"
+					type_hash: "c3f642cf65c817b8"
+				}
+				{
+					__uuid: "1fbdd174-d03d-fd18-5070-1d85576a7617"
+					name: "vertex"
+					display_name: "Geometry Modifier"
+					id: "output__vertex__1"
+					type_hash: "84dbff90ce229699"
+					order: 1
+				}
+			]
+		}
+	}
+}
+descriptor: {
+	__uuid: "e54fbba6-75a9-e760-33f5-6a3750f63eac"
+	blend_mode: 2
+}
+__asset_uuid: "4de0068e-dd05-382f-cda4-1dfaf91c6d8e"
+__asset_thumbnail: {
+	__uuid: "3b2fe7f4-badc-28e6-948c-289968e6fdc2"
+}

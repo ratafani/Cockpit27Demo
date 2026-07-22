@@ -184,7 +184,7 @@ shader_graph: {
 					value: {
 						__type: "tm_material_resource"
 						__uuid: "1aa8e030-850c-0768-1d61-ae66287a7fdb"
-						resource: "696127d3-b211-5e0b-8e88-bc83092490ef"
+						resource: "6f91e2bc-3772-f56e-5c7f-f28e7dca4405"
 						resource__type: "tm_texture"
 					}
 					public: true
@@ -450,3 +450,6 @@ descriptor: {
 	__uuid: "df29630f-ba47-4117-151f-af59e07b05e8"
 }
 __asset_uuid: "6c0c898b-f9a0-eeaf-bc07-540a73b8a5f0"
+__asset_thumbnail: {
+	__uuid: "1cb66afa-448f-c6a0-ce1b-21a8328df4e2"
+}

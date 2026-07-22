@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "179d7f3b-aa99-829b-fcea-77ed01451af1"
+source_filename: "../../../../../../Downloads/Rain_Height.png"
+source_texture: "5c001d21-4a50-78e6-67cc-899d077c90db"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "6f1e05d2-ce8c-0d2d-3746-fdc5ed408c12"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "9eee8001-52a4-671e-193e-13b33cb6c233"
+	graph: {
+		__uuid: "2b088ea3-e998-8f8b-19ca-ef3f5a35e56f"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "311e84c2-053c-4beb-0569-d8aac8083cd2"
+		interface: {
+			__uuid: "245cd71e-45e0-0372-e87f-e0c79a74f1f7"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "80ed42b0-003f-1504-072c-3ea14241dccf"
+		}
+	}
+}
+color_space: {
+	__uuid: "b6dd6ab1-2fee-8e3c-0633-9c51fa2b0faf"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "ad998d14-6687-149e-0ed4-eac452d98f01"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "c1156082-6ca8-a024-94e5-710d2d05ed28"
+}

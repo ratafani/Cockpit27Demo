@@ -1,0 +1,66 @@
+__type: "tm_usd_asset"
+__uuid: "f87e13cf-ead2-16a1-220d-2de4a1db73c7"
+source_path: "../../../../../../Downloads/Cockpit_A320.usdc"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "7b153464-e722-b845-8d7c-c5516dabb575"
+		settings: {
+			__uuid: "85e48094-94b7-0847-3635-2178fabea321"
+			graph: {
+				__uuid: "685dbb31-c70c-dab9-86ea-d615a2b24b9b"
+				interface: {
+					__uuid: "5e45ce08-70b9-f391-cdb6-2673b7595198"
+					inputs: [
+						{
+							__uuid: "53ea0c41-ec04-d614-ac76-978314b9b79b"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "eac606f4-477f-40dd-8eb9-b087a32e402c"
+							}
+							public: true
+						}
+						{
+							__uuid: "cb11d7a8-8c82-cca7-91a5-ed1dd5da6d2c"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "47f133fc-251a-9362-cb20-a83414a3abb6"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+		output: "28564a38-3f49-ba4e-2aa8-97dbc29e3135"
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "83cd9aa2-e348-95e0-8b7f-99ec4bec598a"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "94badb6d-5e21-67b0-31f0-0619961441df"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "a5c0208e-d649-ac10-d5d4-a9eab50ef13e"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "ea315209-3bf9-6f97-58d3-bf1415b587e4"
+		name: "Default"
+		root_entity: "bd7ea60b-2831-ad6b-bea7-17e2b5c2b508"
+		proxy_entity: "48dac135-de17-8200-dd1c-45cfd5a44c0e"
+		session: "b334ce7f-a97e-d8c4-4067-13fd0878a218"
+	}
+]
+__asset_uuid: "6ff25b4f-80b7-a07c-c470-d842601f04e7"

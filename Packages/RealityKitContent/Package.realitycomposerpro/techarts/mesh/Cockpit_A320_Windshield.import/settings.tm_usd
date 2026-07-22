@@ -1,0 +1,66 @@
+__type: "tm_usd_asset"
+__uuid: "836318a9-1702-6e9c-7286-cc4b6a0c3565"
+source_path: "../../../../../../Downloads/Cockpit_A320_Windshield.usdc"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "ecd44cdb-c53e-fa1e-8e11-a4fcbdc23405"
+		settings: {
+			__uuid: "8bbfa781-b287-05cf-aa8c-3c98bfea62af"
+			graph: {
+				__uuid: "0113b9c5-52d8-d134-b716-f4fdc06f240a"
+				interface: {
+					__uuid: "e4c72e3f-e4f8-4b1e-1901-500af2aae075"
+					inputs: [
+						{
+							__uuid: "fa7fa3e6-da91-479a-a36b-2ba4608654e9"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "e2959115-6b7b-55d0-4703-4748bf2a46b8"
+							}
+							public: true
+						}
+						{
+							__uuid: "0c7bd11b-4fda-e801-95e4-e6396566e9f4"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "1c6daea7-64f7-62cc-db0c-38f0537550e3"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+		output: "7a3f7c38-5ed4-08b0-9ea6-b652a2480dc6"
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "412e9cc8-6958-d093-3edb-b62d8e61e6ad"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "dad95cce-26fd-b0e4-d062-9505485932d6"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "60e96c68-dfa3-e96f-7319-cec3eed64bf2"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "40b79ce6-c102-0f8d-b8f5-b295d932e124"
+		name: "Default"
+		root_entity: "b9c43b2f-084a-8dad-a7df-c1b16decf1a2"
+		proxy_entity: "6899c097-bbb2-be39-4c14-425aa4b52952"
+		session: "46a4bf3d-db6c-9474-75ed-00ff7715cf4d"
+	}
+]
+__asset_uuid: "e5455e1b-f390-388c-a201-abb70576c31b"
