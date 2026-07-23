@@ -1385,74 +1385,6 @@
 		}
 	}
 	{
-		name: "BlendShapeInputNodeDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "216e4d06f91bb179"
-			}
-			{
-				name: "paramID"
-				type: "reference"
-				type_hash: "c123671f09b99d8a"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			id: {
-			}
-		}
-	}
-	{
-		name: "BlendShapeWeightsParamHandle"
-		properties: [
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "39fa7a48f53a4045"
-			}
-		]
-		default: {
-			id: {
-			}
-		}
-	}
-	{
-		name: "BlendShapeWeightsParameterDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "39fa7a48f53a4045"
-			}
-			{
-				name: "readonly"
-				type: "bool"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			name: "Unnamed"
-			id: {
-			}
-		}
-	}
-	{
 		name: "BoolBehaviorConditionDefinition"
 		properties: [
 			{
@@ -2848,87 +2780,6 @@
 		}
 	}
 	{
-		name: "PhysicsBoneSolverNodeDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "216e4d06f91bb179"
-			}
-			{
-				name: "sourceChild"
-				type: "subobject"
-				type_hash: "c59d47683fcbbee1"
-			}
-			{
-				name: "chainName"
-				type: "string"
-			}
-			{
-				name: "iterationCount"
-				type: "uint32_t"
-			}
-			{
-				name: "stiffness"
-				type: "float"
-			}
-			{
-				name: "damping"
-				type: "float"
-			}
-			{
-				name: "gravity"
-				type: "subobject"
-				type_hash: "8d1487af36b1e3e1"
-			}
-			{
-				name: "enableSelfCollision"
-				type: "bool"
-			}
-			{
-				name: "collisionMargin"
-				type: "float"
-			}
-			{
-				name: "enableRotationCorrection"
-				type: "bool"
-			}
-			{
-				name: "rotationBlendLower"
-				type: "float"
-			}
-			{
-				name: "rotationBlendUpper"
-				type: "float"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			id: {
-			}
-			sourceChild: {
-			}
-			iterationCount: 5
-			stiffness: 0.80000001192092896
-			damping: 0.10000000149011612
-			gravity: {
-				y: -9.8000001907348633
-			}
-			enableSelfCollision: true
-			collisionMargin: 0.0099999997764825821
-			enableRotationCorrection: true
-			rotationBlendLower: 0.25
-			rotationBlendUpper: 0.75
-		}
-	}
-	{
 		name: "Play Audio_tag"
 		properties: [
 			{
@@ -3300,33 +3151,6 @@
 		}
 	}
 	{
-		name: "SkeletalPoseParameterDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "39fa7a48f53a4045"
-			}
-			{
-				name: "readonly"
-				type: "bool"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			name: "Unnamed"
-			id: {
-			}
-		}
-	}
-	{
 		name: "SpeedScaleNodeDefinition"
 		properties: [
 			{
@@ -3357,63 +3181,6 @@
 			id: {
 			}
 			childID: {
-			}
-		}
-	}
-	{
-		name: "SpringBoneNodeDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "216e4d06f91bb179"
-			}
-			{
-				name: "sourceChild"
-				type: "subobject"
-				type_hash: "c59d47683fcbbee1"
-			}
-			{
-				name: "affectedBone"
-				type: "string"
-			}
-			{
-				name: "stiffness"
-				type: "float"
-			}
-			{
-				name: "damping"
-				type: "float"
-			}
-			{
-				name: "applyMovementLimits"
-				type: "bool"
-			}
-			{
-				name: "movementLimits"
-				type: "subobject"
-				type_hash: "8d1487af36b1e3e1"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			id: {
-			}
-			sourceChild: {
-			}
-			stiffness: 100
-			damping: 20
-			movementLimits: {
-				x: 1
-				y: 1
-				z: 1
 			}
 		}
 	}

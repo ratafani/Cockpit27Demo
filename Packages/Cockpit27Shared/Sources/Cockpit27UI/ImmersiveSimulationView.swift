@@ -19,30 +19,27 @@ public struct ImmersiveSimulationView: View {
     public var body: some View {
         RealityView { content in
             do {
-                // Try Variation 1: The exported scene from immersivecockpit.reality
-                let immersiveScene = try await Entity(named: "immersivecockpit", in: realityKitContentBundle)
+                // Primary: Load updatedcockpit.reality scene
+                let cockpitScene = try await Entity(named: "updatedcockpit", in: realityKitContentBundle)
                 
-                // Offset the scene so that its origin (0,0,0) aligns with the user's head.
-                // Changed to 1.15 for seated perspective.
-                immersiveScene.position = SIMD3<Float>(0.0, 1.15, 0.0) 
+                // Align RCP origin (0,0,0) directly with the user's initial head position (0,0,0 in VisionOS)
+                cockpitScene.position = .zero 
                 
-                setupCockpit(scene: immersiveScene)
-                content.add(immersiveScene)
-                print("Successfully loaded immersivecockpit scene.")
+                setupCockpit(scene: cockpitScene)
+                content.add(cockpitScene)
+                print("✅ Successfully loaded updatedcockpit scene.")
             } catch {
-                print("Failed Variation 1: \(error)")
+                print("⚠️ Failed loading 'updatedcockpit' directly: \(error)")
                 do {
-                    // Try Variation 2: world from immersivecockpit.reality if the root is named world
-                    let worldScene = try await Entity(named: "world", in: realityKitContentBundle)
+                    // Fallback: try loading "Cockpit_A320" or "world" if named differently in scene package
+                    let fallbackScene = try await Entity(named: "Cockpit_A320", in: realityKitContentBundle)
+                    fallbackScene.position = .zero 
                     
-                    // Offset the scene so that its origin (0,0,0) aligns with the user's head.
-                    worldScene.position = SIMD3<Float>(0.0, 1.15, 0.0) 
-                    
-                    setupCockpit(scene: worldScene)
-                    content.add(worldScene)
-                    print("Successfully loaded world scene.")
+                    setupCockpit(scene: fallbackScene)
+                    content.add(fallbackScene)
+                    print("✅ Successfully loaded Cockpit_A320 fallback scene.")
                 } catch {
-                    print("Failed Variation 2: \(error)")
+                    print("❌ Failed loading fallback scene: \(error)")
                 }
             }
         }
@@ -66,12 +63,11 @@ public struct ImmersiveSimulationView: View {
     }
     
     private func makeInteractable(_ entity: Entity) {
-        // Generate a collision shape if none exists (this recursively creates one bounding box for the entire rig)
+        // Generate a collision shape if none exists (recursively creates bounding box for the entity rig)
         entity.generateCollisionShapes(recursive: true)
         
-        // Ensure the entity can receive gestures
+        // Ensure the entity can receive direct touch gestures
         if entity.components[InputTargetComponent.self] == nil {
-            // Restrict to `.direct` so the user must physically touch/collide with the entity to interact
             var input = InputTargetComponent()
             input.allowedInputTypes = .direct
             entity.components.set(input)
@@ -82,11 +78,20 @@ public struct ImmersiveSimulationView: View {
         // Create an interaction component and attach it to the root scene entity
         var interaction = CockpitInteractionComponent()
         
-        // Based on the RCP hierarchy screenshot:
-        interaction.throttleEntity = scene.findEntity(named: "CP_ThrottleL_Lever_Rig_V01")
-        interaction.sidestickEntity = scene.findEntity(named: "SC_SideStickL_Rig_V01")
+        // Match hierarchy from RCP (updatedcockpit -> Cockpit_A320 -> root -> Sidestick / Throttle 1):
+        let throttleL = scene.findEntity(named: "CP_ThrottleL_Lever_Rig_V01")
+        let throttleR = scene.findEntity(named: "CP_ThrottleR_Lever_Rig_V01")
+        let throttleFallback = scene.findEntity(named: "Throttle 1")
         
-        // Try to find the Skinned Mesh (ModelEntity) and joint for Sidestick
+        interaction.throttleEntity = throttleL ?? throttleFallback
+        interaction.throttleRightEntity = throttleR
+        
+        let sidestickRig = scene.findEntity(named: "SC_SideStickL_Rig_V01")
+            ?? scene.findEntity(named: "SC_SideStickL_Rig_V01_001")
+            ?? scene.findEntity(named: "Sidestick")
+        interaction.sidestickEntity = sidestickRig
+
+        // Check for Skinned Mesh (ModelEntity) and joint for Sidestick
         if let root = interaction.sidestickEntity {
             var modelEntity: ModelEntity? = nil
             var queue: [Entity] = [root]
@@ -117,29 +122,48 @@ public struct ImmersiveSimulationView: View {
             interaction.initialButtonRigRotation = buttonRigRoot.transform.rotation
         }
         
+        // Make throttles and sidestick interactable with collision + input targets
         if let throttle = interaction.throttleEntity {
             makeInteractable(throttle)
+        }
+        if let throttleR = interaction.throttleRightEntity {
+            makeInteractable(throttleR)
         }
         if let sidestick = interaction.sidestickEntity {
             makeInteractable(sidestick)
         }
         
-        // Store for gesture reference
+        // Keep exact (0,0,0) scene position as configured in RCP
+        // (No offset overrides applied)
+        
+        // Store component on root scene entity for System and gesture queries
         scene.components.set(interaction)
         self.interactionEntity = scene
         
-        // Setup buttons with the Emissive component
-        if let buttonL = scene.findEntity(named: "CP_FireFaultL_Button_Rig_V01") {
-            makeInteractable(buttonL)
-            var emissiveComp = EmissiveButtonComponent()
-            emissiveComp.targetEntities = findModelEntities(in: buttonL)
-            buttonL.components.set(emissiveComp)
-        }
-        if let buttonR = scene.findEntity(named: "CP_FireFaultR_Button_Rig_V01") {
-            makeInteractable(buttonR)
-            var emissiveComp = EmissiveButtonComponent()
-            emissiveComp.targetEntities = findModelEntities(in: buttonR)
-            buttonR.components.set(emissiveComp)
+        // Setup interactive buttons on Central Pedestal & Overhead with Emissive components
+        let buttonNames = [
+            "CP_FireFaultL_Button_Rig_V01",
+            "CP_FireFaultR_Button_Rig_V01",
+            "CP_ENG1_Switch_Rig_V01",
+            "CP_ENG2_Switch_Rig_V01",
+            "CP_EngineMode_Rotate_Rig_V01",
+            "CP_PitchTrimL_Rotate_Rig_V01",
+            "CP_PitchTrimR_Rotate_Rig_V01",
+            "CP_PitchTrimWheelL_Rotate_Rig_V01",
+            "CP_PitchTrimWheelR_Rotate_Rig_V01"
+        ]
+        
+        for name in buttonNames {
+            if let btn = scene.findEntity(named: name) {
+                makeInteractable(btn)
+                var emissiveComp = EmissiveButtonComponent()
+                let modelEntities = findModelEntities(in: btn)
+                emissiveComp.targetEntities = modelEntities
+                btn.components.set(emissiveComp)
+                print("🔘 [setupCockpit] Registered button '\(btn.name)' with \(modelEntities.count) target ModelEntities")
+            } else {
+                print("⚠️ [setupCockpit] Could not find button entity named '\(name)' in scene")
+            }
         }
     }
     
@@ -162,8 +186,8 @@ public struct ImmersiveSimulationView: View {
         var currentEntity: Entity? = entity
         while let current = currentEntity {
             if var emissiveComponent = current.components[EmissiveButtonComponent.self] {
-                print("🎯 Found EmissiveButtonComponent on \(current.name) - starting animation!")
-                emissiveComponent.startAnimation()
+                print("🎯 Found EmissiveButtonComponent on \(current.name) - toggling light state!")
+                emissiveComponent.toggle()
                 current.components.set(emissiveComponent)
                 
                 // Procedural physical button push: instantly move the button inwards on Z axis

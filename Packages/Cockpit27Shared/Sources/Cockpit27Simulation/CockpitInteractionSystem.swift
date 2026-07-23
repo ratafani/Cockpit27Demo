@@ -39,7 +39,7 @@ public class CockpitInteractionSystem: System {
                 if !component.isSidestickGrabbed {
                     if let sidestick = component.sidestickEntity {
                         let sidestickWorldPos = sidestick.visualBounds(relativeTo: nil).center
-                        if simd_distance(pinchPos, sidestickWorldPos) < 0.3 { // 30cm grab radius
+                        if simd_distance(pinchPos, sidestickWorldPos) < 0.35 { // 35cm grab radius
                             component.isSidestickGrabbed = true
                             component.initialLeftPinchPos = pinchPos
                             if component.initialSidestickRotation == nil {
@@ -60,11 +60,19 @@ public class CockpitInteractionSystem: System {
                     
                     let rotation = simd_quatf(angle: clampedPitch, axis: [1, 0, 0]) * simd_quatf(angle: clampedRoll, axis: [0, 0, 1])
                     
-                    // Weight paint animation on the Joint
+                    // 1. Joint animation if model entity exists
                     if let model = component.sidestickModelEntity, let jointIndex = component.sidestickJointIndex, model.jointNames.count > jointIndex {
                         var transforms = model.jointTransforms
                         transforms[jointIndex].rotation = rotation
                         model.jointTransforms = transforms
+                    } else if let sidestick = component.sidestickEntity {
+                        // 2. Direct transform rotation fallback
+                        if component.initialSidestickRotation == nil {
+                            component.initialSidestickRotation = sidestick.transform.rotation
+                        }
+                        if let initialRot = component.initialSidestickRotation {
+                            sidestick.transform.rotation = initialRot * rotation
+                        }
                     }
                     
                     if let initialButtonRot = component.initialButtonRigRotation {
@@ -87,6 +95,8 @@ public class CockpitInteractionSystem: System {
                     let currentRot = transforms[jointIndex].rotation
                     transforms[jointIndex].rotation = simd_slerp(currentRot, simd_quatf(angle: 0, axis: [1,0,0]), 0.15)
                     model.jointTransforms = transforms
+                } else if let sidestick = component.sidestickEntity, let initialRot = component.initialSidestickRotation {
+                    sidestick.transform.rotation = simd_slerp(sidestick.transform.rotation, initialRot, 0.15)
                 }
                 
                 if let currentRot = component.buttonRigEntity?.transform.rotation, let initialRot = component.initialButtonRigRotation {
@@ -113,39 +123,70 @@ public class CockpitInteractionSystem: System {
             }
             
             if isRightCurled, let pinchPos = rightPinchPos {
-                if !component.isThrottleGrabbed {
-                    if let throttle = component.throttleEntity {
-                        let throttleWorldPos = throttle.visualBounds(relativeTo: nil).center
-                        if simd_distance(pinchPos, throttleWorldPos) < 0.3 { // 30cm grab radius
-                            component.isThrottleGrabbed = true
-                            component.initialRightPinchPos = pinchPos
-                            component.throttleValueAtGrabStart = component.throttleValue
-                            if component.initialThrottleRotation == nil {
-                                component.initialThrottleRotation = throttle.transform.rotation
-                            }
+                let leftThrottleEntity = component.throttleEntity
+                let rightThrottleEntity = component.throttleRightEntity
+                
+                let distL = leftThrottleEntity.map { simd_distance(pinchPos, $0.visualBounds(relativeTo: nil).center) } ?? Float.infinity
+                let distR = rightThrottleEntity.map { simd_distance(pinchPos, $0.visualBounds(relativeTo: nil).center) } ?? Float.infinity
+                
+                if !component.isThrottleLGrabbed && !component.isThrottleRGrabbed {
+                    // Check if hand is near left lever
+                    if distL < 0.30 && distL <= distR {
+                        component.isThrottleLGrabbed = true
+                        component.initialRightPinchPos = pinchPos
+                        component.throttleLValueAtGrabStart = component.throttleLValue
+                        if component.initialThrottleLRotation == nil, let t = leftThrottleEntity {
+                            component.initialThrottleLRotation = t.transform.rotation
+                        }
+                    }
+                    // Check if hand is near right lever
+                    else if distR < 0.30 {
+                        component.isThrottleRGrabbed = true
+                        component.initialRightPinchPos = pinchPos
+                        component.throttleRValueAtGrabStart = component.throttleRValue
+                        if component.initialThrottleRRotation == nil, let tr = rightThrottleEntity {
+                            component.initialThrottleRRotation = tr.transform.rotation
                         }
                     }
                 }
                 
-                if component.isThrottleGrabbed, let initialPos = component.initialRightPinchPos {
+                if component.isThrottleLGrabbed, let initialPos = component.initialRightPinchPos {
                     let delta = pinchPos - initialPos
-                    let movementDelta = -(delta.z / 0.25)
-                    component.throttleValue = max(0.0, min(1.0, component.throttleValueAtGrabStart + movementDelta))
+                    let movementDelta = -(delta.z / 0.55) // Smooth sensitivity: 55cm travel range
+                    component.throttleLValue = max(0.0, min(1.0, component.throttleLValueAtGrabStart + movementDelta))
+                }
+                
+                if component.isThrottleRGrabbed, let initialPos = component.initialRightPinchPos {
+                    let delta = pinchPos - initialPos
+                    let movementDelta = -(delta.z / 0.55) // Smooth sensitivity: 55cm travel range
+                    component.throttleRValue = max(0.0, min(1.0, component.throttleRValueAtGrabStart + movementDelta))
                 }
             } else {
-                component.isThrottleGrabbed = false
+                component.isThrottleLGrabbed = false
+                component.isThrottleRGrabbed = false
                 component.initialRightPinchPos = nil
             }
             
-            // Apply throttle rotation EVERY frame
-            if let throttle = component.throttleEntity {
-                if component.initialThrottleRotation == nil {
-                    component.initialThrottleRotation = throttle.transform.rotation
+            // Apply throttle rotation EVERY frame to respective lever
+            if let throttleL = component.throttleEntity {
+                if component.initialThrottleLRotation == nil {
+                    component.initialThrottleLRotation = throttleL.transform.rotation
                 }
-                let angle = (component.throttleValue - 0.5) * (Float.pi / 2)
-                let throttleRotation = simd_quatf(angle: angle, axis: [1, 0, 0])
-                if let initialRot = component.initialThrottleRotation {
-                    throttle.transform.rotation = initialRot * throttleRotation
+                let angleL = (component.throttleLValue - 0.5) * (Float.pi / 2)
+                let rotL = simd_quatf(angle: angleL, axis: [1, 0, 0])
+                if let initialRotL = component.initialThrottleLRotation {
+                    throttleL.transform.rotation = initialRotL * rotL
+                }
+            }
+            
+            if let throttleR = component.throttleRightEntity {
+                if component.initialThrottleRRotation == nil {
+                    component.initialThrottleRRotation = throttleR.transform.rotation
+                }
+                let angleR = (component.throttleRValue - 0.5) * (Float.pi / 2)
+                let rotR = simd_quatf(angle: angleR, axis: [1, 0, 0])
+                if let initialRotR = component.initialThrottleRRotation {
+                    throttleR.transform.rotation = initialRotR * rotR
                 }
             }
             
