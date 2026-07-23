@@ -89,6 +89,12 @@ children: [
 				__uuid: "3c12f023-2925-0945-de7b-daf2c9874b5a"
 				__prototype_type: "tm_entity"
 				__prototype_uuid: "38b20379-35ea-042d-9f24-5f4dabcaa027"
+				components__removed: [
+					"dc6c2f50-8b86-6b84-667a-84784ce0f895"
+				]
+				components__removed__types: [
+					"tm_re_directional_light_component"
+				]
 				components__instantiated: [
 					{
 						__type: "tm_transform_component"
@@ -177,7 +183,7 @@ children: [
 							__prototype_type: "tm_position_double"
 							__prototype_uuid: "b07401d0-4053-b9aa-09a0-111af81c0912"
 							x: -0.23899999260902405
-							y: -0.21699999272823334
+							y: -0.18600000441074371
 							z: 0.45100000500679016
 						}
 						local_rotation: {
@@ -202,8 +208,8 @@ children: [
 							__prototype_uuid: "a65d7790-558a-2912-533f-1f65970d0848"
 						}
 						intensity: 19000
-						inner_angle_in_degrees: 45
-						outer_angle_in_degrees: 60
+						inner_angle_in_degrees: 30
+						outer_angle_in_degrees: 40
 						casts_shadows: true
 						shadow_component: {
 							__uuid: "7d5aaa24-c0bf-2eb3-d894-7599d5323495"

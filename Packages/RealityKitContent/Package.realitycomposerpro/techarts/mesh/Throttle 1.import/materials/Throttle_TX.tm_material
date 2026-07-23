@@ -27,16 +27,6 @@ shader_graph: {
 				}
 			}
 			{
-				__uuid: "e34f8507-db6a-39d3-b512-94aab29f6614"
-				type: "ND_UsdPreviewSurface_surfaceshader"
-				label: "PreviewSurface"
-				position: {
-					__uuid: "3ba5f7bf-393c-c222-cc0c-54afbca05ed9"
-					x: -250.49583435058594
-					y: 835.2176513671875
-				}
-			}
-			{
 				__uuid: "3ddf6cc3-8b46-f71e-5573-9d435712097b"
 				type: "ND_multiply_color3FA"
 				label: "Multiply"
@@ -232,8 +222,8 @@ shader_graph: {
 				label: "Mix"
 				position: {
 					__uuid: "6414790d-36c3-f691-aae9-8a9345720d3c"
-					x: -749
-					y: 264
+					x: -769.4517822265625
+					y: 192.5
 				}
 			}
 			{
@@ -262,18 +252,8 @@ shader_graph: {
 				label: "NormalMapDecode"
 				position: {
 					__uuid: "ca39bef1-6dcd-c4e6-46d5-5c6ca4463f97"
-					x: -815.5
-					y: 982.5457763671875
-				}
-			}
-			{
-				__uuid: "d4ff81ac-a7a0-3391-4c18-b49a04a80acd"
-				type: "ND_image_vector3"
-				label: "Image"
-				position: {
-					__uuid: "930cf718-af40-5f40-361b-07a84501236f"
-					x: -1151.5062255859375
-					y: 982.5457763671875
+					x: -604.1983642578125
+					y: 830.5457763671875
 				}
 			}
 			{
@@ -283,6 +263,15 @@ shader_graph: {
 					__uuid: "bb466df4-0c4d-94dc-c656-b1d082b15f69"
 					x: -134.49583435058594
 					y: 592.7176513671875
+				}
+			}
+			{
+				__uuid: "500996ad-fac6-18ff-f5a0-1e9c8f791cc3"
+				type: "ND_RealityKitTexture2D_color3"
+				position: {
+					__uuid: "6eb479ba-a410-9d32-a393-87e7a2f17094"
+					x: -1095.0062255859375
+					y: 884.0457763671875
 				}
 			}
 		]
@@ -372,20 +361,6 @@ shader_graph: {
 				to_connector_hash: "7da4d360d4218a66"
 			}
 			{
-				__uuid: "99cc433d-3d83-dd6e-b111-451ec1f583f2"
-				from_node: "188e0361-e780-91e4-0056-cef19fc5eb87"
-				to_node: "d4ff81ac-a7a0-3391-4c18-b49a04a80acd"
-				from_connector_hash: "548a33fba7832619"
-				to_connector_hash: "63d525adf27fd749"
-			}
-			{
-				__uuid: "883e048e-a77f-2986-d41b-88fe919fb6d0"
-				from_node: "d4ff81ac-a7a0-3391-4c18-b49a04a80acd"
-				to_node: "130a195d-0e54-d6a5-1b18-2f527b8ccad5"
-				from_connector_hash: "685a9889b8402b60"
-				to_connector_hash: "4b08db74701cd3c7"
-			}
-			{
 				__uuid: "74d72584-2486-4342-630e-b4764be49cbf"
 				from_node: "130a195d-0e54-d6a5-1b18-2f527b8ccad5"
 				to_node: "2548a867-a5b5-21f1-2cd2-a14d43571e75"
@@ -405,6 +380,20 @@ shader_graph: {
 				to_node: "b93660f5-ead3-a177-81aa-358d544147d7"
 				from_connector_hash: "685a9889b8402b60"
 				to_connector_hash: "c1549ebf90daa052"
+			}
+			{
+				__uuid: "7cbf1dd3-21d1-c763-ecfa-e823dcdff3d4"
+				from_node: "188e0361-e780-91e4-0056-cef19fc5eb87"
+				to_node: "500996ad-fac6-18ff-f5a0-1e9c8f791cc3"
+				from_connector_hash: "548a33fba7832619"
+				to_connector_hash: "63d525adf27fd749"
+			}
+			{
+				__uuid: "5cd13746-ed46-9f64-f03f-41d70beaa1d1"
+				from_node: "500996ad-fac6-18ff-f5a0-1e9c8f791cc3"
+				to_node: "130a195d-0e54-d6a5-1b18-2f527b8ccad5"
+				from_connector_hash: "685a9889b8402b60"
+				to_connector_hash: "4b08db74701cd3c7"
 			}
 		]
 		data: [
@@ -435,6 +424,16 @@ shader_graph: {
 					__type: "tm_float"
 					__uuid: "724191fe-e506-47f9-ab74-586803551b6a"
 					float: 0.5
+				}
+			}
+			{
+				__uuid: "366baf61-75da-cadf-7079-efd6c332001c"
+				to_node: "500996ad-fac6-18ff-f5a0-1e9c8f791cc3"
+				to_connector_hash: "38a79de7eac20d9c"
+				data: {
+					__type: "tm_bool"
+					__uuid: "4327affc-60b7-e335-cbde-8b6c23e4891e"
+					bool: true
 				}
 			}
 		]
@@ -478,6 +477,7 @@ shader_graph: {
 					id: "inputs:EmissiveTrigger"
 					type_hash: "6d0a4e744c45523b"
 					edit_type_hash: "6d0a4e744c45523b"
+					value_set_by_user: true
 					value: {
 						__type: "tm_float"
 						__uuid: "c7623c4a-2d27-8cd5-5108-8df04d2aa25c"
