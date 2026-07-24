@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "190ca711-f03f-058e-2f9d-548c33369d98"
+name: "root/CP_MCDUL_Parent/CP_Button_MCDU_FuelPrediction_Rig/CP_Button_MCDU_FuelPrediction_Root"
+joints: [
+	{
+		__uuid: "41a6e315-999c-fe12-daee-88dd5b575a0c"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "ccbe0e04-ee1a-f56e-f4e2-f53d931ace51"
+			position: {
+				__uuid: "f4da3900-74d9-cc92-c024-f612c46f671c"
+			}
+			rotation: {
+				__uuid: "a1f78842-d505-68a7-1a88-3c59a242040f"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "f42fab2d-1996-701f-24fc-dbaa5cd41981"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "becd256d-f2f1-b5d5-aee7-8df090ba377d"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "2f04065f-ce60-01df-6db8-96e7367a59e9"

@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "c3909197-4bcf-537e-7557-ec7af25f6292"
+name: "root/CP_ECAM_Parent/CP_Button_ECAM_ToConfig_Rig/CP_Button_ECAM_ToConfig_Root"
+joints: [
+	{
+		__uuid: "0727b4eb-4ab8-0752-0509-67d0c02cb81f"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "c163b2d0-9009-f364-9e7a-4f3176a830b1"
+			position: {
+				__uuid: "c1cd555c-2da4-2816-4bf5-1c62c0fd841b"
+			}
+			rotation: {
+				__uuid: "8af12ba9-b44e-6388-6127-c00dc343d902"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "44734cca-4b30-e2f9-9888-0145814a2090"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "a550527d-a1d2-42fb-c232-a85b4acc6011"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "3e443c19-a7d2-8b58-852b-999881681fb1"

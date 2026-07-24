@@ -1,0 +1,22 @@
+__type: "tm_mesh_resource"
+__uuid: "1abbaa4c-d2a5-c4f9-ac6f-28f40a51a2bd"
+models: [
+	{
+		__uuid: "8842b96c-2b7b-86cd-43df-fe1a11953bd1"
+		name: "Cylinder_013"
+		geometry: "f7ff7c4b-3847-8b2e-cec3-7c7bca8ade9c"
+		bounds_min: {
+			__uuid: "64e14805-8694-8df2-a070-a0443443a466"
+			x: -0.1628326028585434
+			y: -0.18478788435459137
+			z: -0.01484999991953373
+		}
+		bounds_max: {
+			__uuid: "8a4035a8-b42a-e1e4-dbe8-e55b46c828db"
+			x: 0.1628326028585434
+			y: 0.1628326028585434
+			z: 0.14604678750038147
+		}
+	}
+]
+__asset_uuid: "7c18c7f0-751e-a87c-88bb-f12c46fb5bc7"

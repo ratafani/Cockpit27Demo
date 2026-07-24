@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "456adf3c-4a77-c152-94eb-b6a5395d7513"
+name: "root/CP_MCDUL_Parent/CP_Button_MCDU_OverflyKey_Rig/CP_Button_MCDU_OverflyKey_Root"
+joints: [
+	{
+		__uuid: "dbe6b1ce-c44b-4dd2-ebdf-9787feaed99a"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "320ee49d-f14d-f8fb-3fc3-d01553bb1f53"
+			position: {
+				__uuid: "3699cf7f-f989-1c21-9044-f88cedaa9512"
+			}
+			rotation: {
+				__uuid: "37457bf8-accc-eaf4-e401-a84e23d173bc"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "3c9b2cd6-0499-b82e-7041-27334165026c"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "4c39fd34-d18e-27c3-c279-7de5f7305262"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "c0b8f87c-5655-d79e-59cd-4fefc7026814"

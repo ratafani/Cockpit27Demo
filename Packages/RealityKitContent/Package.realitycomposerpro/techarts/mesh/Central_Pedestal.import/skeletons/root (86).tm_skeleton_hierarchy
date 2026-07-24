@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "701abc4c-b611-3aff-8ace-d539dac23d99"
+name: "root/CP_MCDUL_Parent/CP_Button_MCDU_AirTraffictControl_Rig/CP_Button_MCDU_AirTraffictControl_Root"
+joints: [
+	{
+		__uuid: "e73dc554-b455-4c68-f3b6-69720a753683"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "1c24568d-dbba-7f7e-7132-dd730c73cb4a"
+			position: {
+				__uuid: "3ac82262-6028-79a4-740a-92b6c4c03266"
+			}
+			rotation: {
+				__uuid: "c4becd32-a0e4-66c6-6a21-566e52d008fe"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "d13f32b6-93a1-7d0c-23f3-8bc6a039cf5d"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "d336c861-7d99-d295-faca-dc1aeca0ec04"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "af2f4780-6f8a-1463-62a0-93612df48047"

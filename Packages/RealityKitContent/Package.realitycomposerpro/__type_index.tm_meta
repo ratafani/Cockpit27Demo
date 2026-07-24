@@ -4662,6 +4662,7 @@
 					nodes: [
 						{
 							type: "tm_update"
+							label: ""
 							position: {
 								x: 67
 								y: -91.660003662109375
@@ -4669,6 +4670,7 @@
 						}
 						{
 							type: "tm_did_add"
+							label: ""
 							position: {
 								x: 67
 								y: 109.33000183105469
@@ -4676,6 +4678,7 @@
 						}
 						{
 							type: "tm_did_activate"
+							label: ""
 							position: {
 								x: 67.5
 								y: 318.67999267578125
@@ -4683,6 +4686,7 @@
 						}
 						{
 							type: "tm_will_remove"
+							label: ""
 							position: {
 								x: 65.989997863769531
 								y: 533.53997802734375
@@ -4690,6 +4694,7 @@
 						}
 						{
 							type: "tm_will_deactivate"
+							label: ""
 							position: {
 								x: 76.5
 								y: 746.47998046875
@@ -11328,6 +11333,8 @@
 				type: "uint64_t"
 			}
 		]
+		default: {
+		}
 	}
 	{
 		name: "tm_graph_data"
@@ -11498,6 +11505,8 @@
 				type_hash: "8944e0b1cefd4756"
 			}
 		]
+		default: {
+		}
 	}
 	{
 		name: "tm_graph_node_dynamic_connector"
@@ -15308,6 +15317,7 @@
 				nodes: [
 					{
 						type: "RootNodeDefinition"
+						label: ""
 						position: {
 							x: 300
 							y: -36.5
@@ -15644,6 +15654,7 @@
 				nodes: [
 					{
 						type: "BTRootNodeDefinition"
+						label: ""
 						position: {
 							x: 300
 							y: -36.5
@@ -26316,6 +26327,8 @@
 				type: "float"
 			}
 		]
+		default: {
+		}
 	}
 	{
 		name: "tm_vec3_t"

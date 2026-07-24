@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "14415d86-33e4-f1e9-8989-50e7c1ed8e62"
+name: "root/CP_Knob_Throttle_PitchTrimWheelR_Rig/CP_Knob_Throttle_PitchTrimWheelR_Root"
+joints: [
+	{
+		__uuid: "ad24eaca-689c-397d-fedf-f93137ef4583"
+		name: "CP_Rotate_PitchTrimWheelR_RigBase"
+		local_rest_pose: {
+			__uuid: "166bf18c-fba0-65ee-90f3-74ca320b5f6b"
+			position: {
+				__uuid: "9e5699e2-10e6-800d-4833-07aa4273cd9f"
+			}
+			rotation: {
+				__uuid: "09f2b912-52f6-7908-656c-f668dca5c39e"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "6b2e00c0-1f2d-2299-038a-08f450074c5f"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "2eb0e04e-97a2-e872-6ce8-8bb290193ddc"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "78b219b3-8ba5-8463-5bdf-f413b0300fe7"

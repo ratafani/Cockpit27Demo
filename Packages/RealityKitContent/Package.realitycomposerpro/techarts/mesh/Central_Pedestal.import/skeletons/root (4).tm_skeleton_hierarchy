@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "2a18b412-60ac-c468-00bf-ede0fdc3959a"
+name: "root/CP_Switch_Throttle_ENG1_Rig/CP_Switch_Throttle_ENG1_Root"
+joints: [
+	{
+		__uuid: "a588a751-2657-29b4-b391-d83a439bb9b9"
+		name: "CP_Switch_ENG1_RigSwitct"
+		local_rest_pose: {
+			__uuid: "c60a1bc7-3fcc-b7a9-b52a-3284dc276b87"
+			position: {
+				__uuid: "d6467334-3dd7-706d-bada-926a3e806ce6"
+			}
+			rotation: {
+				__uuid: "a4b3111d-3e83-acf8-19a4-efbda742e79f"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "8d3d942f-e3a8-8f33-952d-837a3b21a975"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "bd6ba471-f6a1-8d15-6a95-17a497323fdd"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "1fe7db24-66cb-6ee9-efa7-e8824c1bfdb5"

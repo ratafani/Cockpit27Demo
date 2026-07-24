@@ -1,0 +1,50 @@
+__type: "tm_material"
+__uuid: "a3b9faa1-6ba7-5363-51cb-37f2aa9e629c"
+shader: {
+	__uuid: "a1d46534-c0eb-cb38-843e-451c3d11e741"
+}
+shader_graph: {
+	__uuid: "ed5f79c5-a7a2-3ec9-9c1e-41f840d9518f"
+	graph: {
+		__uuid: "2cf02fc5-5629-eb5d-3dda-ebdf18c66666"
+		nodes: [
+			{
+				__uuid: "0ba102ed-b5bb-1b65-8ec8-3405fed44aa4"
+				type: "tm_output_node"
+				position: {
+					__uuid: "bc2b9551-4853-c37b-0b50-a12a3ffbd853"
+					x: 616.74774169921875
+					y: -256.09429931640625
+				}
+			}
+		]
+		interface: {
+			__uuid: "d96b5a47-09e9-e309-04d1-2c84e065919c"
+			outputs: [
+				{
+					__uuid: "2bb451ea-79da-e08a-78a1-12af37b5025a"
+					name: "surface"
+					display_name: "Surface Shader"
+					id: "output__surface__0"
+					type_hash: "c3f642cf65c817b8"
+				}
+				{
+					__uuid: "0bc4226e-aec7-121c-e95d-310eed9add37"
+					name: "vertex"
+					display_name: "Geometry Modifier"
+					id: "output__vertex__1"
+					type_hash: "84dbff90ce229699"
+					order: 1
+				}
+			]
+		}
+	}
+}
+descriptor: {
+	__uuid: "02041338-c6d8-e528-c1d0-bf48e409741d"
+	blend_mode: 2
+}
+__asset_uuid: "e3ace64b-1b8c-13d6-6cd3-477c72f559ed"
+__asset_thumbnail: {
+	__uuid: "07e80792-e6cb-8c05-ec50-4aac5c606e24"
+}

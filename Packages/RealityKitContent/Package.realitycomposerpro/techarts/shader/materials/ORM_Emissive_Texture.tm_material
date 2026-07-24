@@ -11,6 +11,7 @@ shader_graph: {
 			{
 				__uuid: "45c6d9ea-fe9b-fed6-9c9a-873c8ae9a916"
 				type: "tm_input_node"
+				label: ""
 				position: {
 					__uuid: "c9f7c27b-84f4-b775-e93a-458b10723ac7"
 					x: -1250
@@ -20,10 +21,11 @@ shader_graph: {
 			{
 				__uuid: "73087e00-5e8a-a496-78f3-fdfda0694bc1"
 				type: "tm_output_node"
+				label: ""
 				position: {
 					__uuid: "f6e4adde-69e9-9fc7-67fa-be690d4b0239"
-					x: -1000
-					y: 128
+					x: 30.943271636962891
+					y: 417.67181396484375
 				}
 			}
 			{
@@ -32,8 +34,8 @@ shader_graph: {
 				label: "PreviewSurface"
 				position: {
 					__uuid: "e060f269-fe52-c58b-1e8a-cc6cbf032e57"
-					x: -750
-					y: 16
+					x: -250
+					y: 437.1502685546875
 				}
 			}
 			{
@@ -42,8 +44,8 @@ shader_graph: {
 				label: "Multiply"
 				position: {
 					__uuid: "bd60b3cf-18f8-8bf1-1787-82771d7c75e3"
-					x: -500
-					y: 112
+					x: -788.859375
+					y: 437.1502685546875
 				}
 			}
 			{
@@ -52,7 +54,8 @@ shader_graph: {
 				label: "Image2D"
 				position: {
 					__uuid: "a03ec8b1-1b57-bec6-ecae-8144c0bc5a4c"
-					x: -250
+					x: -932.859375
+					y: 128.49497985839844
 				}
 			}
 			{
@@ -61,7 +64,8 @@ shader_graph: {
 				label: "ORM_Channeling"
 				position: {
 					__uuid: "dcd0a9bb-c557-8ade-dc37-56132982c71a"
-					y: 104
+					x: -963.859375
+					y: 419.1502685546875
 				}
 				settings: {
 					__type: "tm_subgraph_node_settings"
@@ -75,6 +79,7 @@ shader_graph: {
 								{
 									__uuid: "a884ec10-59c8-467a-952e-285f14276c35"
 									type: "tm_input_node"
+									label: ""
 									position: {
 										__uuid: "0f482c0c-2fa3-c1c9-e0e0-c31e29724669"
 										x: -375
@@ -84,6 +89,7 @@ shader_graph: {
 								{
 									__uuid: "05284dc7-302b-a181-7c56-b4c8ea0d3c8b"
 									type: "tm_output_node"
+									label: ""
 									position: {
 										__uuid: "d9ce4a9c-95bc-381b-d19c-c12d324a5ba7"
 										x: 970.44293212890625
@@ -230,8 +236,8 @@ shader_graph: {
 				label: "Mix"
 				position: {
 					__uuid: "6c930941-5f26-5928-1af6-26851a8706f5"
-					x: 250
-					y: 104
+					x: -547.998779296875
+					y: 199.99497985839844
 				}
 			}
 			{
@@ -240,7 +246,8 @@ shader_graph: {
 				label: "Image2D_1"
 				position: {
 					__uuid: "943c889c-8ff7-e180-51df-74a7f340cb59"
-					x: 500
+					x: -932.859375
+					y: -267.50994873046875
 				}
 			}
 			{
@@ -249,8 +256,8 @@ shader_graph: {
 				label: "Min"
 				position: {
 					__uuid: "ada6cd20-b8bb-b387-baf5-643dc0045ae9"
-					x: 750
-					y: 112
+					x: -612.998779296875
+					y: 342.9949951171875
 				}
 			}
 			{
@@ -259,8 +266,8 @@ shader_graph: {
 				label: "NormalMapDecode"
 				position: {
 					__uuid: "149dfea7-c94b-d387-4cd7-a4f1c117e9fa"
-					x: 1000
-					y: 120
+					x: -496.02215576171875
+					y: 614.483154296875
 				}
 			}
 			{
@@ -269,8 +276,8 @@ shader_graph: {
 				label: "Image"
 				position: {
 					__uuid: "4327bd00-c128-15a6-a051-95a15ce25cec"
-					x: 1250
-					y: 48
+					x: -934.359375
+					y: 637.80743408203125
 				}
 			}
 		]
@@ -481,6 +488,11 @@ shader_graph: {
 					type_hash: "c0f0b0d37d0844de"
 					edit_type_hash: "c0f0b0d37d0844de"
 					public: true
+				}
+				{
+					__uuid: "7e153780-4289-4f8e-75db-c981e06e9e33"
+					id: "input__graph_16909217785413250210__9131367399386963417"
+					order: 1
 				}
 			]
 			outputs: [

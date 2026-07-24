@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "4c6775fa-3e48-11b4-3e99-31515622ea6f"
+name: "root/CP_ECAM_Parent/CP_Button_ECAM_Door_Rig/CP_Button_ECAM_Door_Root"
+joints: [
+	{
+		__uuid: "9d1961d0-a6a0-202f-7f46-8d279f629ee6"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "0d7e6d22-e7b7-bab4-a6fc-8ec712f1f39a"
+			position: {
+				__uuid: "1a55915b-976d-9c43-6d0a-4e63cae5ba71"
+			}
+			rotation: {
+				__uuid: "498d0843-9445-16f8-b366-957750c0cce5"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "f7fba1e8-6bdf-ef80-291a-b0d811f4c948"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "bf2a5a34-030f-9153-0bb0-5c5bb4b24d67"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "fd03b1ff-f1e0-6cec-6518-e8f2191bf129"

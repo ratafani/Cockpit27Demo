@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "93d05615-f00e-26bd-38cb-3dbeb338256c"
+source_filename: "../../../../../../Downloads/Central_Pedestal/Switching_Panel_TX/CP_SwitchingPanel_TextureMap_Emissive.1001.png"
+source_texture: "c40b848e-83fb-1150-5672-083ebae0007e"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "1ef8ecc2-b585-bede-819e-5e149b8dde1f"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "1eae8ee7-6fd6-3348-dd15-a2740fb1e927"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "ed2bb167-cead-8718-bdb5-05d25d9b26e5"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "9101a63c-0be5-2a0c-a996-761f4a62f9ac"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "67302590-5000-34f0-75fd-f7b045414d8f"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "424e0be9-01e4-1a8d-4b16-0bf0477c15ce"
+}
