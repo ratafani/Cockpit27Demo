@@ -481,7 +481,7 @@ shader_graph: {
 					value: {
 						__type: "tm_float"
 						__uuid: "c7623c4a-2d27-8cd5-5108-8df04d2aa25c"
-						float: 1
+						float: 5
 					}
 					public: true
 				}

@@ -186,22 +186,24 @@ public struct ImmersiveSimulationView: View {
         var currentEntity: Entity? = entity
         while let current = currentEntity {
             if var emissiveComponent = current.components[EmissiveButtonComponent.self] {
-                print("🎯 Found EmissiveButtonComponent on \(current.name) - toggling light state!")
-                emissiveComponent.toggle()
-                current.components.set(emissiveComponent)
-                
-                // Procedural physical button push: instantly move the button inwards on Z axis
-                let originalPos = current.position
-                current.position = originalPos + SIMD3<Float>(0, 0, -0.01) // Push in 1cm
-                
-                // Spring back out after a short delay
-                Task {
-                    try? await Task.sleep(nanoseconds: 150_000_000)
-                    await MainActor.run {
-                        current.position = originalPos
+                if emissiveComponent.toggle() {
+                    print("🎯 Found EmissiveButtonComponent on \(current.name) - toggled light state to \(emissiveComponent.isOn ? "ON (5.0)" : "OFF (0.0)")!")
+                    current.components.set(emissiveComponent)
+                    
+                    // Procedural physical button push: instantly move the button inwards on Z axis
+                    let originalPos = current.position
+                    current.position = originalPos + SIMD3<Float>(0, 0, -0.01) // Push in 1cm
+                    
+                    // Spring back out after a short delay
+                    Task {
+                        try? await Task.sleep(nanoseconds: 150_000_000)
+                        await MainActor.run {
+                            current.position = originalPos
+                        }
                     }
+                } else {
+                    print("⏳ Debounced rapid duplicate tap on \(current.name)")
                 }
-                
                 return
             }
             currentEntity = current.parent

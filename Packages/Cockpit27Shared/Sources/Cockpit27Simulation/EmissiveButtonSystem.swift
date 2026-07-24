@@ -91,7 +91,7 @@ public class EmissiveButtonSystem: System {
                 }
             } else if var pbr = mat as? PhysicallyBasedMaterial {
                 pbr.emissiveColor = .init(color: UIColor(red: 1.0, green: 0.7, blue: 0.1, alpha: 1.0))
-                pbr.emissiveIntensity = intensity * 5.0
+                pbr.emissiveIntensity = intensity
                 updatedMaterials[i] = pbr
                 modified = true
                 print("✅ [EmissiveButtonSystem] PhysicallyBasedMaterial on '\(entity.name)' set emissiveIntensity to \(pbr.emissiveIntensity)")
