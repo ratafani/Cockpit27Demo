@@ -13,6 +13,10 @@ public struct EmissiveButtonComponent: Component {
     public var elapsedTime: TimeInterval = 0
     public var duration: TimeInterval = 0.3 // 300ms smooth light toggle animation
     
+    // Refractory threshold to absorb finger lift-out exit gesture events (250ms)
+    public var lastPressTime: Date = .distantPast
+    public var minTouchDuration: TimeInterval = 0.25
+    
     // Original rest position of the button entity for physical spring animation
     public var originalPosition: SIMD3<Float>?
     
@@ -22,12 +26,14 @@ public struct EmissiveButtonComponent: Component {
     public init() {}
     
     /// Triggers state change when finger presses down on button.
-    /// Returns true if press succeeded, or false if finger was already touching.
+    /// Returns true if press succeeded, or false if finger was already touching or in refractory period.
     @discardableResult
     public mutating func onPressDown() -> Bool {
-        guard !isTouching else {
-            return false // Already touching - ignore repeated triggers while held
+        let now = Date()
+        guard !isTouching && now.timeIntervalSince(lastPressTime) >= minTouchDuration else {
+            return false // Ignore duplicate finger lift-out events
         }
+        self.lastPressTime = now
         self.isTouching = true
         self.isOn.toggle()
         self.startEmissiveValue = self.currentEmissiveValue
