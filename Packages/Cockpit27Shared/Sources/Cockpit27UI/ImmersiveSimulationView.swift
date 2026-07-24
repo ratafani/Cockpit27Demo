@@ -53,13 +53,6 @@ public struct ImmersiveSimulationView: View {
         .onDisappear {
             HandTrackingService.shared.stop()
         }
-        .gesture(
-            SpatialTapGesture()
-                .targetedToAnyEntity()
-                .onEnded { value in
-                    handleTap(entity: value.entity)
-                }
-        )
     }
     
     private func makeInteractable(_ entity: Entity) {
@@ -176,45 +169,5 @@ public struct ImmersiveSimulationView: View {
             results.append(contentsOf: findModelEntities(in: child))
         }
         return results
-    }
-    
-    private func handleTap(entity: Entity) {
-        print("👆 Tap detected on entity: \(entity.name)")
-        
-        // Because the collision shape might be on a child mesh, we need to traverse UP 
-        // the hierarchy to find the parent Rig that holds our EmissiveButtonComponent.
-        var currentEntity: Entity? = entity
-        while let current = currentEntity {
-            if var emissiveComponent = current.components[EmissiveButtonComponent.self] {
-                if emissiveComponent.onPressDown() {
-                    print("🎯 [TouchState] Button '\(current.name)' Pressed DOWN -> Light: \(emissiveComponent.isOn ? "ON (5.0)" : "OFF (0.0)")")
-                    
-                    if emissiveComponent.originalPosition == nil {
-                        emissiveComponent.originalPosition = current.position
-                    }
-                    let restPos = emissiveComponent.originalPosition ?? current.position
-                    current.position = restPos + SIMD3<Float>(0, 0, -0.01) // Push in 1cm
-                    current.components.set(emissiveComponent)
-                    
-                    // Release button after physical stroke duration (150ms)
-                    Task {
-                        try? await Task.sleep(nanoseconds: 150_000_000)
-                        await MainActor.run {
-                            if var comp = current.components[EmissiveButtonComponent.self] {
-                                comp.onRelease()
-                                current.components.set(comp)
-                            }
-                            current.position = restPos // Spring back out
-                            print("✋ [TouchState] Button '\(current.name)' Released -> Ready for next tap")
-                        }
-                    }
-                } else {
-                    print("⏳ [TouchState] Button '\(current.name)' is currently pressed/held - ignoring repeated event")
-                }
-                return
-            }
-            currentEntity = current.parent
-        }
-        print("⚠️ No EmissiveButtonComponent found in hierarchy of \(entity.name).")
     }
 }
