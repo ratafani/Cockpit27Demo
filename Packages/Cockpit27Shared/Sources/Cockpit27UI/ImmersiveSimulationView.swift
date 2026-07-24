@@ -186,23 +186,30 @@ public struct ImmersiveSimulationView: View {
         var currentEntity: Entity? = entity
         while let current = currentEntity {
             if var emissiveComponent = current.components[EmissiveButtonComponent.self] {
-                if emissiveComponent.toggle() {
-                    print("🎯 Found EmissiveButtonComponent on \(current.name) - toggled light state to \(emissiveComponent.isOn ? "ON (5.0)" : "OFF (0.0)")!")
+                if emissiveComponent.onPressDown() {
+                    print("🎯 [TouchState] Button '\(current.name)' Pressed DOWN -> Light: \(emissiveComponent.isOn ? "ON (5.0)" : "OFF (0.0)")")
+                    
+                    if emissiveComponent.originalPosition == nil {
+                        emissiveComponent.originalPosition = current.position
+                    }
+                    let restPos = emissiveComponent.originalPosition ?? current.position
+                    current.position = restPos + SIMD3<Float>(0, 0, -0.01) // Push in 1cm
                     current.components.set(emissiveComponent)
                     
-                    // Procedural physical button push: instantly move the button inwards on Z axis
-                    let originalPos = current.position
-                    current.position = originalPos + SIMD3<Float>(0, 0, -0.01) // Push in 1cm
-                    
-                    // Spring back out after a short delay
+                    // Release button after physical stroke duration (150ms)
                     Task {
                         try? await Task.sleep(nanoseconds: 150_000_000)
                         await MainActor.run {
-                            current.position = originalPos
+                            if var comp = current.components[EmissiveButtonComponent.self] {
+                                comp.onRelease()
+                                current.components.set(comp)
+                            }
+                            current.position = restPos // Spring back out
+                            print("✋ [TouchState] Button '\(current.name)' Released -> Ready for next tap")
                         }
                     }
                 } else {
-                    print("⏳ Debounced rapid duplicate tap on \(current.name)")
+                    print("⏳ [TouchState] Button '\(current.name)' is currently pressed/held - ignoring repeated event")
                 }
                 return
             }
