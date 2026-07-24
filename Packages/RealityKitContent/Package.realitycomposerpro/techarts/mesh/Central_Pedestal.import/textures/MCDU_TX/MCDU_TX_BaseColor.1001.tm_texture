@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "356283d0-37d1-f3fd-06cc-51ab7c9a3b4d"
+source_filename: "../../../../../../Downloads/Central_Pedestal/MCDU_TX/MCDU_TX_BaseColor.1001.png"
+source_texture: "4994e73f-c869-b007-108c-be201199ce06"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "9ec4d04c-d156-700f-05a4-83a747e45e20"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "2eede1a4-6795-f4af-bf6a-01b52e305dd4"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "342ae11f-0909-3c94-e8ba-1deac27a25e5"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "21675304-2a6a-f3df-6d85-424b930cb281"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "4ca0a573-c6fa-2a1f-569d-539d8996ba6c"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "7c6c3ca7-16b1-9a97-dc2b-11aa687a18ce"
+}

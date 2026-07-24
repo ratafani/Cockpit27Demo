@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "f15aafe0-7675-2ce2-e568-9f70f76ea030"
+name: "root/CP_SwitchingPanel_Parent/CP_Knob_SwitchingPanel_Ecam_Rig/CP_Knob_SwitchingPanel_Ecam_Root"
+joints: [
+	{
+		__uuid: "8673b5a1-a4e1-7647-63ba-73be48785619"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "887d079f-c587-408f-1dfd-60d603b0ee7b"
+			position: {
+				__uuid: "d7896623-4fae-706c-9f6a-773cfb01bda9"
+			}
+			rotation: {
+				__uuid: "337c7ef3-6225-5c31-f0eb-56e3685274d6"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "f55a5c6c-3b13-3bcf-f855-ea1ec171943d"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "8199c9f8-7c51-c994-a4e3-3069cced1027"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "2a7ffba9-91e6-e349-544d-bafab8305e0a"

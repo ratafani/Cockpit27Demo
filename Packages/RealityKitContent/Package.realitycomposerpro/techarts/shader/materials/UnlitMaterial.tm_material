@@ -13,8 +13,8 @@ shader_graph: {
 				type: "tm_input_node"
 				position: {
 					__uuid: "52ee8d4c-7a19-577d-2518-ec945ec4cbcb"
-					x: -375
-					y: 136
+					x: -244.98524475097656
+					y: -53.5
 				}
 			}
 			{
@@ -22,8 +22,8 @@ shader_graph: {
 				type: "tm_output_node"
 				position: {
 					__uuid: "83cce386-4712-a8da-87fb-1437ee7c93af"
-					x: -125
-					y: 128
+					x: 961.99884033203125
+					y: 179
 				}
 			}
 			{
@@ -32,8 +32,8 @@ shader_graph: {
 				label: "UnlitSurface"
 				position: {
 					__uuid: "db9db067-ddb1-6019-b5e9-4c9a0647be6b"
-					x: 125
-					y: 88
+					x: 672.51116943359375
+					y: 89.5
 				}
 			}
 			{

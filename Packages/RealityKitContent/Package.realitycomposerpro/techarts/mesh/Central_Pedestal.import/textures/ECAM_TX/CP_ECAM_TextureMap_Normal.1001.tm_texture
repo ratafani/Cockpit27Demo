@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "00951b5f-0c27-95b5-ef56-d3a62ece9584"
+source_filename: "../../../../../../Downloads/Central_Pedestal/ECAM_TX/CP_ECAM_TextureMap_Normal.1001.png"
+source_texture: "3a3d3d40-1300-5548-06b7-3899898b7057"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "74839c4f-a8b3-e110-80c1-ca502e551a55"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "a547a22d-6da1-c98f-c0f7-9cf51062948a"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "18b79d72-d05b-fd3e-657c-3e2c7731c508"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "f92604f7-4040-27ed-6315-d2d660d0e2f2"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "eaeca7f7-bef1-8234-0400-f6266401753b"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "9d2f8513-f8e9-2717-10a6-c9b9bc2249be"
+}

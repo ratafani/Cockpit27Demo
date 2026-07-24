@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "09a08f94-ae1c-9c32-65b7-fd5ff71935e5"
+name: "root/CP_ECAM_Parent/CP_Button_ECAM_Fuel_Rig/CP_Button_ECAM_Fuel_Root"
+joints: [
+	{
+		__uuid: "08976f94-c828-b174-06ac-5122549f37c6"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "8e04730a-a75b-74d8-c2fe-2fa2319e7c3e"
+			position: {
+				__uuid: "570ae798-003f-be9c-d001-b927a710bf34"
+			}
+			rotation: {
+				__uuid: "a0d428ef-2f51-9c1b-a5cb-44b7ca08c936"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "a304e50b-64d4-04cc-cc38-a4ca859e842a"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "a203e028-6384-18b0-d9f8-d201e707b3b6"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "fa3a96c2-f49b-b15a-8586-5c75a0127a99"

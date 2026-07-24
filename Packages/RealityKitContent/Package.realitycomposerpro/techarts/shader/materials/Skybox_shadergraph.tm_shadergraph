@@ -1,0 +1,77 @@
+__type: "tm_material_shader_graph_subgraph"
+__uuid: "757052a0-55e8-f654-9136-bf29bc5102b3"
+graph: {
+	__uuid: "84550a59-0eb5-3cd0-ef77-67b72c0eb88c"
+	nodes: [
+		{
+			__uuid: "be4db2ac-4e93-1aff-6c2e-8baf6d0366a4"
+			type: "ND_image_color3"
+			position: {
+				__uuid: "77a350cc-baaf-0e74-dc6e-6d5f37ce0f3d"
+				x: -89.621589660644531
+				y: -20.584953308105469
+			}
+		}
+		{
+			__uuid: "ce3d48de-2c74-6e02-8ef2-fd014ca2a9c2"
+			type: "ND_realitykit_unlit_surfaceshader"
+			position: {
+				__uuid: "fad3973b-fe9a-bfd4-e390-19a0667294a9"
+				x: 335.58920288085938
+				y: -110.08495330810547
+			}
+		}
+		{
+			__uuid: "2989f387-7863-465f-ad71-31b8d1942c25"
+			type: "tm_output_node"
+			position: {
+				__uuid: "eeb9cfab-9723-49bd-2400-18f5ad91f851"
+				x: 567.3984375
+				y: -10.02734375
+			}
+		}
+	]
+	connections: [
+		{
+			__uuid: "569b8b03-3e83-d194-0ea0-2d127db7ec26"
+			from_node: "be4db2ac-4e93-1aff-6c2e-8baf6d0366a4"
+			to_node: "ce3d48de-2c74-6e02-8ef2-fd014ca2a9c2"
+			from_connector_hash: "685a9889b8402b60"
+			to_connector_hash: "06776ddaf0290228"
+		}
+		{
+			__uuid: "14a6b284-2bd6-f5e3-a6e4-6acc54ea0819"
+			from_node: "ce3d48de-2c74-6e02-8ef2-fd014ca2a9c2"
+			to_node: "2989f387-7863-465f-ad71-31b8d1942c25"
+			from_connector_hash: "685a9889b8402b60"
+			to_connector_hash: "6e085860ffede97e"
+		}
+	]
+	data: [
+		{
+			__uuid: "1d599ec6-ae75-37d6-e6cd-253afdee03d3"
+			to_node: "be4db2ac-4e93-1aff-6c2e-8baf6d0366a4"
+			to_connector_hash: "63d525adf27fd749"
+			data: {
+				__type: "tm_material_resource"
+				__uuid: "be6cb1eb-8cb6-d470-1881-ecd8994327be"
+				name: "../../../../../../../../Users/muhammadtafanirabbani/Downloads/citrus_orchard_puresky_4k.exr"
+				resource: "06b7a777-450b-4b89-bf13-be35c08aca0b"
+				resource__type: "tm_texture"
+			}
+		}
+	]
+	interface: {
+		__uuid: "92be6f63-b14a-e691-9037-6e869b4d752f"
+		outputs: [
+			{
+				__uuid: "79dd6dfb-1b36-2871-7ab9-0cd355baa6b8"
+				name: "Out"
+				id: "output__graph_12642927967847539461__8156344192827249204"
+				type_hash: "c3f642cf65c817b8"
+				edit_type_hash: "c3f642cf65c817b8"
+			}
+		]
+	}
+}
+__asset_uuid: "4812a687-8275-e385-cc9b-8b9932fdd457"

@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "d1d3b567-f006-c12b-d94e-40c3049ea736"
+name: "root/CP_MCDUL_Parent/CP_Knob_MCDU_Screen_Rig/CP_Knob_Screen_Root"
+joints: [
+	{
+		__uuid: "d3163ea5-9fb2-b0d9-3a65-6fd5a4674ff6"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "6dbee2de-0be2-055b-27c0-ecbdbc03a738"
+			position: {
+				__uuid: "f564128b-51cd-da65-0c0e-9f7684460175"
+			}
+			rotation: {
+				__uuid: "600b1bd1-1fc2-9938-40a7-0f93110a84e6"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "ab77eaa1-4834-51f7-c70d-489c1173b52d"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "c898d5de-8779-8207-52f4-327491d60320"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "50029355-0d09-9e3c-5c6c-1f5d077122c9"

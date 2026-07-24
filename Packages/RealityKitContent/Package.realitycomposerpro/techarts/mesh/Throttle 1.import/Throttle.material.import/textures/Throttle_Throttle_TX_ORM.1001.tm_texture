@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "6b7368e5-5790-7c75-b42a-e63157af6595"
+source_filename: "../../../../../../Downloads/Throttle 2/Throttle_textures/Throttle_Throttle_TX_ORM.1001.png"
+source_texture: "b411e1f0-0653-778e-3e40-8993876955f6"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "7430edea-d2c9-75cc-5a24-af1cec058f46"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "79ebe8b7-2f3c-f889-27b7-ff1e75367b3e"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "ccee9f14-0c39-05ec-3c0d-1f9d1460af24"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "26528659-89ce-d107-9e7e-2010a78f9d2a"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "ab524cda-bbb6-89f0-684e-d7575c8c85ab"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "b49014c9-fb22-3d9e-6168-31e9022ec3ff"
+}

@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "672c6845-b6e0-e4cc-28a5-848731447e74"
+source_filename: "../../../../../../Downloads/CP_ECAM_TextureMap_ORM.1001.jpg"
+source_texture: "9103773c-3b0b-f867-2f5c-66e61d7af21b"
+transform: "6b5fd8e4eec2cf5b"
+transform_settings: {
+	__uuid: "4796bb43-43a9-dd12-17ec-47f6848a3539"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "fcfa8bad-adea-8933-2de9-6c2b3bf3a963"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "a34eb119-c74e-4a55-1e32-8a06dc130489"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "3e678d5f-14a7-2917-f215-bda2855ad8f1"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "3119e825-2c88-47d4-d73c-b956231fc494"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "94923325-67e2-ca62-2b14-3c8bdb51bacd"
+}

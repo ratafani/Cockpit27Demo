@@ -76,8 +76,8 @@ graph: {
 			type: "tm_input_node"
 			position: {
 				__uuid: "c982eb34-325d-3877-3e90-fb6139ca4637"
-				x: -600
-				y: -78.250007629394531
+				x: -505
+				y: -196.25
 			}
 		}
 		{

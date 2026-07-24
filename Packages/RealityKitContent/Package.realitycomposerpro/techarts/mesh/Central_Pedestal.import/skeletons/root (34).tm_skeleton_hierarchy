@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "fe2e4609-78c0-7041-75e5-529e016fb0bb"
+name: "root/CP_MCDUL_Parent/CP_Button_MCDU_FlightPlan_Rig/CP_Button_MCDU_FlightPlan_Root"
+joints: [
+	{
+		__uuid: "65ea3069-2366-5437-4e3e-34f6cc7c62b0"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "ed4ef3f4-954e-a889-0989-1c0ebe30ca9c"
+			position: {
+				__uuid: "136a38ff-0a2e-023c-3a65-f8b989e2fa3d"
+			}
+			rotation: {
+				__uuid: "edaa5bdd-0e41-e9f1-2f2d-8e7d8f8e269f"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "6b180c64-e8ff-6678-42cf-58fb1d0d32c8"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "2f815e67-321e-02fb-cd78-ccc552df01fc"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "546c6ae2-6b49-dfb3-6e9d-8e5dcc8c99c0"

@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "5fc51de4-4619-b549-021d-72de50292ffa"
+name: "root/CP_SwitchingPanel_Parent/CP_Knob_SwitchingPanel_AirData_Rig/CP_Knob_SwitchingPanel_AirData_Root"
+joints: [
+	{
+		__uuid: "7ff8675b-9eac-fc61-e7e6-aed78121b8fc"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "645e9609-2c39-c89f-d0bc-6b5969b3bc02"
+			position: {
+				__uuid: "ac32b2ea-d2ba-54f9-ff81-4fda0d73f7d6"
+			}
+			rotation: {
+				__uuid: "91ede30c-da95-83a2-c860-84f123b97610"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "b364a058-a560-b9ed-811f-5d001bd9456d"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "82ff41b2-e4df-0f69-2c51-30cbc578ff4d"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "a59561ec-e3d2-fc7f-8913-62631b1f3c69"

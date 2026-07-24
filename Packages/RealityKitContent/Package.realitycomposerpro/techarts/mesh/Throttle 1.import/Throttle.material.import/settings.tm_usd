@@ -1,0 +1,63 @@
+__type: "tm_usd_asset"
+__uuid: "2b97ccba-a06d-0a5e-6bd5-7de681e7a64d"
+source_path: "../../../../../../Downloads/Throttle 2/Throttle.material.usda"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "a5ff942e-5649-e09b-323e-1a741d19ae2e"
+		settings: {
+			__uuid: "6eb1239c-7c66-1c7a-9e11-f90d25620839"
+			graph: {
+				__uuid: "6f945f7f-30eb-f7d0-bd1c-efdaf8ac73fd"
+				interface: {
+					__uuid: "43a342e6-97fe-ee21-a05d-0b39d571ceea"
+					inputs: [
+						{
+							__uuid: "71faf98f-5a8f-9a35-7582-1520d22b71fc"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "177faf0f-80cf-19ab-afdd-d4cffde3b6e2"
+							}
+							public: true
+						}
+						{
+							__uuid: "0906336d-2088-fa34-3055-5e0ab58b9ba6"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "f14654bd-2633-f186-5dc7-51512d5172ea"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "71bff3a2-f519-2207-8da0-48c443ea71ba"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "9fabbb5c-fc15-b63d-f2b1-d578fb099941"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "50ec897f-6562-9c82-b3d4-609fd7f0d8a8"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "79110111-20df-54ea-ec88-acff019316be"
+		name: "Default"
+		session: "adc43bbd-cfd3-d9e1-9016-9e26db7d1b44"
+	}
+]
+__asset_uuid: "f9e05cce-a19d-5cc9-39f6-262de2ee74fa"

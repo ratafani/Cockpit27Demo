@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "f764f28f-fe4c-aba3-730c-d4d45c77d9f7"
+name: "root/CP_Knob_Throttle_EngineMode_Rig/CP_Knob_Throttle_EngineMode_Root"
+joints: [
+	{
+		__uuid: "bb864429-42fd-80f9-5198-a30f7af3628d"
+		name: "CP_Rotate_EngineMode_RigRotate"
+		local_rest_pose: {
+			__uuid: "38fabae6-6565-cbb3-82b2-8245da4dec43"
+			position: {
+				__uuid: "82f0d07a-44f7-9303-d9f3-be4bf1446948"
+			}
+			rotation: {
+				__uuid: "c53111f0-4c78-8cf1-6056-23ecc026e412"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "a01f5aae-f204-4c40-a394-0dcf48692543"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "4c6c9fe8-f32a-74cd-9f30-d33cc3caa832"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "f6be5fa0-73f4-a06a-a049-f11be3428a07"

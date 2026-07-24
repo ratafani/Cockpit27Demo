@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "dc3eafa5-f314-9db3-207e-73484e4d9b1e"
+name: "root/CP_MCDUL_Parent/CP_Button_MCDU_7_Rig/CP_Button_MCDU_7_Root"
+joints: [
+	{
+		__uuid: "f304bcaa-4e56-c2a8-f6ad-049e8fd4ecff"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "959cb8c9-c079-37ed-1797-5f3f4b88dafc"
+			position: {
+				__uuid: "3562ff06-af8f-5a54-c486-15a47552b497"
+			}
+			rotation: {
+				__uuid: "4a23c24a-eb45-93a8-e5e5-4dc5e13981a1"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "68b5f446-3065-9431-9f86-e4c8b697ea46"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "400e44ee-a107-8745-6ee3-b8a623648f6a"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "f1bd0a7f-09a1-8114-89d5-45284a33a029"

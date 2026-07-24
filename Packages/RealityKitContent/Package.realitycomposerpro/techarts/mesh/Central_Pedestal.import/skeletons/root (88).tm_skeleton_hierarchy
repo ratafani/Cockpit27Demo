@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "0f3bb901-275c-976c-4af4-713eeca0890f"
+name: "root/CP_ECAM_Parent/CP_Rotate_ECAM_SafetyEmer_Rig/CP_Rotate_ECAM_SafetyEmer_Root"
+joints: [
+	{
+		__uuid: "cdb693bc-0e3e-5d05-a067-a7cd10369cbe"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "2008d7e7-3f55-24c8-2583-60431088a6cd"
+			position: {
+				__uuid: "a0c73197-3df1-3657-ef47-52733949405e"
+			}
+			rotation: {
+				__uuid: "97b1b9a2-8867-7f49-5e4e-5bea9e07b60c"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "aa63088a-3e65-dbc6-0adb-682869b774a5"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "b28a34c8-d2a8-5f6d-d543-35335634377a"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "47abf3dc-c7de-3ba5-8650-6c6e5ebef0f0"

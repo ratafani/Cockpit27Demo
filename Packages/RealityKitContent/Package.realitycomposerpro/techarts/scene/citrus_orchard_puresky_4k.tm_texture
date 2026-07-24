@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "06b7a777-450b-4b89-bf13-be35c08aca0b"
+source_filename: "../../../../../../../../Users/muhammadtafanirabbani/Downloads/citrus_orchard_puresky_4k.exr"
+source_texture: "8e2afc66-7c7c-fa9e-9b71-60d1282d53e2"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "6b5a281b-943d-da3f-7e91-176245745653"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "9eee8001-52a4-671e-193e-13b33cb6c233"
+	graph: {
+		__uuid: "07a55a68-deec-d43c-fe60-321f83151447"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "311e84c2-053c-4beb-0569-d8aac8083cd2"
+		interface: {
+			__uuid: "36353efc-d847-7acb-ee1c-cde6ff58d03c"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "80ed42b0-003f-1504-072c-3ea14241dccf"
+		}
+	}
+}
+color_space: {
+	__uuid: "55126d29-d00c-7103-45f8-eacec95e4c7c"
+	color_primary: 6
+	transfer_function: 1
+	color_model: 1
+}
+__asset_uuid: "e6db347f-3421-227a-a055-16ff69d2d7fe"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "c3ea197b-641f-bbfe-c5e5-47d7de12fdd9"
+}

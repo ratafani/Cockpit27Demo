@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "3db91511-a773-ebf2-682c-0dd77301ecbd"
+name: "root/CP_Button_Throttle_FireFaultR_Rig/CP_Button_Throttle_FireFaultR_Root"
+joints: [
+	{
+		__uuid: "5b08c7d8-b4bb-1e1b-6ef3-912954fd8a9b"
+		name: "CP_Button_FireFaultR_RigButton"
+		local_rest_pose: {
+			__uuid: "da41dc19-d6ed-d508-72b5-dd6b278488fa"
+			position: {
+				__uuid: "2ec50879-8fb8-f212-6116-cffc07dd258d"
+			}
+			rotation: {
+				__uuid: "79587ff9-9add-2243-a5b9-ce7597b487c1"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "7d6ed3ec-e60e-f54b-39e0-189bd1396223"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "0c920a98-4ddc-a3dd-1288-3355c2be371f"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "1d0a77fb-71e3-6b2e-846c-ed5fb0d6f6eb"

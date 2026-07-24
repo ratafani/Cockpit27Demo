@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "8e73c6d2-c324-3b16-be93-f969a1372c1f"
+name: "root/CP_SwitchingPanel_Parent/CP_Knob_SwitchingPanel_EisDmc_Rig/CP_Knob_SwitchingPanel_EisDmc_Root"
+joints: [
+	{
+		__uuid: "3c87f183-2411-53bb-ce87-e697fd708c78"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "972ee4eb-298d-7f1a-3306-577003835a73"
+			position: {
+				__uuid: "6a404466-c75e-be08-d318-e55a3ba7f2d6"
+			}
+			rotation: {
+				__uuid: "a40d77a6-7951-a496-c6c8-e6e5a58947f2"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "ea4ba85e-ec1e-29c9-1574-3ed3dd57d6f1"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "a2060661-327c-5944-cf57-bf37f3f71f01"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "b911ff91-a1c6-82da-ab08-1d2c0cc5ba2a"
