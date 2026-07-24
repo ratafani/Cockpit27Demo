@@ -1,6 +1,7 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
+import Cockpit27Domain
 import Cockpit27Simulation
 import ILSHandTracking
 
@@ -72,16 +73,18 @@ public struct ImmersiveSimulationView: View {
         var interaction = CockpitInteractionComponent()
         
         // Match hierarchy from RCP (updatedcockpit -> Cockpit_A320 -> root -> Sidestick / Throttle 1):
-        let throttleL = scene.findEntity(named: "CP_ThrottleL_Lever_Rig_V01")
-        let throttleR = scene.findEntity(named: "CP_ThrottleR_Lever_Rig_V01")
-        let throttleFallback = scene.findEntity(named: "Throttle 1")
+        let throttleL = scene.findEntity(named: CockpitModel.EntityNames.throttleLeft)
+            ?? scene.findEntity(named: "CP_ThrottleL_Lever_Rig_V01")
+            ?? scene.findEntity(named: CockpitModel.EntityNames.throttleLegacyFallback)
+        let throttleR = scene.findEntity(named: CockpitModel.EntityNames.throttleRight)
+            ?? scene.findEntity(named: "CP_ThrottleR_Lever_Rig_V01")
         
-        interaction.throttleEntity = throttleL ?? throttleFallback
+        interaction.throttleEntity = throttleL
         interaction.throttleRightEntity = throttleR
         
-        let sidestickRig = scene.findEntity(named: "SC_SideStickL_Rig_V01")
+        let sidestickRig = scene.findEntity(named: CockpitModel.EntityNames.sidestick)
+            ?? scene.findEntity(named: "SC_SideStickL_Rig_V01")
             ?? scene.findEntity(named: "SC_SideStickL_Rig_V01_001")
-            ?? scene.findEntity(named: "Sidestick")
         interaction.sidestickEntity = sidestickRig
 
         // Check for Skinned Mesh (ModelEntity) and joint for Sidestick
@@ -127,23 +130,20 @@ public struct ImmersiveSimulationView: View {
         }
         
         // Keep exact (0,0,0) scene position as configured in RCP
-        // (No offset overrides applied)
         
         // Store component on root scene entity for System and gesture queries
         scene.components.set(interaction)
         self.interactionEntity = scene
         
-        // Setup interactive buttons on Central Pedestal & Overhead with Emissive components
-        let buttonNames = [
+        // Setup interactive buttons on Central Pedestal with Emissive components
+        let buttonNames = CockpitModel.EntityNames.pedestalInteractableNames + [
             "CP_FireFaultL_Button_Rig_V01",
             "CP_FireFaultR_Button_Rig_V01",
             "CP_ENG1_Switch_Rig_V01",
             "CP_ENG2_Switch_Rig_V01",
             "CP_EngineMode_Rotate_Rig_V01",
             "CP_PitchTrimL_Rotate_Rig_V01",
-            "CP_PitchTrimR_Rotate_Rig_V01",
-            "CP_PitchTrimWheelL_Rotate_Rig_V01",
-            "CP_PitchTrimWheelR_Rotate_Rig_V01"
+            "CP_PitchTrimR_Rotate_Rig_V01"
         ]
         
         for name in buttonNames {
@@ -154,8 +154,6 @@ public struct ImmersiveSimulationView: View {
                 emissiveComp.targetEntities = modelEntities
                 btn.components.set(emissiveComp)
                 print("🔘 [setupCockpit] Registered button '\(btn.name)' with \(modelEntities.count) target ModelEntities")
-            } else {
-                print("⚠️ [setupCockpit] Could not find button entity named '\(name)' in scene")
             }
         }
     }
