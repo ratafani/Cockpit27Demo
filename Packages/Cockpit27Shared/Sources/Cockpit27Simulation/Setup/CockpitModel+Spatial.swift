@@ -95,11 +95,11 @@ public extension CockpitModel {
                 baseAxis: [1, 0, 0],       // X axis: lever pitches forward/back
                 detents: detents
             )
-            // Wire the pivot child — the lever arm to rotate in LOCAL space, NOT the root rig
-            comp.pivotEntity = findPivotChild(of: tL)
+            // The Rig itself (CP_Lever_Throttle_L_Rig) is the pivot container at (0.54, 0.001, -0.012)
+            comp.pivotEntity = tL
             tL.components.set(comp)
             let worldPos = tL.position(relativeTo: nil)
-            print("  ✅ ThrottleL '\(tL.name)' → LeverComponent | worldPos=\(worldPos) | pivotChild='\(comp.pivotEntity?.name ?? "nil")'")
+            print("  ✅ ThrottleL '\(tL.name)' → LeverComponent | worldPos=\(worldPos) | pivotEntity='\(tL.name)'")
         } else {
             print("  ❌ ThrottleL NOT FOUND — searched for '\(EntityNames.throttleLeft)' and fallback '\(EntityNames.throttleLegacyFallback)'")
         }
@@ -114,10 +114,10 @@ public extension CockpitModel {
                 baseAxis: [1, 0, 0],
                 detents: detents
             )
-            comp.pivotEntity = findPivotChild(of: tR)
+            comp.pivotEntity = tR
             tR.components.set(comp)
             let worldPos = tR.position(relativeTo: nil)
-            print("  ✅ ThrottleR '\(tR.name)' → LeverComponent | worldPos=\(worldPos) | pivotChild='\(comp.pivotEntity?.name ?? "nil")'")
+            print("  ✅ ThrottleR '\(tR.name)' → LeverComponent | worldPos=\(worldPos) | pivotEntity='\(tR.name)'")
         } else {
             print("  ❌ ThrottleR NOT FOUND — searched for '\(EntityNames.throttleRight)'")
         }
