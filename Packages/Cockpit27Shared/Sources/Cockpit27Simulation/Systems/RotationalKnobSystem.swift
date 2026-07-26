@@ -7,11 +7,15 @@ import ILSHandTracking
 public class RotationalKnobSystem: System {
     private static let query = EntityQuery(where: .has(RotationalKnobComponent.self))
     private static let panelQuery = EntityQuery(where: .has(PanelVolumeComponent.self))
+    private static let handQuery = EntityQuery(where: .has(HandModelComponent.self))
     
     private var smoothedLeftTipPos: SIMD3<Float>?
     private var smoothedRightTipPos: SIMD3<Float>?
     private var previousLeftTipPos: SIMD3<Float>?
     private var previousRightTipPos: SIMD3<Float>?
+    
+    private var smoothedLeftWristPos: SIMD3<Float>?
+    private var smoothedRightWristPos: SIMD3<Float>?
     
     public required init(scene: RealityKit.Scene) {}
     
@@ -24,28 +28,25 @@ public class RotationalKnobSystem: System {
         return true
     }
     
-    private func isFingerCurled(skeleton: HandSkeleton,
-                                tip: HandSkeleton.JointName,
-                                knuckle: HandSkeleton.JointName) -> Bool {
-        let tipCol    = skeleton.joint(tip).anchorFromJointTransform.columns.3
-        let knuckleCol = skeleton.joint(knuckle).anchorFromJointTransform.columns.3
-        let wristCol  = skeleton.joint(.wrist).anchorFromJointTransform.columns.3
-        let tipDist     = simd_distance(SIMD3<Float>(tipCol.x,    tipCol.y,    tipCol.z),
-                                        SIMD3<Float>(wristCol.x,  wristCol.y,  wristCol.z))
-        let knuckleDist = simd_distance(SIMD3<Float>(knuckleCol.x, knuckleCol.y, knuckleCol.z),
-                                        SIMD3<Float>(wristCol.x,   wristCol.y,   wristCol.z))
-        return tipDist < knuckleDist
-    }
-    
-    private func isHandCurled(skeleton: HandSkeleton?) -> Bool {
+    private func evaluatePinchState(skeleton: HandSkeleton?, component: inout RotationalKnobComponent) -> Bool {
         guard let skeleton = skeleton else { return false }
-        let curledCount = [
-            isFingerCurled(skeleton: skeleton, tip: .indexFingerTip,  knuckle: .indexFingerKnuckle),
-            isFingerCurled(skeleton: skeleton, tip: .middleFingerTip, knuckle: .middleFingerKnuckle),
-            isFingerCurled(skeleton: skeleton, tip: .ringFingerTip,   knuckle: .ringFingerKnuckle),
-            isFingerCurled(skeleton: skeleton, tip: .littleFingerTip, knuckle: .littleFingerKnuckle)
-        ].filter { $0 }.count
-        return curledCount >= 3
+        let thumbTipCol = skeleton.joint(.thumbTip).anchorFromJointTransform.columns.3
+        let indexTipCol = skeleton.joint(.indexFingerTip).anchorFromJointTransform.columns.3
+        let middleTipCol = skeleton.joint(.middleFingerTip).anchorFromJointTransform.columns.3
+        
+        let thumb = SIMD3<Float>(thumbTipCol.x, thumbTipCol.y, thumbTipCol.z)
+        let index = SIMD3<Float>(indexTipCol.x, indexTipCol.y, indexTipCol.z)
+        let middle = SIMD3<Float>(middleTipCol.x, middleTipCol.y, middleTipCol.z)
+        
+        let distanceToIndex = simd_distance(thumb, index)
+        let distanceToMiddle = simd_distance(thumb, middle)
+        
+        if !component.isGrabbed {
+            return (distanceToIndex < 0.045) || (distanceToMiddle < 0.045)
+        } else {
+            let isReleasing = (distanceToIndex > 0.075) && (distanceToMiddle > 0.075)
+            return !isReleasing
+        }
     }
     
     public func update(context: SceneUpdateContext) {
@@ -54,14 +55,20 @@ public class RotationalKnobSystem: System {
         
         var leftTipRaw: SIMD3<Float>? = nil
         var rightTipRaw: SIMD3<Float>? = nil
+        var leftWristRaw: SIMD3<Float>? = nil
+        var rightWristRaw: SIMD3<Float>? = nil
         
         if let anchor = leftHand, anchor.isTracked, let skeleton = anchor.handSkeleton {
             let col = (anchor.originFromAnchorTransform * skeleton.joint(.indexFingerTip).anchorFromJointTransform).columns.3
             leftTipRaw = SIMD3<Float>(col.x, col.y, col.z)
+            let wristCol = anchor.originFromAnchorTransform.columns.3
+            leftWristRaw = SIMD3<Float>(wristCol.x, wristCol.y, wristCol.z)
         }
         if let anchor = rightHand, anchor.isTracked, let skeleton = anchor.handSkeleton {
             let col = (anchor.originFromAnchorTransform * skeleton.joint(.indexFingerTip).anchorFromJointTransform).columns.3
             rightTipRaw = SIMD3<Float>(col.x, col.y, col.z)
+            let wristCol = anchor.originFromAnchorTransform.columns.3
+            rightWristRaw = SIMD3<Float>(wristCol.x, wristCol.y, wristCol.z)
         }
         
         previousLeftTipPos = smoothedLeftTipPos
@@ -69,37 +76,89 @@ public class RotationalKnobSystem: System {
         
         if let p = leftTipRaw { smoothedLeftTipPos = smoothedLeftTipPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedLeftTipPos = nil; previousLeftTipPos = nil }
         if let p = rightTipRaw { smoothedRightTipPos = smoothedRightTipPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedRightTipPos = nil; previousRightTipPos = nil }
+        if let p = leftWristRaw { smoothedLeftWristPos = smoothedLeftWristPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedLeftWristPos = nil }
+        if let p = rightWristRaw { smoothedRightWristPos = smoothedRightWristPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedRightWristPos = nil }
         
-        let isLeftCurled = isHandCurled(skeleton: leftHand?.handSkeleton)
-        let isRightCurled = isHandCurled(skeleton: rightHand?.handSkeleton)
+        var handComp: HandModelComponent?
+        var handEntity: Entity?
+        for entity in context.scene.performQuery(Self.handQuery) {
+            handComp = entity.components[HandModelComponent.self]
+            handEntity = entity
+            break
+        }
         
         for entity in context.scene.performQuery(Self.query) {
             var comp = entity.components[RotationalKnobComponent.self]!
             if !checkActive(entity) { continue }
             
-            let box = entity.visualBounds(relativeTo: nil)
-            let expandBox = BoundingBox(min: box.min - 0.02, max: box.max + 0.02)
+            let worldPos = entity.position(relativeTo: nil)
+            let triggerRadius: Float = 0.20
             
-            var activeHandPos: SIMD3<Float>? = nil
-            var activePreviousPos: SIMD3<Float>? = nil
-            var activeCurled = false
+            var isLeftNear = false
+            var isRightNear = false
+            if let lp = smoothedLeftTipPos, simd_distance(lp, worldPos) < triggerRadius { isLeftNear = true }
+            if let rp = smoothedRightTipPos, simd_distance(rp, worldPos) < triggerRadius { isRightNear = true }
             
-            if let lPos = smoothedLeftTipPos, expandBox.contains(lPos) {
-                activeHandPos = lPos; activePreviousPos = previousLeftTipPos; activeCurled = isLeftCurled
-            } else if let rPos = smoothedRightTipPos, expandBox.contains(rPos) {
-                activeHandPos = rPos; activePreviousPos = previousRightTipPos; activeCurled = isRightCurled
+            let activeSide: HandAnchor.Chirality = isLeftNear ? .left : .right
+            let anchor = activeSide == .left ? leftHand : rightHand
+            let skeleton = anchor?.handSkeleton
+            
+            let currentTipWorldPos = activeSide == .left ? smoothedLeftTipPos : smoothedRightTipPos
+            let currentWristWorldPos = activeSide == .left ? smoothedLeftWristPos : smoothedRightWristPos
+            let isPinching = (isLeftNear || isRightNear) && evaluatePinchState(skeleton: skeleton, component: &comp)
+            
+            if !comp.isGrabbed {
+                if isPinching, let tipPos = currentTipWorldPos {
+                    comp.isGrabbed = true
+                    comp.previousHandWorldPosition = tipPos
+                    comp.activeChirality = activeSide == .left ? 0 : 1
+                    
+                    let knobWorldPos = entity.position(relativeTo: nil)
+                    let knobWorldRot = entity.orientation(relativeTo: nil)
+                    let wristPos = currentWristWorldPos ?? tipPos
+                    comp.initialGripOffset = knobWorldRot.inverse.act(wristPos - knobWorldPos)
+                }
+            } else {
+                if isPinching, let tipPos = currentTipWorldPos {
+                    let worldDelta = tipPos - comp.previousHandWorldPosition
+                    let parentEntity = entity.parent ?? entity
+                    let localDelta = parentEntity.convert(position: tipPos, from: nil) - parentEntity.convert(position: comp.previousHandWorldPosition, from: nil)
+                    
+                    comp.currentAngle += localDelta.x * comp.sensitivity
+                    entity.transform.rotation = simd_quatf(angle: comp.currentAngle, axis: comp.localRotationAxis)
+                    comp.previousHandWorldPosition = tipPos
+                } else {
+                    comp.isGrabbed = false
+                    comp.activeChirality = -1
+                    comp.initialGripOffset = nil
+                    
+                    if var hc = handComp {
+                        if activeSide == .left { hc.leftSnapPosition = nil; hc.leftSnapOrientation = nil }
+                        else { hc.rightSnapPosition = nil; hc.rightSnapOrientation = nil }
+                        handEntity?.components.set(hc)
+                        handComp = hc
+                    }
+                }
             }
             
-            if comp.isGrabbed { if !activeCurled { comp.isGrabbed = false } }
-            else { if activeHandPos != nil && activeCurled { comp.isGrabbed = true } }
-            
-            if (comp.isGrabbed || activeHandPos != nil),
-               let cur = activeHandPos, let prev = activePreviousPos {
-                let parentEntity = entity.parent ?? entity
-                let localDelta = parentEntity.convert(position: cur, from: nil) - parentEntity.convert(position: prev, from: nil)
-                comp.currentAngle += localDelta.x * comp.sensitivity
-                entity.transform.rotation = simd_quatf(angle: comp.currentAngle, axis: comp.localRotationAxis)
+            if comp.isGrabbed, var hands = handComp {
+                let isLeft = comp.activeChirality == 0
+                let knobWorldPos = entity.position(relativeTo: nil)
+                let knobWorldRot = entity.orientation(relativeTo: nil)
+                let socketOffset = comp.initialGripOffset ?? SIMD3<Float>(0.0, 0.05, 0.0)
+                let socketPos = knobWorldPos + knobWorldRot.act(socketOffset)
+                
+                if isLeft {
+                    hands.leftSnapPosition = socketPos
+                    hands.leftSnapOrientation = nil
+                } else {
+                    hands.rightSnapPosition = socketPos
+                    hands.rightSnapOrientation = nil
+                }
+                handEntity?.components.set(hands)
+                handComp = hands
             }
+            
             entity.components.set(comp)
         }
     }

@@ -12,6 +12,9 @@ public struct LeverComponent: Component {
     public var currentAngle: Float = 0.0
     
     public var isGrabbed: Bool = false
+    public var activeChirality: Int = -1 // -1 = none, 0 = left, 1 = right
+    public var previousHandWorldPosition: SIMD3<Float> = .zero
+    public var initialGripOffset: SIMD3<Float>? = nil
     
     public var initialBoneRotation: simd_quatf? = nil
     public var initialEntityRotation: simd_quatf? = nil
