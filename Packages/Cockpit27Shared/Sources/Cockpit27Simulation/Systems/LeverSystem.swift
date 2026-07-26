@@ -96,15 +96,18 @@ public class LeverSystem: System {
         // ── 3. Process each lever entity ────────────────────────────────────
         for entity in context.scene.performQuery(Self.query) {
             var comp = entity.components[LeverComponent.self]!
-            let worldPos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
+            let pivotBasePos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
+            let leverWorldRot = comp.pivotEntity?.orientation(relativeTo: nil) ?? entity.orientation(relativeTo: nil)
             
-            let triggerRadius: Float = 0.12
+            // The top handle knob is leverRadius (0.20m) above the bottom pivot axle along local +Y
+            let handleWorldPos = pivotBasePos + leverWorldRot.act(SIMD3<Float>(0, comp.leverRadius, 0))
+            let triggerRadius: Float = 0.15
             
             var isLeftNear = false
             var isRightNear = false
             
-            if let lp = smoothedLeftPalmPos, simd_distance(lp, worldPos) < triggerRadius { isLeftNear = true }
-            if let rp = smoothedRightPalmPos, simd_distance(rp, worldPos) < triggerRadius { isRightNear = true }
+            if let lp = smoothedLeftPalmPos, simd_distance(lp, handleWorldPos) < triggerRadius { isLeftNear = true }
+            if let rp = smoothedRightPalmPos, simd_distance(rp, handleWorldPos) < triggerRadius { isRightNear = true }
             
             guard isLeftNear || isRightNear || comp.isGrabbed else { continue }
             
@@ -123,11 +126,9 @@ public class LeverSystem: System {
                     comp.previousHandWorldPosition = handPos
                     comp.activeChirality = activeSide == .left ? 0 : 1
                     
-                    let leverWorldPos = worldPos
-                    let leverWorldRot = entity.orientation(relativeTo: nil)
                     let wristPos = currentWristWorldPos ?? handPos
-                    comp.initialGripOffset = leverWorldRot.inverse.act(wristPos - leverWorldPos)
-                    print("🎛️ [LeverSystem] Lever '\(entity.name)' GRABBED by \(activeSide == .left ? "Left" : "Right") Hand! Angle: \(comp.currentAngle)")
+                    comp.initialGripOffset = leverWorldRot.inverse.act(wristPos - handleWorldPos)
+                    print("🎛️ [LeverSystem] Lever '\(entity.name)' GRABBED at Top Handle! Angle: \(comp.currentAngle)")
                 }
             } else {
                 if isGripping, let handPos = currentHandWorldPos {
@@ -198,13 +199,12 @@ public class LeverSystem: System {
                 entity.transform.rotation = quat * initial
             }
             
-            // Calculate Hand Model Snap Socket
+            // Calculate Hand Model Snap Socket at Top Handle
             if comp.isGrabbed, var hands = handComp {
                 let isLeft = comp.activeChirality == 0
-                let leverWorldPos = entity.position(relativeTo: nil)
-                let leverWorldRot = entity.orientation(relativeTo: nil)
-                let socketOffset = comp.initialGripOffset ?? SIMD3<Float>(0.0, 0.12, 0.0)
-                let socketPos = leverWorldPos + leverWorldRot.act(socketOffset)
+                let currentHandlePos = pivotBasePos + leverWorldRot.act(SIMD3<Float>(0, comp.leverRadius, 0))
+                let socketOffset = comp.initialGripOffset ?? SIMD3<Float>(0.0, 0.0, 0.0)
+                let socketPos = currentHandlePos + leverWorldRot.act(socketOffset)
                 
                 if isLeft {
                     hands.leftSnapPosition = socketPos
