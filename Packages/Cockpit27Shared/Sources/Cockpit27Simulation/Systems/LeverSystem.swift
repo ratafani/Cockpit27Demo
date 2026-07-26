@@ -135,15 +135,26 @@ public class LeverSystem: System {
                     let deltaTheta = (linearMovement / comp.leverRadius) * comp.sensitivity
                     var targetAngle = comp.currentAngle + deltaTheta
                     
+                    // Soft detent magnetic pull
                     for detent in comp.detents {
-                        if abs(targetAngle - detent) < comp.detentTolerance { targetAngle = detent; break }
+                        if abs(targetAngle - detent) < comp.detentTolerance * 0.5 {
+                            targetAngle = detent
+                            break
+                        }
                     }
+                    
                     comp.currentAngle = max(0, min(targetAngle, comp.maxAngle))
                     comp.previousHandWorldPosition = handPos
                     print("🎛️ [LeverSystem] Lever '\(entity.name)' Moving -> Angle: \(comp.currentAngle)")
                 } else {
-                    // Release
-                    print("✋ [LeverSystem] Lever '\(entity.name)' RELEASED")
+                    // Release & snap to nearest detent if within tolerance
+                    for detent in comp.detents {
+                        if abs(comp.currentAngle - detent) < comp.detentTolerance {
+                            comp.currentAngle = detent
+                            break
+                        }
+                    }
+                    print("✋ [LeverSystem] Lever '\(entity.name)' RELEASED at Angle: \(comp.currentAngle)")
                     comp.isGrabbed = false
                     comp.activeChirality = -1
                     comp.initialGripOffset = nil

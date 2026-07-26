@@ -24,7 +24,7 @@ public extension CockpitModel {
         }
         
         // ── Find the best child to use as a pivot entity ───────────────────
-        /// Returns the first ModelEntity in the hierarchy with joints, or the first child otherwise.
+        /// Returns the target ModelEntity to rotate, avoiding empty "_Root" dummy nodes.
         func findPivotChild(of root: Entity) -> Entity? {
             // First pass: recursive search for ModelEntity with joints (skinned mesh)
             var queue: [Entity] = Array(root.children)
@@ -36,9 +36,24 @@ public extension CockpitModel {
                 queue.append(contentsOf: current.children)
             }
             
-            // Second pass: any ModelEntity child (direct)
+            // Second pass: exact name match without "_Rig" (e.g. CP_Lever_Throttle_L inside CP_Lever_Throttle_L_Rig)
+            let targetName = root.name.replacingOccurrences(of: "_Rig", with: "")
+            if let exactMatch = root.findEntity(named: targetName), exactMatch != root {
+                return exactMatch
+            }
+            
+            // Third pass: child with children or ModelComponent (avoiding empty dummy "_Root" nodes)
             for child in root.children {
-                if child is ModelEntity { return child }
+                if !child.name.lowercased().contains("root") && (!child.children.isEmpty || child.components[ModelComponent.self] != nil) {
+                    return child
+                }
+            }
+            
+            // Fourth pass: any non-root child
+            for child in root.children {
+                if !child.name.lowercased().contains("root") {
+                    return child
+                }
             }
             
             // Fallback: first child
