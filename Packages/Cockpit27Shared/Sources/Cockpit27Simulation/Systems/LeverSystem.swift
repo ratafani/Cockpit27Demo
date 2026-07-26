@@ -96,12 +96,11 @@ public class LeverSystem: System {
         // ── 3. Process each lever entity ────────────────────────────────────
         for entity in context.scene.performQuery(Self.query) {
             var comp = entity.components[LeverComponent.self]!
-            let pivotBasePos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
-            let leverWorldRot = comp.pivotEntity?.orientation(relativeTo: nil) ?? entity.orientation(relativeTo: nil)
-            
-            // The top handle knob is leverRadius (0.20m) above the bottom pivot axle along local +Y
-            let handleWorldPos = pivotBasePos + leverWorldRot.act(SIMD3<Float>(0, comp.leverRadius, 0))
-            let triggerRadius: Float = 0.15
+            let bounds = entity.visualBounds(relativeTo: nil)
+            let handleWorldPos = bounds.center
+            let extents = bounds.extents
+            let maxExtent = max(extents.x, max(extents.y, extents.z))
+            let triggerRadius: Float = max(0.12, maxExtent * 0.5 + 0.05)
             
             var isLeftNear = false
             var isRightNear = false

@@ -91,8 +91,10 @@ public class RotationalKnobSystem: System {
             var comp = entity.components[RotationalKnobComponent.self]!
             if !checkActive(entity) { continue }
             
-            let worldPos = entity.position(relativeTo: nil)
-            let triggerRadius: Float = 0.08
+            let bounds = entity.visualBounds(relativeTo: nil)
+            let worldPos = bounds.center
+            let maxExtent = max(bounds.extents.x, max(bounds.extents.y, bounds.extents.z))
+            let triggerRadius: Float = max(0.04, maxExtent * 0.5 + 0.02)
             
             var isLeftNear = false
             var isRightNear = false

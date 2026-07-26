@@ -99,7 +99,8 @@ public extension CockpitModel {
             comp.pivotEntity = tL
             tL.components.set(comp)
             let worldPos = tL.position(relativeTo: nil)
-            print("  ✅ ThrottleL '\(tL.name)' → LeverComponent | worldPos=\(worldPos) | pivotEntity='\(tL.name)'")
+            let bounds = tL.visualBounds(relativeTo: nil)
+            print("  ✅ ThrottleL '\(tL.name)' → LeverComponent | worldPos=\(worldPos) | boundsCenter=\(bounds.center) | extents=\(bounds.extents)")
         } else {
             print("  ❌ ThrottleL NOT FOUND — searched for '\(EntityNames.throttleLeft)' and fallback '\(EntityNames.throttleLegacyFallback)'")
         }
@@ -117,7 +118,8 @@ public extension CockpitModel {
             comp.pivotEntity = tR
             tR.components.set(comp)
             let worldPos = tR.position(relativeTo: nil)
-            print("  ✅ ThrottleR '\(tR.name)' → LeverComponent | worldPos=\(worldPos) | pivotEntity='\(tR.name)'")
+            let bounds = tR.visualBounds(relativeTo: nil)
+            print("  ✅ ThrottleR '\(tR.name)' → LeverComponent | worldPos=\(worldPos) | boundsCenter=\(bounds.center) | extents=\(bounds.extents)")
         } else {
             print("  ❌ ThrottleR NOT FOUND — searched for '\(EntityNames.throttleRight)'")
         }
