@@ -31,12 +31,10 @@ public class LeverSystem: System {
         let index = SIMD3<Float>(indexTipCol.x, indexTipCol.y, indexTipCol.z)
         let middle = SIMD3<Float>(middleTipCol.x, middleTipCol.y, middleTipCol.z)
         let ring = SIMD3<Float>(ringTipCol.x, ringTipCol.y, ringTipCol.z)
-        let little = SIMD3<Float>(littleTipCol.x, littleTipCol.y, littleTipCol.z)
         
         let distanceToIndex = simd_distance(thumb, index)
         let distanceToMiddle = simd_distance(thumb, middle)
         let distanceToRing = simd_distance(thumb, ring)
-        let distanceToLittle = simd_distance(thumb, little)
         
         // Also check power fist curl
         let wristCol = skeleton.joint(.wrist).anchorFromJointTransform.columns.3
@@ -64,14 +62,14 @@ public class LeverSystem: System {
         var rightWristRaw: SIMD3<Float>? = nil
         
         if let anchor = leftHand, anchor.isTracked, let skeleton = anchor.handSkeleton {
-            let palmCol = (anchor.originFromAnchorTransform * skeleton.joint(.middleFingerKnuckle).anchorFromJointTransform).columns.3
-            leftPalmRaw = SIMD3<Float>(palmCol.x, palmCol.y, palmCol.z)
+            let col = (anchor.originFromAnchorTransform * skeleton.joint(.middleFingerKnuckle).anchorFromJointTransform).columns.3
+            leftPalmRaw = SIMD3<Float>(col.x, col.y, col.z)
             let wristCol = anchor.originFromAnchorTransform.columns.3
             leftWristRaw = SIMD3<Float>(wristCol.x, wristCol.y, wristCol.z)
         }
         if let anchor = rightHand, anchor.isTracked, let skeleton = anchor.handSkeleton {
-            let palmCol = (anchor.originFromAnchorTransform * skeleton.joint(.middleFingerKnuckle).anchorFromJointTransform).columns.3
-            rightPalmRaw = SIMD3<Float>(palmCol.x, palmCol.y, palmCol.z)
+            let col = (anchor.originFromAnchorTransform * skeleton.joint(.middleFingerKnuckle).anchorFromJointTransform).columns.3
+            rightPalmRaw = SIMD3<Float>(col.x, col.y, col.z)
             let wristCol = anchor.originFromAnchorTransform.columns.3
             rightWristRaw = SIMD3<Float>(wristCol.x, wristCol.y, wristCol.z)
         }
@@ -79,10 +77,11 @@ public class LeverSystem: System {
         previousLeftPalmPos = smoothedLeftPalmPos
         previousRightPalmPos = smoothedRightPalmPos
         
-        if let p = leftPalmRaw { smoothedLeftPalmPos = smoothedLeftPalmPos.map { $0 * 0.8 + p * 0.2 } ?? p } else { smoothedLeftPalmPos = nil; previousLeftPalmPos = nil }
-        if let p = rightPalmRaw { smoothedRightPalmPos = smoothedRightPalmPos.map { $0 * 0.8 + p * 0.2 } ?? p } else { smoothedRightPalmPos = nil; previousRightPalmPos = nil }
-        if let p = leftWristRaw { smoothedLeftWristPos = smoothedLeftWristPos.map { $0 * 0.8 + p * 0.2 } ?? p } else { smoothedLeftWristPos = nil }
-        if let p = rightWristRaw { smoothedRightWristPos = smoothedRightWristPos.map { $0 * 0.8 + p * 0.2 } ?? p } else { smoothedRightWristPos = nil }
+        if let p = leftPalmRaw { smoothedLeftPalmPos = smoothedLeftPalmPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedLeftPalmPos = nil; previousLeftPalmPos = nil }
+        if let p = rightPalmRaw { smoothedRightPalmPos = smoothedRightPalmPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedRightPalmPos = nil; previousRightPalmPos = nil }
+        
+        if let p = leftWristRaw { smoothedLeftWristPos = smoothedLeftWristPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedLeftWristPos = nil }
+        if let p = rightWristRaw { smoothedRightWristPos = smoothedRightWristPos.map { $0 * 0.7 + p * 0.3 } ?? p } else { smoothedRightWristPos = nil }
         
         // ── 2. Find HandModelComponent ─────────────────────────────────────
         var handComp: HandModelComponent?
@@ -96,6 +95,8 @@ public class LeverSystem: System {
         // ── 3. Process each lever entity ────────────────────────────────────
         for entity in context.scene.performQuery(Self.query) {
             var comp = entity.components[LeverComponent.self]!
+            let pivotBasePos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
+            let leverWorldRot = comp.pivotEntity?.orientation(relativeTo: nil) ?? entity.orientation(relativeTo: nil)
             let bounds = entity.visualBounds(relativeTo: nil)
             let handleWorldPos = bounds.center
             let extents = bounds.extents
