@@ -11,7 +11,7 @@ struct Cockpit27App: App {
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveSimulationView(onExit: {
+            ImmersiveSimulationView(showGloves: $coordinator.showGloves, hidePhysicalHand: $coordinator.hidePhysicalHand, onExit: {
                 Task {
                     await coordinator.backToIntro()
                 }

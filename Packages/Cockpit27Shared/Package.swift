@@ -49,7 +49,8 @@ let package = Package(
                 .product(name: "ILSEngine", package: "ILSpatial"),
                 .product(name: "ILSHandTracking", package: "ILSpatial"),
                 .product(name: "RealityKitContent", package: "RealityKitContent")
-            ]
+            ],
+            resources: [.process("Resources")]
         )
     ]
 )
