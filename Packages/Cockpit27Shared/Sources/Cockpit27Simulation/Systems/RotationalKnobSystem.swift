@@ -92,7 +92,7 @@ public class RotationalKnobSystem: System {
             if !checkActive(entity) { continue }
             
             let worldPos = entity.position(relativeTo: nil)
-            let triggerRadius: Float = 0.20
+            let triggerRadius: Float = 0.35
             
             var isLeftNear = false
             var isRightNear = false
@@ -117,17 +117,19 @@ public class RotationalKnobSystem: System {
                     let knobWorldRot = entity.orientation(relativeTo: nil)
                     let wristPos = currentWristWorldPos ?? tipPos
                     comp.initialGripOffset = knobWorldRot.inverse.act(wristPos - knobWorldPos)
+                    print("🔘 [RotationalKnobSystem] Knob '\(entity.name)' PINCHED by \(activeSide == .left ? "Left" : "Right") Hand! Angle: \(comp.currentAngle)")
                 }
             } else {
                 if isPinching, let tipPos = currentTipWorldPos {
-                    let worldDelta = tipPos - comp.previousHandWorldPosition
                     let parentEntity = entity.parent ?? entity
                     let localDelta = parentEntity.convert(position: tipPos, from: nil) - parentEntity.convert(position: comp.previousHandWorldPosition, from: nil)
                     
                     comp.currentAngle += localDelta.x * comp.sensitivity
                     entity.transform.rotation = simd_quatf(angle: comp.currentAngle, axis: comp.localRotationAxis)
                     comp.previousHandWorldPosition = tipPos
+                    print("🔘 [RotationalKnobSystem] Knob '\(entity.name)' Rotating -> Angle: \(comp.currentAngle)")
                 } else {
+                    print("✋ [RotationalKnobSystem] Knob '\(entity.name)' RELEASED")
                     comp.isGrabbed = false
                     comp.activeChirality = -1
                     comp.initialGripOffset = nil

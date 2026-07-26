@@ -96,9 +96,9 @@ public class LeverSystem: System {
         // ── 3. Process each lever entity ────────────────────────────────────
         for entity in context.scene.performQuery(Self.query) {
             var comp = entity.components[LeverComponent.self]!
-            let worldPos = entity.position(relativeTo: nil)
+            let worldPos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
             
-            let triggerRadius: Float = 0.25
+            let triggerRadius: Float = 0.35
             
             var isLeftNear = false
             var isRightNear = false
@@ -120,10 +120,11 @@ public class LeverSystem: System {
                     comp.previousHandWorldPosition = handPos
                     comp.activeChirality = activeSide == .left ? 0 : 1
                     
-                    let leverWorldPos = entity.position(relativeTo: nil)
+                    let leverWorldPos = worldPos
                     let leverWorldRot = entity.orientation(relativeTo: nil)
                     let wristPos = currentWristWorldPos ?? handPos
                     comp.initialGripOffset = leverWorldRot.inverse.act(wristPos - leverWorldPos)
+                    print("🎛️ [LeverSystem] Lever '\(entity.name)' GRABBED by \(activeSide == .left ? "Left" : "Right") Hand! Angle: \(comp.currentAngle)")
                 }
             } else {
                 if isGripping, let handPos = currentHandWorldPos {
@@ -139,8 +140,10 @@ public class LeverSystem: System {
                     }
                     comp.currentAngle = max(0, min(targetAngle, comp.maxAngle))
                     comp.previousHandWorldPosition = handPos
+                    print("🎛️ [LeverSystem] Lever '\(entity.name)' Moving -> Angle: \(comp.currentAngle)")
                 } else {
                     // Release
+                    print("✋ [LeverSystem] Lever '\(entity.name)' RELEASED")
                     comp.isGrabbed = false
                     comp.activeChirality = -1
                     comp.initialGripOffset = nil
