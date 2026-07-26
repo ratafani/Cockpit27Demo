@@ -92,23 +92,26 @@ public class RotationalKnobSystem: System {
             if !checkActive(entity) { continue }
             
             let worldPos = entity.position(relativeTo: nil)
-            let triggerRadius: Float = 0.35
+            let triggerRadius: Float = 0.08
             
             var isLeftNear = false
             var isRightNear = false
             if let lp = smoothedLeftTipPos, simd_distance(lp, worldPos) < triggerRadius { isLeftNear = true }
             if let rp = smoothedRightTipPos, simd_distance(rp, worldPos) < triggerRadius { isRightNear = true }
             
+            guard isLeftNear || isRightNear || comp.isGrabbed else { continue }
+            
             let activeSide: HandAnchor.Chirality = isLeftNear ? .left : .right
             let anchor = activeSide == .left ? leftHand : rightHand
             let skeleton = anchor?.handSkeleton
             
+            let isHandBusy = activeSide == .left ? (handComp?.leftSnapPosition != nil) : (handComp?.rightSnapPosition != nil)
             let currentTipWorldPos = activeSide == .left ? smoothedLeftTipPos : smoothedRightTipPos
             let currentWristWorldPos = activeSide == .left ? smoothedLeftWristPos : smoothedRightWristPos
-            let isPinching = (isLeftNear || isRightNear) && evaluatePinchState(skeleton: skeleton, component: &comp)
+            let isPinching = evaluatePinchState(skeleton: skeleton, component: &comp)
             
             if !comp.isGrabbed {
-                if isPinching, let tipPos = currentTipWorldPos {
+                if !isHandBusy && isPinching, let tipPos = currentTipWorldPos {
                     comp.isGrabbed = true
                     comp.previousHandWorldPosition = tipPos
                     comp.activeChirality = activeSide == .left ? 0 : 1

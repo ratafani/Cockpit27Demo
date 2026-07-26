@@ -98,7 +98,7 @@ public class LeverSystem: System {
             var comp = entity.components[LeverComponent.self]!
             let worldPos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
             
-            let triggerRadius: Float = 0.35
+            let triggerRadius: Float = 0.12
             
             var isLeftNear = false
             var isRightNear = false
@@ -106,16 +106,19 @@ public class LeverSystem: System {
             if let lp = smoothedLeftPalmPos, simd_distance(lp, worldPos) < triggerRadius { isLeftNear = true }
             if let rp = smoothedRightPalmPos, simd_distance(rp, worldPos) < triggerRadius { isRightNear = true }
             
+            guard isLeftNear || isRightNear || comp.isGrabbed else { continue }
+            
             let activeSide: HandAnchor.Chirality = isLeftNear ? .left : .right
             let anchor = activeSide == .left ? leftHand : rightHand
             let skeleton = anchor?.handSkeleton
             
+            let isHandBusy = activeSide == .left ? (handComp?.leftSnapPosition != nil) : (handComp?.rightSnapPosition != nil)
             let currentHandWorldPos = activeSide == .left ? smoothedLeftPalmPos : smoothedRightPalmPos
             let currentWristWorldPos = activeSide == .left ? smoothedLeftWristPos : smoothedRightWristPos
-            let isGripping = (isLeftNear || isRightNear) && evaluateGripState(skeleton: skeleton, component: &comp)
+            let isGripping = evaluateGripState(skeleton: skeleton, component: &comp)
             
             if !comp.isGrabbed {
-                if isGripping, let handPos = currentHandWorldPos {
+                if !isHandBusy && isGripping, let handPos = currentHandWorldPos {
                     comp.isGrabbed = true
                     comp.previousHandWorldPosition = handPos
                     comp.activeChirality = activeSide == .left ? 0 : 1
