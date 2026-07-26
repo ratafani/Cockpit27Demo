@@ -98,7 +98,7 @@ public class HandTrackingSystem: System {
         pinchPos = SIMD3<Float>(palmCol.x, palmCol.y, palmCol.z)
         
         if isPinching && !wasPinching {
-            var material = SimpleMaterial(color: .green.withAlphaComponent(0.8), isMetallic: false)
+            let material = SimpleMaterial(color: .green.withAlphaComponent(0.8), isMetallic: false)
             glove.model?.materials = [material]
         } else if !isPinching && wasPinching {
             glove.model?.materials = originalMaterials

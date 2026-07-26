@@ -2,6 +2,7 @@ import Foundation
 import RealityKit
 
 /// Strongly-typed model mapping the exact Reality Composer Pro entity hierarchy for Cockpit27.
+@MainActor
 public struct CockpitModel {
     
     // MARK: - Hierarchy Entity Names

@@ -10,7 +10,7 @@ public extension CockpitModel {
         // These avoid bit 0 used by makeInteractable()/generateCollisionShapes().
         let handGroup    = CollisionGroup(rawValue: 1 << 2)
         let cockpitGroup = CollisionGroup(rawValue: 1 << 3)
-        let controlFilter = CollisionFilter(group: cockpitGroup, mask: handGroup)
+        _ = CollisionFilter(group: cockpitGroup, mask: handGroup)
         
         // ── Diagnostic: print full entity hierarchy ────────────────────────
         func printHierarchy(_ entity: Entity, indent: String = "  ") {
