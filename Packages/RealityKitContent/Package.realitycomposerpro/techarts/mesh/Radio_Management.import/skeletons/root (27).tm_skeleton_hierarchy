@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "6a13a8bb-ad16-ccc7-4819-7830c283b599"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_CallVHF1_Rig/CP_Button_RadioManagement_CallVHF1_Root"
+joints: [
+	{
+		__uuid: "d5741d3f-d253-8086-c1f2-3dd7b125755e"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "8d760651-994d-4d01-e75c-a1f452e629ef"
+			position: {
+				__uuid: "105afd75-53ad-f02e-76f0-515dcb6869a3"
+			}
+			rotation: {
+				__uuid: "ce55ede1-e3d4-bc19-f770-06e2b48922dc"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "43802898-4904-f123-22dc-dcbdc01a5a85"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "41cbcbb8-8d38-08e7-e21c-dabae38c9648"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "2bd36327-44f1-6c1e-dbfe-d83753d1f73a"

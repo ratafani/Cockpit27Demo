@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "cf924f7f-27ea-9691-acd7-d4510c939e57"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_IntRad_Rig/CP_Switch_RadioManagement_IntRad_Root"
+joints: [
+	{
+		__uuid: "18354c81-a8db-7b1e-a8b2-42a26e59c74d"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "d0442842-09f9-06af-3322-adb62ad1e51d"
+			position: {
+				__uuid: "79bfd649-a651-a4fe-cae7-bff2963fcda4"
+			}
+			rotation: {
+				__uuid: "89454296-bdd3-45d1-283d-972ce1fc12cb"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "7e8a629e-3d9f-51b8-4933-a27ef262e442"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "d35158ef-8de5-dd68-21a9-35230d1e4973"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "f99a175c-7c50-563d-fa47-ab4f75f3c663"

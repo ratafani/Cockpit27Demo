@@ -1,0 +1,70 @@
+__type: "tm_usd_asset"
+__uuid: "be50ef4a-ebe4-942f-0d66-f827121d66e9"
+source_path: "../../../../../../Downloads/Radio_Management2.usdc"
+settings: [
+	{
+		__type: "tm_scene_optimizer"
+		__uuid: "c2237e69-136a-f977-fc58-0572d6d2d5dc"
+		settings: {
+			__uuid: "cf7c15f4-420e-3af8-eaf1-d0118f4f82dc"
+			graph: {
+				__uuid: "c5e6359b-8267-1f71-de44-05d6c2a3e7cd"
+				interface: {
+					__uuid: "ae1f7b84-ab76-0220-e4e7-da8951ebcd5f"
+					inputs: [
+						{
+							__uuid: "9e46d1e5-6a12-459e-f82b-7fec3a2498a1"
+							name: "Merging Mode"
+							id: "scene_optimizer_settings__merging_mode"
+							value: {
+								__type: "tm_scene_optimizer_merging_mode"
+								__uuid: "ca23feed-bc38-90cc-60e5-fe0e0d7c815c"
+							}
+							public: true
+						}
+						{
+							__uuid: "6a90b7d5-26f8-4432-7dc1-32dd327a1579"
+							name: "Entities to Keep"
+							id: "scene_optimizer_settings__keep_entities_list"
+							value: {
+								__type: "tm_scene_optimizer_keep_entities_list"
+								__uuid: "9d4922df-ed84-541c-7a4f-085b2fa28364"
+							}
+							public: true
+						}
+					]
+				}
+			}
+		}
+		output: "d9434701-1433-b5e1-dc13-cd6723f2dcea"
+	}
+	{
+		__type: "tm_lod_generator"
+		__uuid: "db8f4d81-5f97-3507-a72e-3d2a2629719c"
+	}
+	{
+		__type: "tm_usd_animation_settings"
+		__uuid: "8a3a3222-2191-b1c2-e55d-8ecd5881ef7c"
+	}
+]
+pro_settings: [
+	{
+		__type: "tm_usd_purpose_settings"
+		__uuid: "cfd80511-cd63-02f7-bec7-8ff2a73f959e"
+	}
+	{
+		__type: "tm_usd_dev_settings"
+		__uuid: "9fed2c61-72fe-20d7-70c7-22643cd692a8"
+		mesh_creation_graph: "feefd623-b26a-6155-97b0-2dd807e0e1c3"
+	}
+]
+variants: [
+	{
+		__uuid: "65894462-5c66-5e65-007a-80431e4f873a"
+		name: "Default"
+		root_entity: "420a77ea-9dd8-c374-acb4-1b6053386b6f"
+		proxy_entity: "ad736f88-8394-e5d6-cd79-1194a2205949"
+		session: "04246193-0a1f-1333-d6e4-a0f9b69bfb52"
+	}
+]
+__asset_uuid: "6687c2c9-720f-c09f-d2cb-d5668a77ed91"

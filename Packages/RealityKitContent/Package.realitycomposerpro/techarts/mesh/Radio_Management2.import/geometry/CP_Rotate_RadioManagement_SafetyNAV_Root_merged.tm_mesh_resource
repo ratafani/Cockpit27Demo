@@ -1,0 +1,41 @@
+__type: "tm_mesh_resource"
+__uuid: "c1c0ca1d-54da-be0d-b3cc-24ab872d4a11"
+instances: [
+	{
+		__uuid: "f1ab4fa2-bd9f-8152-68c6-7ad659075b24"
+		model: "9a32df51-dca5-d629-02d2-5f484e4b2219"
+		transform: {
+			__uuid: "eec7444f-d872-4836-4f6d-ed2a56d25b6b"
+			position: {
+				__uuid: "36326f44-0d48-d1a6-5c72-a11bd4cd0c89"
+			}
+			rotation: {
+				__uuid: "a752c3d2-8ff8-1378-8549-87adb5345744"
+			}
+			scale: {
+				__uuid: "3b25a896-6df0-b88b-14fc-718c39a28674"
+			}
+		}
+	}
+]
+models: [
+	{
+		__uuid: "9a32df51-dca5-d629-02d2-5f484e4b2219"
+		name: "Cylinder_031"
+		geometry: "fd657872-95d5-b23e-23ab-d067e1a84aab"
+		skinning_data: {
+			__uuid: "feb50a2f-e3a9-e05d-6d02-ab1ba12b887d"
+			skelton_name: "root/CP_RadioManagement_Parent/CP_Rotate_RadioManagement_SafetyNAV_Rig/CP_Rotate_RadioManagement_SafetyNAV_Root"
+			bones: [
+				{
+					__uuid: "6a26c5bf-da22-8a3f-8e6f-03fd9c0fac88"
+					name: "Bone"
+				}
+			]
+		}
+	}
+]
+skeletons: [
+	"94f0c727-fdd9-1b6b-1110-a3b94752dd6c"
+]
+__asset_uuid: "e45af17f-5ed4-0e29-e9e7-ef1490876978"

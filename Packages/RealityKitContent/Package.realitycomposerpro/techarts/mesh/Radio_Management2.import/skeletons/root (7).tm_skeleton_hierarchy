@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "cfec5535-ad53-dea9-7de2-e41a8e04736a"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_SEL_Rig/CP_Button_RadioManagement_SEL_Root"
+joints: [
+	{
+		__uuid: "16bc72f0-0a53-b894-129d-df4eabc03067"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "5ed6befa-8f02-d026-cf04-56103fe59aeb"
+			position: {
+				__uuid: "0e7f3543-d150-c821-050b-5dda936bdcff"
+			}
+			rotation: {
+				__uuid: "0c3c1f4e-310e-da96-7af1-269e167e695c"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "4dfb0e94-9fc9-c806-aaaf-6cbd20bc8632"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "ad6fce97-ce56-137d-4c4a-314f6ec0854d"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "3666a465-6366-0a5c-d768-204e2fdd2037"

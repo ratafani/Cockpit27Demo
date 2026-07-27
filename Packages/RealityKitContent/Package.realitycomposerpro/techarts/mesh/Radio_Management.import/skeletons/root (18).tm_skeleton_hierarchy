@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "680896b3-fe2b-61f6-33b8-b80823f4dfcc"
+name: "root/CP_RadioManagement_Parent/CP_Switch_RadioManagement_Power_Rig/CP_Switch_RadioManagement_Power_Root"
+joints: [
+	{
+		__uuid: "f04fd2a6-9691-92bf-f01b-9fa9d80e215d"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "3988d631-5926-9670-a5c9-31e52ee57951"
+			position: {
+				__uuid: "a24dac01-f5df-ca9e-b72f-982d6eb9a954"
+			}
+			rotation: {
+				__uuid: "545822b9-4755-5179-53a4-ba7a928abb42"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "e2fa23ea-aee3-6ec6-bc8e-eee4f3848a63"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "3368d824-ea5a-29a2-fc60-10e794458f3a"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "4b7e3380-3a5e-df56-8591-b47555849f9b"

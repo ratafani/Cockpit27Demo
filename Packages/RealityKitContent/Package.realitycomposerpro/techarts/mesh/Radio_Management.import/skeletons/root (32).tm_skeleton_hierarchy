@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "4010d990-0a91-a093-6360-458281a31f95"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_AttCAB_Rig/CP_Button_RadioManagement_AttCAB_Root"
+joints: [
+	{
+		__uuid: "26465549-3e24-9fe0-d5ca-46358ae05bfb"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "f1c6f2a3-5caa-ce4d-53ca-916e0093b4db"
+			position: {
+				__uuid: "5b7fa6e8-0a0d-1cb3-062f-6c0b1edc8120"
+			}
+			rotation: {
+				__uuid: "2d556c97-1aed-d96a-37fe-9a1c7557f1f3"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "4a438fd1-91b1-e59f-17eb-0397f3c9a955"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "2c35d569-d784-a88b-80aa-a3d5918566c9"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "d097bc47-0ddb-9420-185e-026bbdc8c04e"

@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "aa43be91-96d7-33c4-6fed-37370185e10c"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_VHF2_Rig/CP_Button_RadioManagement_VHF2_Root"
+joints: [
+	{
+		__uuid: "84f34af6-2785-0d2a-ad57-a424695450a5"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "cd2064ad-adb5-dc88-d858-3f0e462cd5a7"
+			position: {
+				__uuid: "d722d0df-e955-ff6e-624a-b7ac848bd825"
+			}
+			rotation: {
+				__uuid: "4898c84a-8506-9d48-bbb0-d0d4d73befd4"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "b94026c2-bebd-0c0f-393e-8c08bb39ae09"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "fe11a8cf-7360-c521-2942-5a5eb0ed81ae"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "bb9f0526-9d07-6a23-b880-ee729217d30e"
