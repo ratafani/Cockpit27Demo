@@ -74,16 +74,25 @@ public class LinearActuatorSystem: System {
             if !checkActive(entity) { continue }
             
             var targetWorldPos: SIMD3<Float>? = nil
-            let box = entity.visualBounds(relativeTo: nil)
-            let expandBox = BoundingBox(min: box.min - 0.05, max: box.max + 0.05)
             
-            if leftHandTargetID == nil, let lPos = smoothedLeftTipPos, box.contains(lPos) { leftHandTargetID = entity.id }
-            else if rightHandTargetID == nil, let rPos = smoothedRightTipPos, box.contains(rPos) { rightHandTargetID = entity.id }
+            var isLeftTouching = false
+            var isRightTouching = false
+            
+            if let lPos = smoothedLeftTipPos, isPointInsideEntity(lPos, entity: entity, padding: 0.008) {
+                isLeftTouching = true
+            }
+            if let rPos = smoothedRightTipPos, isPointInsideEntity(rPos, entity: entity, padding: 0.008) {
+                isRightTouching = true
+            }
+
+            
+            if leftHandTargetID == nil && isLeftTouching { leftHandTargetID = entity.id }
+            else if rightHandTargetID == nil && isRightTouching { rightHandTargetID = entity.id }
             
             if leftHandTargetID == entity.id {
-                if let lPos = smoothedLeftTipPos, expandBox.contains(lPos) { targetWorldPos = lPos } else { leftHandTargetID = nil }
+                if isLeftTouching, let lPos = smoothedLeftTipPos { targetWorldPos = lPos } else { leftHandTargetID = nil }
             } else if rightHandTargetID == entity.id {
-                if let rPos = smoothedRightTipPos, expandBox.contains(rPos) { targetWorldPos = rPos } else { rightHandTargetID = nil }
+                if isRightTouching, let rPos = smoothedRightTipPos { targetWorldPos = rPos } else { rightHandTargetID = nil }
             }
             
             if let worldPos = targetWorldPos {
@@ -97,5 +106,6 @@ public class LinearActuatorSystem: System {
             }
             entity.components.set(comp)
         }
+
     }
 }

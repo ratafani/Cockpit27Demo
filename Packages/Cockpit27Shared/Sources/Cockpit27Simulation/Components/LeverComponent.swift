@@ -2,6 +2,7 @@ import RealityKit
 import simd
 
 public struct LeverComponent: Component {
+    public var controlID: String = "LEVER_CONTROL"
     public let pivotOffset: SIMD3<Float>
     public let leverRadius: Float
     public let sensitivity: Float
@@ -18,15 +19,20 @@ public struct LeverComponent: Component {
     
     public var initialBoneRotation: simd_quatf? = nil
     public var initialEntityRotation: simd_quatf? = nil
+    public var initialWorldRotation: simd_quatf? = nil
     
     // The actual child entity to rotate in LOCAL space (set at setup time)
     public var pivotEntity: Entity?
+    
+    // The specific inner mesh and bone for collision & snapping
+    public var handleMeshEntity: Entity?
+    public var handleJointIndex: Int
     
     public var boneIndex: Int
     
     public init(pivotOffset: SIMD3<Float>, leverRadius: Float = 0.15, sensitivity: Float = 1.0,
                 maxAngle: Float = Float.pi/2, baseAxis: SIMD3<Float> = [1, 0, 0],
-                detents: [Float] = [], detentTolerance: Float = 0.05, boneIndex: Int = 0) {
+                detents: [Float] = [], detentTolerance: Float = 0.05, boneIndex: Int = 0, handleJointIndex: Int = 0) {
         self.pivotOffset = pivotOffset
         self.leverRadius = leverRadius
         self.sensitivity = sensitivity
@@ -35,5 +41,6 @@ public struct LeverComponent: Component {
         self.detents = detents
         self.detentTolerance = detentTolerance
         self.boneIndex = boneIndex
+        self.handleJointIndex = handleJointIndex
     }
 }

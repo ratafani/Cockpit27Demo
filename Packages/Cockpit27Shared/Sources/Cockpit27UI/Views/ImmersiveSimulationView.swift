@@ -28,8 +28,8 @@ public struct ImmersiveSimulationView: View {
                 // Primary: Load updatedcockpit.reality scene
                 let cockpitScene = try await Entity(named: "updatedcockpit", in: realityKitContentBundle)
                 
-                // Align RCP origin (0,0,0) directly with the user's initial head position (0,0,0 in VisionOS)
-                cockpitScene.position = .zero 
+                // Align RCP origin (0,0,0) directly with the user's initial head position
+                cockpitScene.position = .zero
                 
                 setupCockpit(scene: cockpitScene)
                 content.add(cockpitScene)
@@ -49,7 +49,7 @@ public struct ImmersiveSimulationView: View {
                 do {
                     // Fallback: try loading "Cockpit_A320" or "world" if named differently in scene package
                     let fallbackScene = try await Entity(named: "Cockpit_A320", in: realityKitContentBundle)
-                    fallbackScene.position = .zero 
+                    fallbackScene.position = .zero
                     
                     setupCockpit(scene: fallbackScene)
                     content.add(fallbackScene)
@@ -123,14 +123,35 @@ public struct ImmersiveSimulationView: View {
         for name in buttonNames {
             if let btn = scene.findEntity(named: name) {
                 makeInteractable(btn)
+                attachButtonTrigger(to: btn)
                 var emissiveComp = EmissiveButtonComponent()
                 let modelEntities = findModelEntities(in: btn)
                 emissiveComp.targetEntities = modelEntities
                 btn.components.set(emissiveComp)
-                print("🔘 [setupCockpit] Registered button '\(btn.name)' with \(modelEntities.count) target ModelEntities")
+                print("🔘 [setupCockpit] Registered button '\(btn.name)' with \(modelEntities.count) target ModelEntities & Trigger Colliders")
             }
         }
     }
+    
+    private func attachButtonTrigger(to btn: Entity) {
+        let handGroup = CollisionGroup(rawValue: 1 << 2)
+        let cockpitGroup = CollisionGroup(rawValue: 1 << 3)
+        let filter = CollisionFilter(group: cockpitGroup, mask: handGroup)
+        
+        let targets = findModelEntities(in: btn)
+        for target in targets {
+            if let model = target as? ModelEntity, let mesh = model.model?.mesh {
+                let shape = ShapeResource.generateConvex(from: mesh)
+                target.components.set(CollisionComponent(shapes: [shape], mode: .trigger, filter: filter))
+            } else {
+                let shape = ShapeResource.generateBox(size: [0.018, 0.018, 0.015])
+                target.components.set(CollisionComponent(shapes: [shape], mode: .trigger, filter: filter))
+            }
+        }
+
+
+    }
+
     
     private func findModelEntities(in root: Entity) -> [Entity] {
         var results = [Entity]()

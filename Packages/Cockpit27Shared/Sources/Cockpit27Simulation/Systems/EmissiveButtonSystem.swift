@@ -30,47 +30,48 @@ public class EmissiveButtonSystem: System {
             indexTips.append(SIMD3<Float>(col.x, col.y, col.z))
         }
         
+        // Unused handComp removed
+        
         for entity in entities {
             guard var component = entity.components[EmissiveButtonComponent.self] else { continue }
             
-            // 1. Physical 3D Hand Skeleton Proximity Collision
-            if !indexTips.isEmpty {
-                let buttonCenter = entity.visualBounds(relativeTo: nil).center
-                var minDist: Float = .greatestFiniteMagnitude
-                for tip in indexTips {
-                    let d = simd_distance(tip, buttonCenter)
-                    if d < minDist { minDist = d }
-                }
-                
-                // Press Threshold: finger tip within 3.5cm of button center
-                if minDist < 0.035 {
-                    if !component.isTouching {
-                        component.isTouching = true
-                        component.isOn.toggle()
-                        component.startEmissiveValue = component.currentEmissiveValue
-                        component.targetEmissiveValue = component.isOn ? 5.0 : 0.0
-                        component.isAnimating = true
-                        component.elapsedTime = 0
-                        
-                        print("👉 [HandCollision] Index finger touched '\(entity.name)' (dist: \(String(format: "%.3f", minDist))m) -> Light: \(component.isOn ? "ON (5.0)" : "OFF (0.0)")")
-                        
-                        // Push button in 1cm
-                        if component.originalPosition == nil {
-                            component.originalPosition = entity.position
-                        }
-                        let restPos = component.originalPosition ?? entity.position
-                        entity.position = restPos + SIMD3<Float>(0, 0, -0.01)
-                    }
-                } else if minDist > 0.055 { // Release Hysteresis: finger > 5.5cm away
-                    if component.isTouching {
-                        component.isTouching = false
-                        if let restPos = component.originalPosition {
-                            entity.position = restPos // Spring back out
-                        }
-                        print("✋ [HandCollision] Index finger pulled away from '\(entity.name)' -> Button re-armed")
-                    }
+            var isCollidingWithIndex = false
+            for tip in indexTips {
+                if isPointInsideEntity(tip, entity: entity, padding: 0.005) {
+                    isCollidingWithIndex = true
+                    break
                 }
             }
+            
+            if isCollidingWithIndex {
+
+                if !component.isTouching {
+                    component.isTouching = true
+                    component.isOn.toggle()
+                    component.startEmissiveValue = component.currentEmissiveValue
+                    component.targetEmissiveValue = component.isOn ? 5.0 : 0.0
+                    component.isAnimating = true
+                    component.elapsedTime = 0
+                    
+                    print("👉 [NativeCollision] Index finger touched '\(entity.name)' -> Light: \(component.isOn ? "ON (5.0)" : "OFF (0.0)")")
+                    
+                    // Push button in 1cm
+                    if component.originalPosition == nil {
+                        component.originalPosition = entity.position
+                    }
+                    let restPos = component.originalPosition ?? entity.position
+                    entity.position = restPos + SIMD3<Float>(0, 0, -0.01)
+                }
+            } else {
+                if component.isTouching {
+                    component.isTouching = false
+                    if let restPos = component.originalPosition {
+                        entity.position = restPos // Spring back out
+                    }
+                    print("✋ [NativeCollision] Index finger pulled away from '\(entity.name)' -> Button re-armed")
+                }
+            }
+
             
             // 2. Animate Emissive Light Transition
             if component.isAnimating {

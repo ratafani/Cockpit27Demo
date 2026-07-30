@@ -1,5 +1,6 @@
 import RealityKit
 import ILSHandTracking
+import Cockpit27Core
 
 @MainActor
 public enum CockpitHandTracking {
@@ -9,22 +10,28 @@ public enum CockpitHandTracking {
 public struct CockpitSimulationSetup {
     @MainActor
     public static func registerAll() {
-        EmissiveButtonComponent.registerComponent()
-        EmissiveButtonSystem.registerSystem()
+        // Register Live Hand Tracking Service into DI Container
+        DependencyContainer.shared.register(HandTracking27ServiceProtocol.self, service: CockpitHandTrackingBridge())
         
+        // Register Components
+        EmissiveButtonComponent.registerComponent()
         PanelVolumeComponent.registerComponent()
         LinearActuatorComponent.registerComponent()
-        SnappingSwitchComponent.registerComponent()
+        SwitchComponent.registerComponent()
         LeverComponent.registerComponent()
-        JoystickComponent.registerComponent()
-        RotationalKnobComponent.registerComponent()
+        SideStickComponent.registerComponent()
+        KnobComponent.registerComponent()
         HandModelComponent.registerComponent()
+        CockpitControlTagComponent.registerComponent()
         
+        // Register Systems
+        EmissiveButtonSystem.registerSystem()
         LinearActuatorSystem.registerSystem()
-        SnappingSwitchSystem.registerSystem()
+        SwitchSystem.registerSystem()
         LeverSystem.registerSystem()
-        JoystickSystem.registerSystem()
-        RotationalKnobSystem.registerSystem()
+        SideStickSystem.registerSystem()
+        KnobSystem.registerSystem()
         HandTrackingSystem.registerSystem()
+        CockpitDebugTelemetrySystem.registerSystem()
     }
 }

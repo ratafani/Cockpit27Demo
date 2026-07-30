@@ -60,6 +60,23 @@ public extension CockpitModel {
             return root.children.first
         }
         
+        // ── Helper: Attach Submesh Trigger Collision ──────────────────────
+        func attachSubmeshTrigger(to entity: Entity, isSmallButton: Bool = false) {
+            let filter = CollisionFilter(group: cockpitGroup, mask: handGroup)
+            let target = findPivotChild(of: entity) ?? entity
+            if let model = target as? ModelEntity, let mesh = model.model?.mesh {
+                let shape = ShapeResource.generateConvex(from: mesh)
+                target.components.set(CollisionComponent(shapes: [shape], mode: .trigger, filter: filter))
+            } else {
+                let bounds = entity.visualBounds(relativeTo: entity)
+                let extents = isSmallButton ? SIMD3<Float>(0.015, 0.015, 0.012) : max(bounds.extents, [0.02, 0.02, 0.02])
+                let shape = ShapeResource.generateBox(size: extents)
+                target.components.set(CollisionComponent(shapes: [shape], mode: .trigger, filter: filter))
+            }
+        }
+
+
+        
         // 1.5. MCDU Buttons (Linear Actuator)
         func setupMCDUKeys(in parent: Entity?) {
             guard let parent = parent else { return }
@@ -70,6 +87,7 @@ public extension CockpitModel {
                 if current.name.lowercased().contains("button") || current.name.lowercased().contains("key") {
                     if current.components[LinearActuatorComponent.self] == nil {
                         current.components.set(LinearActuatorComponent(localAxis: [0, 0, -1], restPosition: current.position, maxTravel: 0.005))
+                        attachSubmeshTrigger(to: current, isSmallButton: true)
                         count += 1
                     }
                 }
@@ -81,12 +99,9 @@ public extension CockpitModel {
         setupMCDUKeys(in: self.mcdulParentRight)
         
         // 2. Throttles (Arc Lever)
-        // baseAxis [1,0,0] = X axis → lever pitches forward/back (correct for throttle)
         let detents: [Float] = [0.0, 0.436, 0.610, 0.785]
         
         if let tL = self.throttleLeft {
-            print("  🔍 ThrottleL hierarchy:")
-            printHierarchy(tL)
             var comp = LeverComponent(
                 pivotOffset: [0, -0.2, 0],
                 leverRadius: 0.2,
@@ -95,18 +110,13 @@ public extension CockpitModel {
                 baseAxis: [1, 0, 0],       // X axis: lever pitches forward/back
                 detents: detents
             )
-            // The Rig itself (CP_Lever_Throttle_L_Rig) is the pivot container at (0.54, 0.001, -0.012)
             comp.pivotEntity = tL
+            comp.handleMeshEntity = findPivotChild(of: tL)
             tL.components.set(comp)
-            let worldPos = tL.position(relativeTo: nil)
-            let bounds = tL.visualBounds(relativeTo: nil)
-            print("  ✅ ThrottleL '\(tL.name)' → LeverComponent | worldPos=\(worldPos) | boundsCenter=\(bounds.center) | extents=\(bounds.extents)")
-        } else {
-            print("  ❌ ThrottleL NOT FOUND — searched for '\(EntityNames.throttleLeft)' and fallback '\(EntityNames.throttleLegacyFallback)'")
+            attachSubmeshTrigger(to: comp.handleMeshEntity ?? tL)
+            print("  ✅ ThrottleL '\(tL.name)' → LeverComponent & SubmeshTrigger attached")
         }
         if let tR = self.throttleRight {
-            print("  🔍 ThrottleR hierarchy:")
-            printHierarchy(tR)
             var comp = LeverComponent(
                 pivotOffset: [0, -0.2, 0],
                 leverRadius: 0.2,
@@ -116,78 +126,57 @@ public extension CockpitModel {
                 detents: detents
             )
             comp.pivotEntity = tR
+            comp.handleMeshEntity = findPivotChild(of: tR)
             tR.components.set(comp)
-            let worldPos = tR.position(relativeTo: nil)
-            let bounds = tR.visualBounds(relativeTo: nil)
-            print("  ✅ ThrottleR '\(tR.name)' → LeverComponent | worldPos=\(worldPos) | boundsCenter=\(bounds.center) | extents=\(bounds.extents)")
-        } else {
-            print("  ❌ ThrottleR NOT FOUND — searched for '\(EntityNames.throttleRight)'")
+            attachSubmeshTrigger(to: comp.handleMeshEntity ?? tR)
+            print("  ✅ ThrottleR '\(tR.name)' → LeverComponent & SubmeshTrigger attached")
         }
         
-        // 3. Sidestick (Gimbal)
         if let stick = self.sidestick {
-            print("  🔍 Sidestick hierarchy:")
-            printHierarchy(stick)
-            // stickHeight=0.25m → 25cm sweep = full deflection
-            var comp = JoystickComponent(maxPitch: 0.35, maxRoll: 0.35, stickRadius: 0.25, sensitivity: 3.5, boneIndex: 1)
-            // The pivot is the direct child entity — rotates in local space inside the rig
+            var comp = SideStickComponent(controlID: "CAPT_SIDESTICK", maxPitchDegrees: 20.0, maxRollDegrees: 20.0)
+            comp.boneIndex = 1 // Use bone index 1 for the stick shaft (0 is usually the root/base)
             comp.pivotEntity = findPivotChild(of: stick)
-            
-            // Socket & Snap is now calculated purely mathematically in JoystickSystem 
-            // using the stick's world position + offset rotated by `combinedQ`.
-            
+            comp.handleMeshEntity = comp.pivotEntity
             stick.components.set(comp)
-            let worldPos = stick.position(relativeTo: nil)
-            print("  ✅ Sidestick '\(stick.name)' → JoystickComponent | worldPos=\(worldPos) | pivotChild='\(comp.pivotEntity?.name ?? "nil")' | socketSnap=READY")
-        } else {
-            print("  ❌ Sidestick NOT FOUND — searched for '\(EntityNames.sidestick)'")
+            attachSubmeshTrigger(to: comp.handleMeshEntity ?? stick)
+            print("  ✅ Sidestick '\(stick.name)' → SideStickComponent & SubmeshTrigger attached")
         }
         
-        // 4. Engine Switches (Snapping Switch)
+        // 4. Engine Switches (Switch)
         let engStates: [Float] = [0.0, 0.523]
         if let eng1 = self.engine1Switch {
-            eng1.components.set(SnappingSwitchComponent(localRotationAxis: [1, 0, 0], states: engStates))
-            print("  ✅ ENG1 switch '\(eng1.name)' registered")
-        } else { print("  ❌ ENG1 switch NOT FOUND") }
+            eng1.components.set(SwitchComponent(controlID: "ENG_1_MASTER", localRotationAxis: [1, 0, 0], states: engStates))
+            attachSubmeshTrigger(to: eng1, isSmallButton: true)
+            print("  ✅ ENG1 switch '\(eng1.name)' registered with SubmeshTrigger")
+        }
         if let eng2 = self.engine2Switch {
-            eng2.components.set(SnappingSwitchComponent(localRotationAxis: [1, 0, 0], states: engStates))
-            print("  ✅ ENG2 switch '\(eng2.name)' registered")
-        } else { print("  ❌ ENG2 switch NOT FOUND") }
+            eng2.components.set(SwitchComponent(controlID: "ENG_2_MASTER", localRotationAxis: [1, 0, 0], states: engStates))
+            attachSubmeshTrigger(to: eng2, isSmallButton: true)
+            print("  ✅ ENG2 switch '\(eng2.name)' registered with SubmeshTrigger")
+        }
         
         let modeStates: [Float] = [-0.523, 0.0, 0.523]
         if let modeKnob = self.engineModeKnob {
-            modeKnob.components.set(SnappingSwitchComponent(localRotationAxis: [0, 1, 0], states: modeStates))
-            print("  ✅ Engine mode knob '\(modeKnob.name)' registered")
-        } else { print("  ❌ Engine mode knob NOT FOUND") }
+            var comp = KnobComponent(controlID: "ENG_MODE_SEL", localRotationAxis: [0, 0, 1], sensitivity: 3.0, detents: modeStates, detentTolerance: 0.1)
+            comp.handleMeshEntity = findPivotChild(of: modeKnob)
+            modeKnob.components.set(comp)
+            attachSubmeshTrigger(to: comp.handleMeshEntity ?? modeKnob)
+            print("  ✅ Engine mode knob '\(modeKnob.name)' registered with SubmeshTrigger")
+        }
         
         // 5. Fire Fault Buttons
         if let fireL = self.fireFaultButtonLeft {
             fireL.components.set(LinearActuatorComponent(localAxis: [0, -1, 0], restPosition: fireL.position, maxTravel: 0.01))
+            attachSubmeshTrigger(to: fireL, isSmallButton: true)
             print("  ✅ FireFaultL '\(fireL.name)' registered")
-        } else { print("  ❌ FireFaultL NOT FOUND") }
+        }
         if let fireR = self.fireFaultButtonRight {
             fireR.components.set(LinearActuatorComponent(localAxis: [0, -1, 0], restPosition: fireR.position, maxTravel: 0.01))
+            attachSubmeshTrigger(to: fireR, isSmallButton: true)
             print("  ✅ FireFaultR '\(fireR.name)' registered")
-        } else { print("  ❌ FireFaultR NOT FOUND") }
-        
-        // 6. Pitch Trim Controls
-        if let trimKnobL = self.pitchTrimKnobLeft {
-            trimKnobL.components.set(RotationalKnobComponent(localRotationAxis: [1, 0, 0], sensitivity: 5.0))
-            print("  ✅ PitchTrimKnobL '\(trimKnobL.name)' registered")
-        } else { print("  ❌ PitchTrimKnobL NOT FOUND") }
-        if let trimKnobR = self.pitchTrimKnobRight {
-            trimKnobR.components.set(RotationalKnobComponent(localRotationAxis: [1, 0, 0], sensitivity: 5.0))
-            print("  ✅ PitchTrimKnobR '\(trimKnobR.name)' registered")
-        } else { print("  ❌ PitchTrimKnobR NOT FOUND") }
-        
-        let trimWheelStates: [Float] = [-0.5, 0.0, 0.5]
-        if let trimWheelL = self.pitchTrimWheelLeft {
-            trimWheelL.components.set(SnappingSwitchComponent(localRotationAxis: [1, 0, 0], states: trimWheelStates))
-        }
-        if let trimWheelR = self.pitchTrimWheelRight {
-            trimWheelR.components.set(SnappingSwitchComponent(localRotationAxis: [1, 0, 0], states: trimWheelStates))
         }
         
         print("🔧 [SPATIAL] configureSpatialActuators() complete\n")
     }
 }
+

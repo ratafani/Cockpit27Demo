@@ -2,11 +2,16 @@ import RealityKit
 import ARKit
 import simd
 import ILSHandTracking
+import Cockpit27Core
 
 @MainActor
 public class LeverSystem: System {
     private static let query = EntityQuery(where: .has(LeverComponent.self))
     private static let handQuery = EntityQuery(where: .has(HandModelComponent.self))
+    
+    private let handTrackingService: HandTracking27ServiceProtocol?
+    private let audioService: Audio27ServiceProtocol
+    private let telemetryService: Cockpit27TelemetryProtocol
     
     // EMA Smoothing for stability
     private var smoothedLeftPalmPos: SIMD3<Float>?
@@ -17,37 +22,58 @@ public class LeverSystem: System {
     private var smoothedLeftWristPos: SIMD3<Float>?
     private var smoothedRightWristPos: SIMD3<Float>?
     
-    public required init(scene: RealityKit.Scene) {}
+    public required init(scene: RealityKit.Scene) {
+        self.handTrackingService = DependencyContainer.shared.tryResolve(HandTracking27ServiceProtocol.self)
+        self.audioService = DependencyContainer.shared.resolve(Audio27ServiceProtocol.self)
+        self.telemetryService = DependencyContainer.shared.resolve(Cockpit27TelemetryProtocol.self)
+    }
     
-    private func evaluateGripState(skeleton: HandSkeleton?, component: inout LeverComponent) -> Bool {
-        guard let skeleton = skeleton else { return false }
+    private func evaluateGripState(skeleton: HandSkeleton?, component: inout LeverComponent, targetEntity: Entity, currentPalmWorldPos: SIMD3<Float>?) -> Bool {
+        guard let skeleton = skeleton, let palm = currentPalmWorldPos else { return false }
         let thumbTipCol = skeleton.joint(.thumbTip).anchorFromJointTransform.columns.3
         let indexTipCol = skeleton.joint(.indexFingerTip).anchorFromJointTransform.columns.3
         let middleTipCol = skeleton.joint(.middleFingerTip).anchorFromJointTransform.columns.3
         let ringTipCol = skeleton.joint(.ringFingerTip).anchorFromJointTransform.columns.3
-        let littleTipCol = skeleton.joint(.littleFingerTip).anchorFromJointTransform.columns.3
         
         let thumb = SIMD3<Float>(thumbTipCol.x, thumbTipCol.y, thumbTipCol.z)
-        let index = SIMD3<Float>(indexTipCol.x, indexTipCol.y, indexTipCol.z)
         let middle = SIMD3<Float>(middleTipCol.x, middleTipCol.y, middleTipCol.z)
-        let ring = SIMD3<Float>(ringTipCol.x, ringTipCol.y, ringTipCol.z)
+        let distanceThumbToMiddle = simd_distance(thumb, middle)
         
-        let distanceToIndex = simd_distance(thumb, index)
-        let distanceToMiddle = simd_distance(thumb, middle)
-        let distanceToRing = simd_distance(thumb, ring)
-        
-        // Also check power fist curl
+        // Check power fist curl
         let wristCol = skeleton.joint(.wrist).anchorFromJointTransform.columns.3
         let wrist = SIMD3<Float>(wristCol.x, wristCol.y, wristCol.z)
         let indexKnuckleCol = skeleton.joint(.indexFingerKnuckle).anchorFromJointTransform.columns.3
         let indexKnuckle = SIMD3<Float>(indexKnuckleCol.x, indexKnuckleCol.y, indexKnuckleCol.z)
+        let middleKnuckleCol = skeleton.joint(.middleFingerKnuckle).anchorFromJointTransform.columns.3
+        let middleKnuckle = SIMD3<Float>(middleKnuckleCol.x, middleKnuckleCol.y, middleKnuckleCol.z)
+        let ringKnuckleCol = skeleton.joint(.ringFingerKnuckle).anchorFromJointTransform.columns.3
+        let ringKnuckle = SIMD3<Float>(ringKnuckleCol.x, ringKnuckleCol.y, ringKnuckleCol.z)
+        
+        let index = SIMD3<Float>(indexTipCol.x, indexTipCol.y, indexTipCol.z)
+        let ring = SIMD3<Float>(ringTipCol.x, ringTipCol.y, ringTipCol.z)
+        
         let isIndexCurled = simd_distance(index, wrist) < simd_distance(indexKnuckle, wrist)
+        let isMiddleCurled = simd_distance(middle, wrist) < simd_distance(middleKnuckle, wrist)
+        let isRingCurled = simd_distance(ring, wrist) < simd_distance(ringKnuckle, wrist)
+        
+        let isPalmNearHandle = isPointInsideEntity(palm, entity: targetEntity, padding: 0.04)
+        
+        let distanceToIndex = simd_distance(thumb, index)
+        let distanceToRing = simd_distance(thumb, ring)
+        let isIndexTipNear = isPointInsideEntity(index, entity: targetEntity, padding: 0.01)
         
         if !component.isGrabbed {
-            return (distanceToIndex < 0.045) || (distanceToMiddle < 0.045) || (distanceToRing < 0.045) || isIndexCurled
+            let isPinching = (distanceToIndex < 0.045) || (distanceThumbToMiddle < 0.045) || (distanceToRing < 0.045)
+            let curledCount = (isIndexCurled ? 1 : 0) + (isMiddleCurled ? 1 : 0) + (isRingCurled ? 1 : 0)
+            let isPowerGrip = (curledCount >= 2) && (distanceThumbToMiddle <= 0.06)
+            return ((isPinching || isPowerGrip) && isPalmNearHandle) || isIndexTipNear
         } else {
-            let isReleasing = (distanceToIndex > 0.075) && (distanceToMiddle > 0.075) && (distanceToRing > 0.075) && !isIndexCurled
-            return !isReleasing
+            let handleWorldPos = targetEntity.visualBounds(relativeTo: nil).center
+            let isTooFar = simd_distance(palm, handleWorldPos) > 0.45 // Release radius hysteresis
+            let isPinching = (distanceToIndex < 0.10) || (distanceThumbToMiddle < 0.10) || (distanceToRing < 0.10)
+            let isReleasingPower = (!isIndexCurled && !isMiddleCurled && !isRingCurled) || distanceThumbToMiddle > 0.08
+            let isHolding = isPinching || !isReleasingPower
+            return isHolding && !isTooFar
         }
     }
     
@@ -96,29 +122,39 @@ public class LeverSystem: System {
         for entity in context.scene.performQuery(Self.query) {
             var comp = entity.components[LeverComponent.self]!
             let pivotBasePos = comp.pivotEntity?.position(relativeTo: nil) ?? entity.position(relativeTo: nil)
-            let leverWorldRot = comp.pivotEntity?.orientation(relativeTo: nil) ?? entity.orientation(relativeTo: nil)
-            let bounds = entity.visualBounds(relativeTo: nil)
-            let handleWorldPos = bounds.center
-            let extents = bounds.extents
-            let maxExtent = max(extents.x, max(extents.y, extents.z))
-            let triggerRadius: Float = max(0.12, maxExtent * 0.5 + 0.05)
+            if comp.initialWorldRotation == nil {
+                comp.initialWorldRotation = comp.pivotEntity?.orientation(relativeTo: nil) ?? entity.orientation(relativeTo: nil)
+            }
+            let baseWorldRot = comp.initialWorldRotation!
+            
+            // Priority 1: Use handle mesh for bounds
+            let meshEntity = comp.handleMeshEntity ?? entity
+            let targetEntity = comp.handleMeshEntity ?? entity
             
             var isLeftNear = false
             var isRightNear = false
             
-            if let lp = smoothedLeftPalmPos, simd_distance(lp, handleWorldPos) < triggerRadius { isLeftNear = true }
-            if let rp = smoothedRightPalmPos, simd_distance(rp, handleWorldPos) < triggerRadius { isRightNear = true }
+            if let lp = smoothedLeftPalmPos, isPointInsideEntity(lp, entity: targetEntity, padding: 0.02) { isLeftNear = true }
+            if let rp = smoothedRightPalmPos, isPointInsideEntity(rp, entity: targetEntity, padding: 0.02) { isRightNear = true }
             
             guard isLeftNear || isRightNear || comp.isGrabbed else { continue }
+
+
             
-            let activeSide: HandAnchor.Chirality = isLeftNear ? .left : .right
+            let activeSide: HandAnchor.Chirality
+            if comp.isGrabbed {
+                activeSide = (comp.activeChirality == 0) ? .left : .right
+            } else {
+                activeSide = isLeftNear ? .left : .right
+            }
             let anchor = activeSide == .left ? leftHand : rightHand
             let skeleton = anchor?.handSkeleton
             
             let isHandBusy = activeSide == .left ? (handComp?.leftSnapPosition != nil) : (handComp?.rightSnapPosition != nil)
             let currentHandWorldPos = activeSide == .left ? smoothedLeftPalmPos : smoothedRightPalmPos
             let currentWristWorldPos = activeSide == .left ? smoothedLeftWristPos : smoothedRightWristPos
-            let isGripping = evaluateGripState(skeleton: skeleton, component: &comp)
+            let isGripping = evaluateGripState(skeleton: skeleton, component: &comp, targetEntity: targetEntity, currentPalmWorldPos: currentHandWorldPos)
+
             
             if !comp.isGrabbed {
                 if !isHandBusy && isGripping, let handPos = currentHandWorldPos {
@@ -127,7 +163,10 @@ public class LeverSystem: System {
                     comp.activeChirality = activeSide == .left ? 0 : 1
                     
                     let wristPos = currentWristWorldPos ?? handPos
-                    comp.initialGripOffset = leverWorldRot.inverse.act(wristPos - handleWorldPos)
+                    let currentQuat = simd_quatf(angle: comp.currentAngle, axis: comp.baseAxis)
+                    let currentTiltedRot = baseWorldRot * currentQuat
+                    
+                    comp.initialGripOffset = currentTiltedRot.inverse.act(wristPos - pivotBasePos)
                     print("🎛️ [LeverSystem] Lever '\(entity.name)' GRABBED at Top Handle! Angle: \(comp.currentAngle)")
                 }
             } else {
@@ -158,14 +197,15 @@ public class LeverSystem: System {
                             break
                         }
                     }
+                    let activeChirality = comp.activeChirality
                     print("✋ [LeverSystem] Lever '\(entity.name)' RELEASED at Angle: \(comp.currentAngle)")
                     comp.isGrabbed = false
                     comp.activeChirality = -1
                     comp.initialGripOffset = nil
                     
                     if var hc = handComp {
-                        if activeSide == .left { hc.leftSnapPosition = nil; hc.leftSnapOrientation = nil }
-                        else { hc.rightSnapPosition = nil; hc.rightSnapOrientation = nil }
+                        if activeChirality == 0 { hc.leftSnapPosition = nil; hc.leftSnapOrientation = nil; hc.leftTargetGripPose = nil; hc.leftSnapBlend = 0.0 }
+                        else if activeChirality == 1 { hc.rightSnapPosition = nil; hc.rightSnapOrientation = nil; hc.rightTargetGripPose = nil; hc.rightSnapBlend = 0.0 }
                         handEntity?.components.set(hc)
                         handComp = hc
                     }
@@ -202,9 +242,22 @@ public class LeverSystem: System {
             // Calculate Hand Model Snap Socket at Top Handle
             if comp.isGrabbed, var hands = handComp {
                 let isLeft = comp.activeChirality == 0
-                let currentHandlePos = pivotBasePos + leverWorldRot.act(SIMD3<Float>(0, comp.leverRadius, 0))
-                let socketOffset = comp.initialGripOffset ?? SIMD3<Float>(0.0, 0.0, 0.0)
-                let socketPos = currentHandlePos + leverWorldRot.act(socketOffset)
+                
+                var socketPos: SIMD3<Float>
+                
+                // Priority 2: Extract live bone world pos
+                if let pivot = comp.pivotEntity, let model = pivot as? ModelEntity, !model.jointTransforms.isEmpty {
+                    let handleJointIdx = min(comp.handleJointIndex, model.jointTransforms.count - 1)
+                    let handleJointMat = model.jointTransforms[handleJointIdx].matrix
+                    let modelWorldMat = model.transformMatrix(relativeTo: nil)
+                    let handleWorldMat = modelWorldMat * handleJointMat
+                    
+                    socketPos = SIMD3<Float>(handleWorldMat.columns.3.x, handleWorldMat.columns.3.y, handleWorldMat.columns.3.z)
+                } else {
+                    let tiltedRot = baseWorldRot * quat
+                    let socketOffset = comp.initialGripOffset ?? SIMD3<Float>(0.0, comp.leverRadius, 0.0)
+                    socketPos = pivotBasePos + tiltedRot.act(socketOffset)
+                }
                 
                 if isLeft {
                     hands.leftSnapPosition = socketPos
@@ -218,6 +271,17 @@ public class LeverSystem: System {
             }
             
             entity.components.set(comp)
+            
+            // Telemetry & Control Tag update
+            if var controlTag = entity.components[CockpitControlTagComponent.self] {
+                let norm = comp.maxAngle > 0 ? min(1.0, max(0.0, comp.currentAngle / comp.maxAngle)) : 0.0
+                if abs(controlTag.normalizedValue - norm) > 0.01 {
+                    controlTag.normalizedValue = norm
+                    controlTag.isHandAttached = comp.isGrabbed
+                    entity.components.set(controlTag)
+                    telemetryService.reportControlStateChanged(controlID: comp.controlID, normalizedValue: norm, stateIndex: nil)
+                }
+            }
         }
     }
 }

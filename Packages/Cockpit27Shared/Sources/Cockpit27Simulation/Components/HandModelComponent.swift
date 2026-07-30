@@ -8,9 +8,14 @@ public struct HandModelComponent: Component {
     public var isLeftPinching: Bool = false
     public var isRightPinching: Bool = false
     
-    // Pinch world positions
+    // Pinch world positions & centroids
     public var leftPinchPosition: SIMD3<Float> = .zero
     public var rightPinchPosition: SIMD3<Float> = .zero
+    public var leftPinchCentroid: SIMD3<Float> = .zero
+    public var rightPinchCentroid: SIMD3<Float> = .zero
+    public var leftPinchDistance: Float = 0.0
+    public var rightPinchDistance: Float = 0.0
+
     
     // Original materials
     public var originalLeftMaterials: [Material] = []
@@ -23,13 +28,27 @@ public struct HandModelComponent: Component {
     // Snap target for Left Glove (if set, HandTrackingSystem positions glove here)
     public var leftSnapPosition: SIMD3<Float>?
     public var leftSnapOrientation: simd_quatf?
+    public var leftTargetGripPose: String?
+    public var leftSnapBlend: Float = 0.0
     
     // Snap target for Right Glove (if set, HandTrackingSystem positions glove here)
     public var rightSnapPosition: SIMD3<Float>?
     public var rightSnapOrientation: simd_quatf?
+    public var rightTargetGripPose: String?
+    public var rightSnapBlend: Float = 0.0
+    
+    // Persistent Joint Trigger Colliders (Zero-GC Churn)
+    public var leftIndexCollider: Entity?
+    public var leftThumbCollider: Entity?
+    public var leftPalmCollider: Entity?
+    
+    public var rightIndexCollider: Entity?
+    public var rightThumbCollider: Entity?
+    public var rightPalmCollider: Entity?
     
     public init(leftGlove: ModelEntity? = nil, rightGlove: ModelEntity? = nil) {
         self.leftGlove = leftGlove
         self.rightGlove = rightGlove
     }
 }
+
