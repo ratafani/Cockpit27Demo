@@ -63,8 +63,8 @@ public class SideStickSystem: System {
                     ? (meshCenter + SIMD3<Float>(customOffset.x, customOffset.y, customOffset.z))
                     : SIMD3<Float>(simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 1.0)).x, simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 1.0)).y, simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 1.0)).z)
                 
-                let maxExtent = max(bounds.extents.x, max(bounds.extents.y, bounds.extents.z))
-                let triggerRadius: Float = max(0.12, maxExtent * 0.5 + 0.05)
+                let horizontalExtent = max(bounds.extents.x, bounds.extents.z)
+                let triggerRadius: Float = max(0.06, horizontalExtent * 0.25 + 0.02)
                 
                 let isInside = simd_distance(tip, gripWorldPos) < triggerRadius
                 let isContinuingGrab = (comp.isGrabbed && comp.activeChirality == handData.chirality)
