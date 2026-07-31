@@ -25,6 +25,9 @@ public struct SideStickComponent: Component {
     public var boneIndex: Int = 0
     public var initialBoneRotation: simd_quatf? = nil
     
+    // Precise manual grip offset (relative to pivot) for interaction and snapping
+    public var handleLocalOffset: SIMD3<Float> = [0, 0.60, 0]
+    
     public init(
         controlID: String = "CAPTAIN_SIDESTICK",
         maxPitchDegrees: Float = 20.0,
