@@ -46,7 +46,8 @@ public class SideStickSystem: System {
             let handDataList = [leftHandData, rightHandData].compactMap { $0 }
             for handData in handDataList where handData.isTracked {
                 let tipPos = handData.indexTipWorldPos ?? handData.palmWorldPos
-                guard let tip = tipPos else { continue }
+                let wristPos = handData.wristWorldPos ?? handData.palmWorldPos ?? tipPos
+                guard let tip = tipPos, let wrist = wristPos else { continue }
                 
                 var pinchDist: Float = 1.0
                 if let t = handData.thumbTipWorldPos, let i = handData.indexTipWorldPos {
@@ -70,7 +71,7 @@ public class SideStickSystem: System {
                 
                 if isInside || isContinuingGrab {
                     isInteracting = true
-                    activeHandPos = tip
+                    activeHandPos = wrist // Use wrist position for glove alignment & drag calculations
                     currentChirality = handData.chirality
                     if pinchDist < 0.045 {
                         isPinching = true
