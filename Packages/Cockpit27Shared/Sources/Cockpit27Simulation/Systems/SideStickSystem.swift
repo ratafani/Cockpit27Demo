@@ -96,16 +96,21 @@ public class SideStickSystem: System {
                         handComp = hc
                     }
                 } else if !comp.isGrabbed && isPinching {
-                    // Just pinched inside bounds
+                    // Just pinched inside bounds: capture hand position in local pivot space so it stays pinned where grabbed
                     comp.isGrabbed = true
                     comp.activeChirality = currentChirality
-                    comp.initialGripOffset = handPos
+                    let invPivot = simd_inverse(targetEntity.transformMatrix(relativeTo: nil))
+                    let localHand = simd_mul(invPivot, SIMD4<Float>(handPos, 1.0))
+                    comp.initialGripOffset = SIMD3<Float>(localHand.x, localHand.y, localHand.z)
+                    comp.previousHandWorldPosition = handPos
                 } else if comp.initialGripOffset == nil {
-                    // Just pushing
-                    comp.initialGripOffset = handPos
+                    let invPivot = simd_inverse(targetEntity.transformMatrix(relativeTo: nil))
+                    let localHand = simd_mul(invPivot, SIMD4<Float>(handPos, 1.0))
+                    comp.initialGripOffset = SIMD3<Float>(localHand.x, localHand.y, localHand.z)
+                    comp.previousHandWorldPosition = handPos
                 }
                 
-                let deltaWorld = handPos - comp.initialGripOffset!
+                let deltaWorld = handPos - comp.previousHandWorldPosition
                 let pitchLimit = comp.maxPitchDegrees * (.pi / 180.0)
                 let rollLimit = comp.maxRollDegrees * (.pi / 180.0)
                 
@@ -115,7 +120,7 @@ public class SideStickSystem: System {
                 targetPitch = max(-pitchLimit, min(pitchLimit, comp.currentPitch + pitchDelta))
                 targetRoll = max(-rollLimit, min(rollLimit, comp.currentRoll + rollDelta))
                 
-                comp.initialGripOffset = handPos
+                comp.previousHandWorldPosition = handPos
                 
             } else {
                 if comp.springReturnToCenter {
@@ -159,15 +164,12 @@ public class SideStickSystem: System {
                 targetEntity.transform.rotation = finalQuat
             }
             
-            // Snap hand model to exact grip offset if grabbed
+            // Snap hand model to exact pinch location on handle where grabbed
             if comp.isGrabbed, var hc = handComp {
                 let pivotTransform = targetEntity.transformMatrix(relativeTo: nil)
-                let bounds = handleTarget.visualBounds(relativeTo: nil)
-                let meshCenter = bounds.center
-                let customOffset = simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 0.0))
-                let socketPos = bounds.extents.y > 0.01 
-                    ? (meshCenter + SIMD3<Float>(customOffset.x, customOffset.y, customOffset.z))
-                    : SIMD3<Float>(simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 1.0)).x, simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 1.0)).y, simd_mul(pivotTransform, SIMD4<Float>(comp.handleLocalOffset, 1.0)).z)
+                let localOffset = comp.initialGripOffset ?? comp.handleLocalOffset
+                let socketWorld = simd_mul(pivotTransform, SIMD4<Float>(localOffset, 1.0))
+                let socketPos = SIMD3<Float>(socketWorld.x, socketWorld.y, socketWorld.z)
                 
                 if comp.activeChirality == 0 {
                     hc.leftSnapPosition = socketPos
