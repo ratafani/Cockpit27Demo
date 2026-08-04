@@ -392,3 +392,6 @@ descriptor: {
 	__uuid: "6a22ea6d-1081-cbfe-a3b5-f08cc13bdf27"
 }
 __asset_uuid: "eb374e34-0708-0177-90a4-044de130a9a2"
+__asset_thumbnail: {
+	__uuid: "ae5adf30-a597-9071-3262-1ebb3015417b"
+}

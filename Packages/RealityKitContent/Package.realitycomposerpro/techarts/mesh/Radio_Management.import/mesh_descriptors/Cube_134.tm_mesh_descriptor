@@ -1,0 +1,54 @@
+__type: "tm_mesh_descriptor"
+__uuid: "65dfd954-e221-7d6c-ae76-4c84509bbc29"
+vertex_count: 22
+face_vertex_counts: {
+	__uuid: "a972bfee-98e8-51cd-4312-fdbcd822f012"
+	data: "82d7efa6-78c8-17ef-0caf-ac63e872d157"
+	format: 83886112
+	value_count: 2
+}
+indices: {
+	__uuid: "9d15f7aa-875d-e9a4-8fbd-e813b73584ed"
+	data: "aaff6bf9-7403-1410-bd4b-4217a12f7fa7"
+	format: 83886112
+	value_count: 24
+}
+attributes: [
+	{
+		__uuid: "3864d8aa-3b0c-e66e-58d5-19b3294b5ae5"
+		name: "points"
+		interpolation: 2
+		semantic: 1
+		values: {
+			__uuid: "9052920f-bf09-99f0-b24a-758d2308bce9"
+			data: "638e17e5-6988-13a5-8386-ec94dc849e27"
+			format: 16910368
+			value_count: 22
+		}
+	}
+	{
+		__uuid: "1bf0191b-79ab-5296-75ae-d7508b2b694d"
+		name: "primvars:st"
+		interpolation: 3
+		semantic: 5
+		values: {
+			__uuid: "e0f45c5d-9dd2-e849-5473-fe6d7cba4fbe"
+			data: "fe865331-e366-8ed6-da57-58687b5ac197"
+			format: 16779296
+			value_count: 24
+		}
+	}
+	{
+		__uuid: "dc33d482-08a0-75de-91eb-b89066cdebbe"
+		name: "normals"
+		interpolation: 3
+		semantic: 2
+		values: {
+			__uuid: "1a096dd0-036e-9cac-7623-ee350c1d03b8"
+			data: "a9a34af1-999b-990b-e296-29d8f065e17d"
+			format: 16910368
+			value_count: 24
+		}
+	}
+]
+__asset_uuid: "9e9b9b72-71fc-921e-4129-4951291afeba"

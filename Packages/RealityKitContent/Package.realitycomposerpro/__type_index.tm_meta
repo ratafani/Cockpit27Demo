@@ -1385,74 +1385,6 @@
 		}
 	}
 	{
-		name: "BlendShapeInputNodeDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "216e4d06f91bb179"
-			}
-			{
-				name: "paramID"
-				type: "reference"
-				type_hash: "c123671f09b99d8a"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			id: {
-			}
-		}
-	}
-	{
-		name: "BlendShapeWeightsParamHandle"
-		properties: [
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "39fa7a48f53a4045"
-			}
-		]
-		default: {
-			id: {
-			}
-		}
-	}
-	{
-		name: "BlendShapeWeightsParameterDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "39fa7a48f53a4045"
-			}
-			{
-				name: "readonly"
-				type: "bool"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			name: "Unnamed"
-			id: {
-			}
-		}
-	}
-	{
 		name: "BoolBehaviorConditionDefinition"
 		properties: [
 			{
@@ -1752,7 +1684,7 @@
 			name: "Unnamed Enable/Disable Entity_tag"
 			id: {
 			}
-			action_type: 541
+			action_type: 542
 		}
 	}
 	{
@@ -2673,14 +2605,14 @@
 				type_hash: "f77d853056bb7a3e"
 			}
 			{
+				name: "vector2Params"
+				type: "subobject_set"
+				type_hash: "4750bbba867b828f"
+			}
+			{
 				name: "vector3Params"
 				type: "subobject_set"
 				type_hash: "947716729aa3b1fc"
-			}
-			{
-				name: "vector23Params"
-				type: "subobject_set"
-				type_hash: "4750bbba867b828f"
 			}
 			{
 				name: "vector4Params"
@@ -2848,87 +2780,6 @@
 		}
 	}
 	{
-		name: "PhysicsBoneSolverNodeDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "216e4d06f91bb179"
-			}
-			{
-				name: "sourceChild"
-				type: "subobject"
-				type_hash: "c59d47683fcbbee1"
-			}
-			{
-				name: "chainName"
-				type: "string"
-			}
-			{
-				name: "iterationCount"
-				type: "uint32_t"
-			}
-			{
-				name: "stiffness"
-				type: "float"
-			}
-			{
-				name: "damping"
-				type: "float"
-			}
-			{
-				name: "gravity"
-				type: "subobject"
-				type_hash: "8d1487af36b1e3e1"
-			}
-			{
-				name: "enableSelfCollision"
-				type: "bool"
-			}
-			{
-				name: "collisionMargin"
-				type: "float"
-			}
-			{
-				name: "enableRotationCorrection"
-				type: "bool"
-			}
-			{
-				name: "rotationBlendLower"
-				type: "float"
-			}
-			{
-				name: "rotationBlendUpper"
-				type: "float"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			id: {
-			}
-			sourceChild: {
-			}
-			iterationCount: 5
-			stiffness: 0.80000001192092896
-			damping: 0.10000000149011612
-			gravity: {
-				y: -9.8000001907348633
-			}
-			enableSelfCollision: true
-			collisionMargin: 0.0099999997764825821
-			enableRotationCorrection: true
-			rotationBlendLower: 0.25
-			rotationBlendUpper: 0.75
-		}
-	}
-	{
 		name: "Play Audio_tag"
 		properties: [
 			{
@@ -2954,7 +2805,7 @@
 			name: "Unnamed Play Audio_tag"
 			id: {
 			}
-			action_type: 538
+			action_type: 539
 		}
 	}
 	{
@@ -3300,33 +3151,6 @@
 		}
 	}
 	{
-		name: "SkeletalPoseParameterDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "39fa7a48f53a4045"
-			}
-			{
-				name: "readonly"
-				type: "bool"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			name: "Unnamed"
-			id: {
-			}
-		}
-	}
-	{
 		name: "SpeedScaleNodeDefinition"
 		properties: [
 			{
@@ -3357,63 +3181,6 @@
 			id: {
 			}
 			childID: {
-			}
-		}
-	}
-	{
-		name: "SpringBoneNodeDefinition"
-		properties: [
-			{
-				name: "name"
-				type: "string"
-			}
-			{
-				name: "id"
-				type: "subobject"
-				type_hash: "216e4d06f91bb179"
-			}
-			{
-				name: "sourceChild"
-				type: "subobject"
-				type_hash: "c59d47683fcbbee1"
-			}
-			{
-				name: "affectedBone"
-				type: "string"
-			}
-			{
-				name: "stiffness"
-				type: "float"
-			}
-			{
-				name: "damping"
-				type: "float"
-			}
-			{
-				name: "applyMovementLimits"
-				type: "bool"
-			}
-			{
-				name: "movementLimits"
-				type: "subobject"
-				type_hash: "8d1487af36b1e3e1"
-			}
-			{
-				name: "implicit_index"
-				type: "uint32_t"
-			}
-		]
-		default: {
-			id: {
-			}
-			sourceChild: {
-			}
-			stiffness: 100
-			damping: 20
-			movementLimits: {
-				x: 1
-				y: 1
-				z: 1
 			}
 		}
 	}
@@ -4662,77 +4429,88 @@
 					nodes: [
 						{
 							type: "tm_update"
-							label: ""
+							position: {
+								x: 63
+								y: -85
+							}
+						}
+						{
+							type: "tm_did_init"
 							position: {
 								x: 67
-								y: -91.660003662109375
+								y: 149
 							}
 						}
 						{
 							type: "tm_did_add"
-							label: ""
 							position: {
-								x: 67
-								y: 109.33000183105469
+								x: 52
+								y: 365
 							}
 						}
 						{
 							type: "tm_did_activate"
-							label: ""
 							position: {
-								x: 67.5
-								y: 318.67999267578125
+								x: 66
+								y: 558
 							}
 						}
 						{
 							type: "tm_will_remove"
-							label: ""
 							position: {
-								x: 65.989997863769531
-								y: 533.53997802734375
+								x: 65
+								y: 773
 							}
 						}
 						{
 							type: "tm_will_deactivate"
-							label: ""
 							position: {
-								x: 76.5
-								y: 746.47998046875
+								x: 74
+								y: 990
 							}
 						}
 					]
 					comments: [
 						{
-							text: "Called every frame use for per-frame logic."
+							text: "Called every frame."
 							rect: {
-								y: -152.66000366210938
+								y: -153
 								w: 400
-								h: 110
+								h: 124
 							}
 							label_only: true
 						}
 						{
-							text: "Called once when the component is added to an entity."
+							text: "Called when the component is added to an entity first time."
 							rect: {
-								y: 62.330001831054688
+								y: 98
 								w: 400
 								h: 90
 							}
 							label_only: true
 						}
 						{
-							text: "Called when the entity or component becomes active."
+							text: "Called when the component is added to an entity."
 							rect: {
-								y: 271.67999267578125
+								y: 292
 								w: 400
-								h: 90
+								h: 112
+							}
+							label_only: true
+						}
+						{
+							text: "Called when the entity becomes active."
+							rect: {
+								y: 508
+								w: 400
+								h: 89
 							}
 							label_only: true
 						}
 						{
 							text: "Called just before the component is removed from an entity."
 							rect: {
-								y: 486.53997802734375
+								y: 723
 								w: 400
 								h: 90
 							}
@@ -4741,7 +4519,7 @@
 						{
 							text: "Called just before the entity or component deactivates."
 							rect: {
-								y: 699.47998046875
+								y: 940
 								w: 400
 								h: 90
 							}
@@ -7053,6 +6831,10 @@
 				name: "split_faces"
 				type: "bool"
 			}
+			{
+				name: "non_overlapping_uvs"
+				type: "bool"
+			}
 		]
 		default: {
 			width: 0.5
@@ -8430,6 +8212,15 @@
 		]
 	}
 	{
+		name: "tm_compute_graph_output_attribute_settings"
+		properties: [
+			{
+				name: "name"
+				type: "uint32_t"
+			}
+		]
+	}
+	{
 		name: "tm_compute_graph_resource_material"
 		properties: [
 			{
@@ -8463,6 +8254,15 @@
 		properties: [
 			{
 				name: "type"
+				type: "uint32_t"
+			}
+		]
+	}
+	{
+		name: "tm_compute_graph_state_io_settings"
+		properties: [
+			{
+				name: "data_type"
 				type: "uint32_t"
 			}
 		]
@@ -11333,8 +11133,6 @@
 				type: "uint64_t"
 			}
 		]
-		default: {
-		}
 	}
 	{
 		name: "tm_graph_data"
@@ -11505,8 +11303,6 @@
 				type_hash: "8944e0b1cefd4756"
 			}
 		]
-		default: {
-		}
 	}
 	{
 		name: "tm_graph_node_dynamic_connector"
@@ -11810,6 +11606,11 @@
 			{
 				name: "raw"
 				type: "bool"
+			}
+			{
+				name: "source_asset"
+				type: "reference"
+				type_hash: "ca71127abbb72960"
 			}
 		]
 		default: {
@@ -12203,7 +12004,38 @@
 				type: "reference"
 				type_hash: "ca71127abbb72960"
 			}
+			{
+				name: "bake_quality"
+				type: "uint32_t"
+			}
+			{
+				name: "max_path_length"
+				type: "uint32_t"
+			}
 		]
+	}
+	{
+		name: "tm_lightmap_atlas_config"
+		properties: [
+			{
+				name: "AO Lightmap - texels per unit"
+				type: "uint32_t"
+			}
+			{
+				name: "Indirect Lightmap - texels per unit"
+				type: "uint32_t"
+			}
+			{
+				name: "Direct Lightmap - texels per unit"
+				type: "uint32_t"
+			}
+			{
+				name: "Beauty Bakes - texels per unit"
+				type: "uint32_t"
+			}
+		]
+		default: {
+		}
 	}
 	{
 		name: "tm_lightmap_atlas_entry"
@@ -12243,6 +12075,21 @@
 				type_hash: "4047f261a60687c4"
 			}
 			{
+				name: "Lightmap ao atlas asset"
+				type: "subobject"
+				type_hash: "4047f261a60687c4"
+			}
+			{
+				name: "Lightmap indirect atlas asset"
+				type: "subobject"
+				type_hash: "4047f261a60687c4"
+			}
+			{
+				name: "Lightmap full lighting atlas asset"
+				type: "subobject"
+				type_hash: "4047f261a60687c4"
+			}
+			{
 				name: "Ambient Occlusion Configuration"
 				type: "subobject"
 				type_hash: "152b65c5044e1a08"
@@ -12251,6 +12098,11 @@
 				name: "Light Treatment Configuration"
 				type: "subobject"
 				type_hash: "03111195467d3298"
+			}
+			{
+				name: "Lightmap Atlas Configuration"
+				type: "subobject"
+				type_hash: "f57b8872d71e8833"
 			}
 			{
 				name: "Baked data type"
@@ -12267,7 +12119,11 @@
 			}
 		]
 		default: {
-			"Lightmap atlas asset": {
+			"Lightmap ao atlas asset": {
+			}
+			"Lightmap indirect atlas asset": {
+			}
+			"Lightmap full lighting atlas asset": {
 			}
 			"Ambient Occlusion Configuration": {
 			}
@@ -12277,7 +12133,9 @@
 					}
 				}
 			}
-			"Baked data type": 2
+			"Lightmap Atlas Configuration": {
+			}
+			"Baked data type": 1
 			Enable: true
 		}
 	}
@@ -12345,10 +12203,6 @@
 		name: "tm_lightmap_light_config"
 		properties: [
 			{
-				name: "Point lights are"
-				type: "uint32_t"
-			}
-			{
 				name: "Sphere radius"
 				type: "float"
 			}
@@ -12360,6 +12214,18 @@
 				name: "Environment Lighting Configuration"
 				type: "subobject"
 				type_hash: "50f0dbbbee593a51"
+			}
+			{
+				name: "Disk radius"
+				type: "float"
+			}
+			{
+				name: "Spherical cap subtended angle"
+				type: "float"
+			}
+			{
+				name: "Indirect light contribution only"
+				type: "bool"
 			}
 		]
 		default: {
@@ -13094,6 +12960,10 @@
 				name: "graph"
 				type: "subobject"
 				type_hash: "01527750cf1208ef"
+			}
+			{
+				name: "shader_hash"
+				type: "uint64_t"
 			}
 		]
 		default: {
@@ -15317,7 +15187,6 @@
 				nodes: [
 					{
 						type: "RootNodeDefinition"
-						label: ""
 						position: {
 							x: 300
 							y: -36.5
@@ -15654,7 +15523,6 @@
 				nodes: [
 					{
 						type: "BTRootNodeDefinition"
-						label: ""
 						position: {
 							x: 300
 							y: -36.5
@@ -25257,6 +25125,8 @@
 				}
 				{
 					color: 140
+					binding: 1
+					system_color: 1
 					custom_color_light: {
 						r: 0
 						g: 0
@@ -25287,8 +25157,6 @@
 				}
 				{
 					color: 142
-					binding: 1
-					system_color: 1
 					custom_color_light: {
 						r: 0
 						g: 0
@@ -25499,6 +25367,8 @@
 				}
 				{
 					color: 156
+					binding: 1
+					system_color: 53
 					custom_color_light: {
 						r: 0
 						g: 0
@@ -25529,8 +25399,6 @@
 				}
 				{
 					color: 158
-					binding: 1
-					system_color: 53
 					custom_color_light: {
 						r: 0
 						g: 0
@@ -25726,36 +25594,6 @@
 				}
 				{
 					color: 171
-					custom_color_light: {
-						r: 0
-						g: 0
-						b: 0
-						a: 0
-					}
-					custom_color_dark: {
-						r: 0
-						g: 0
-						b: 0
-						a: 0
-					}
-				}
-				{
-					color: 172
-					custom_color_light: {
-						r: 0
-						g: 0
-						b: 0
-						a: 0
-					}
-					custom_color_dark: {
-						r: 0
-						g: 0
-						b: 0
-						a: 0
-					}
-				}
-				{
-					color: 173
 					binding: 1
 					system_color: 47
 					custom_color_light: {
@@ -26106,7 +25944,7 @@
 				type_hash: "c5f12f23d4534d76"
 			}
 			{
-				name: "import_for_onyx"
+				name: "import_for_native_pipeline"
 				type: "bool"
 			}
 		]
@@ -26173,6 +26011,9 @@
 		default: {
 			settings: [
 				{
+					__type: "tm_lod_generator"
+				}
+				{
 					__type: "tm_scene_optimizer"
 					settings: {
 						graph: {
@@ -26198,9 +26039,6 @@
 							}
 						}
 					}
-				}
-				{
-					__type: "tm_lod_generator"
 				}
 			]
 			pro_settings: [
@@ -26327,8 +26165,6 @@
 				type: "float"
 			}
 		]
-		default: {
-		}
 	}
 	{
 		name: "tm_vec3_t"

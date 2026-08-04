@@ -1,0 +1,3382 @@
+__type: "tm_entity"
+__uuid: "cfad5382-3e0e-e5d7-870d-c53ba6c6d79e"
+name: "/"
+components: [
+	{
+		__type: "tm_transform_component"
+		__uuid: "1c45b93b-d4dc-8258-ab4b-6c5efed792fd"
+		local_position_double: {
+			__uuid: "984926d7-73e1-22bd-2d18-406c3f75b9af"
+		}
+		local_rotation: {
+			__uuid: "63f2a2ba-2977-8b06-1568-fdda066d5d16"
+		}
+		local_scale: {
+			__uuid: "90f85a7b-2171-a004-19cb-baeef637392b"
+		}
+	}
+	{
+		__type: "tm_scene_tree_component"
+		__uuid: "2cc826ab-4573-d2d9-8743-2f5ac3379a1d"
+		nodes: "dafb64b8-b35d-572a-f948-35c3098cfb31"
+		node_names: "1784fea4-5b3d-f40a-97f5-25bc25901ea9"
+	}
+]
+children: [
+	{
+		__uuid: "2d340ed6-5b15-12b0-003b-8471fb0a11b9"
+		name: "root"
+		components: [
+			{
+				__type: "tm_transform_component"
+				__uuid: "4fb0d5d7-2b68-0005-e44c-f7d38834a5fb"
+				local_position_double: {
+					__uuid: "5af1fdeb-3b48-fa17-bc4e-dc7e5e16728e"
+				}
+				local_rotation: {
+					__uuid: "24d76ec6-5bee-cec0-bbf1-0589ef09e0e8"
+					x: -0.70710676908493042
+					w: 0.70710676908493042
+				}
+				local_scale: {
+					__uuid: "4c830345-0c06-c2f2-7ecf-b6ccffb4bd06"
+				}
+			}
+		]
+		children: [
+			{
+				__uuid: "f1a63e2d-7f68-ceaf-ba57-4e0ef618e2ff"
+				name: "CP_RadioManagement_Parent"
+				components: [
+					{
+						__type: "tm_transform_component"
+						__uuid: "57c8d47b-53a0-af61-7fe4-3dc2d1f4634b"
+						local_position_double: {
+							__uuid: "95ea1ff5-5cb2-975e-8241-7031d7201efd"
+							x: 4.2531399726867676
+							y: 0.28385999798774719
+							z: 0.29439699649810791
+						}
+						local_rotation: {
+							__uuid: "8f1f3506-bfe8-4fa7-b0aa-d83260250be9"
+							x: -1.3918804775414628e-08
+							y: 0.10452845692634583
+							z: 0.99452191591262817
+							w: -1.3242859608908475e-07
+						}
+						local_scale: {
+							__uuid: "d202f2d0-6873-4035-bb62-8aef419e6c4d"
+							x: 0.82198899984359741
+							y: 0.82198905944824219
+							z: 0.82198905944824219
+						}
+					}
+				]
+				children: [
+					{
+						__uuid: "3b99d6af-98fa-9356-8add-191abd0856d1"
+						name: "CP_Button_RadioManagement_CallVHF3_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "d2dce643-a190-f060-7c02-a27f9b85e58b"
+								local_position_double: {
+									__uuid: "ccbadc84-19e0-ac68-6190-1e1f33a4fbb5"
+									x: -0.46269655227661133
+									y: -0.26433998346328735
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "0fb6d75a-435f-7ac2-73d9-7a2a1bfb320a"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "7514504d-a2d5-f96b-ffc3-6f34c49c5553"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "fa0fa559-73f9-bebb-d196-3cbfe576d0e9"
+								name: "CP_Button_RadioManagement_CallVHF3_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "340b3749-c005-ca9f-8a6c-233445426178"
+										local_position_double: {
+											__uuid: "3e4146d8-8637-ec75-bbf2-5df8154bb7dd"
+										}
+										local_rotation: {
+											__uuid: "cbfae7e2-03e6-3dc3-315f-4e2810806d7f"
+										}
+										local_scale: {
+											__uuid: "073b4ebb-2f9f-e633-941d-e8c9a2ba033a"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "5af1f9ae-2a97-25ae-4ead-f95b21ffd9e5"
+										skeleton_hierarchy: "59ffecc2-6725-39c1-40b7-e3941053bfb9"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "9ab7a72b-df2d-5d2d-a75e-ffa3eb47da42"
+						name: "CP_Button_RadioManagement_MechINT_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "4950266c-7330-a625-f74c-a52a969ce818"
+								local_position_double: {
+									__uuid: "7ce66065-7b65-cc3e-7595-a44d52b25268"
+									x: 0.95127725601196289
+									y: -0.26434004306793213
+									z: 0.10088630020618439
+								}
+								local_rotation: {
+									__uuid: "e0d0d266-a22c-629e-4503-2c4d631c3024"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "fc41a3fa-8e18-15c5-2f5d-568556968cce"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "9ad95f44-2263-3890-5b39-cdb7406ada7d"
+								name: "CP_Button_RadioManagement_MechINT_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "3dd2f604-789c-1560-c90d-92ffedce24a6"
+										local_position_double: {
+											__uuid: "b7e9fc13-3e7f-e742-0219-1de9288d7528"
+										}
+										local_rotation: {
+											__uuid: "20656821-592a-4d27-deed-642b0ba92bc4"
+										}
+										local_scale: {
+											__uuid: "07cee0e0-9d03-06a6-5312-8f46c54e5faf"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "028ccda0-0499-722a-aeb5-fb349ce66564"
+										skeleton_hierarchy: "5b624204-fafe-1c41-68c0-e69b7c6b99bd"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "9e0a8b38-2cc6-e1d3-9ff7-cbcee7ddf84b"
+						name: "CP_Rotate_RadioManagement_HF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "fba57998-3322-4c9f-9966-d65e50af9713"
+								local_position_double: {
+									__uuid: "8b451ac1-33a7-a70a-4f82-f5e52986649c"
+									x: 0.45685195922851563
+									y: -0.83271408081054688
+									z: 0.095273271203041077
+								}
+								local_rotation: {
+									__uuid: "418095d5-7853-7c2c-b6cd-425120050353"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "458c03db-a9d4-b05a-e4d8-96552bb6a612"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "54c5cc2f-fcad-f835-2e01-73fc9b36e679"
+								name: "CP_Rotate_RadioManagement_HF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "8cf41f7d-cb03-a17d-12a9-67eb2ae7d8cd"
+										local_position_double: {
+											__uuid: "05cd07cb-248b-ed9a-cb86-df41a8edd37d"
+										}
+										local_rotation: {
+											__uuid: "af6bd872-4773-5701-2485-3e7559c12ec0"
+										}
+										local_scale: {
+											__uuid: "60f17524-ec8a-6947-74fc-331cd26c2f18"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "2fd9bb19-8f09-3c7b-a35a-ceae5f2e2660"
+										skeleton_hierarchy: "46d36da3-2f41-39ec-0b09-7ce6b0a2d618"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "cea79b80-57db-c843-3e14-cf28a668d55d"
+						name: "CP_Button_RadioManagement_Switch_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "63346a0d-010b-8367-afa6-11846b67c5b0"
+								local_position_double: {
+									__uuid: "16bf7dec-9a7b-2c4e-35b7-cc6be16e9cfc"
+									x: -0.012516498565673828
+									y: 2.0456690788269043
+									z: 0.10088631510734558
+								}
+								local_rotation: {
+									__uuid: "7bf06afe-7cf0-720d-f410-684a09814470"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "96bdc486-a0c9-4605-b781-e2f0b721fe3a"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "e8f75200-86bf-a797-1246-775abfa30d8f"
+								name: "CP_Button_RadioManagement_Switch_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "c62d89c7-b92c-5d0a-840f-a5f13fe65c79"
+										local_position_double: {
+											__uuid: "07d65e48-695c-b45f-c2c2-b25ad4bf88e2"
+										}
+										local_rotation: {
+											__uuid: "e25a96c3-2957-d30e-9afb-7b5196fea2fc"
+										}
+										local_scale: {
+											__uuid: "76e29b17-9364-30a7-f3f0-de70cc8732d9"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "fd0ad099-73f5-c2b9-1555-9e1e59b38e3c"
+										skeleton_hierarchy: "5b3e31df-6c67-925b-3112-c0f296c39b0a"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "30eff53d-c7da-a95d-b8de-aed4f88f2d07"
+						name: "CP_Rotate_RadioManagement_ILS_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "a7318a3f-efd5-3c41-f599-e1072cb00eed"
+								local_position_double: {
+									__uuid: "0d70b44d-ba4a-8224-7f5e-5533fd2c6f6c"
+									x: -0.011186599731445313
+									y: -2.1530749797821045
+									z: 0.095273226499557495
+								}
+								local_rotation: {
+									__uuid: "9db4df12-6501-431f-df8a-c11c3a42c7cc"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "8976431c-07c8-e08f-2b54-0024deec0e9a"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "9b36eb7f-b7ec-ff4c-9b95-a6c740c53d22"
+								name: "CP_Rotate_RadioManagement_ILS_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "b8d465aa-9213-1d1e-f126-ec277a30b3a4"
+										local_position_double: {
+											__uuid: "1b947e0c-81dd-5840-4f18-f67b8327e72a"
+										}
+										local_rotation: {
+											__uuid: "22bc304a-6d6f-ca43-a0f6-4b7054ace437"
+										}
+										local_scale: {
+											__uuid: "942de94c-0d3f-cd95-5b27-6151686076ae"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "de8797d1-ea5b-607c-dedd-bfef77dbf997"
+										skeleton_hierarchy: "729be12e-bb48-81b3-4540-dc7539d20644"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "36e825a8-1d28-6aef-8d1a-7b96df408ec9"
+						name: "CP_Button_RadioManagement_ADF_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "88b67fb1-6077-6edf-e9b7-259718b8972f"
+								local_position_double: {
+									__uuid: "fd41303d-8826-e740-f161-93c0cee87826"
+									x: 0.45947456359863281
+									y: 0.3734179437160492
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "d3c492d7-2c9f-694e-8dce-301f1df4781c"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "e9749077-06be-3e5a-6d95-afe5e2b8e968"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "ac510dd3-6acf-55ab-dea0-94b1012c0f5d"
+								name: "CP_Button_RadioManagement_ADF_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "adb8c71d-816f-eb56-166c-ee521200f5aa"
+										local_position_double: {
+											__uuid: "584c3404-0d3e-3c05-ae3b-fc13e2578c61"
+										}
+										local_rotation: {
+											__uuid: "78d27eb7-7509-615f-a607-8c84f3699181"
+										}
+										local_scale: {
+											__uuid: "d134118d-c7ae-0e5f-5007-463d0cf62513"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "9fb1baee-9ed3-88e4-fc23-57e4bc3c197c"
+										skeleton_hierarchy: "7b5b5f69-8081-4a75-f687-5caa2f6d5fa8"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "835746c4-11d9-070f-2aae-fa1affee6244"
+						name: "CP_Indicator_RadioManagement_SignRadHF2"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "2b8cee07-138c-c65d-fe64-8d5244b492f2"
+								local_position_double: {
+									__uuid: "ee1af62a-6b6b-4ce1-5b96-03167a6b61ad"
+									x: -0.74480533599853516
+									y: 0.96962195634841919
+									z: 0.092403694987297058
+								}
+								local_rotation: {
+									__uuid: "6e7589b3-d9c9-24d1-c569-173a91aa5b7b"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "7389a68e-9404-3917-bc48-d71d1ce88231"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "566f7977-8adf-d379-e07f-6bd50a23fd75"
+								name: "Cylinder_022"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "52ad051b-e620-d8f4-44f1-4630251a7ec2"
+										local_position_double: {
+											__uuid: "94e83573-b0cf-95f3-dbe2-8c2124f61b0f"
+										}
+										local_rotation: {
+											__uuid: "3dff81db-41e9-ea04-527c-f8e16b7a1ece"
+										}
+										local_scale: {
+											__uuid: "c16566e5-9b19-5e9a-9ddc-a3d462b8c784"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "2fa15b92-b1f9-9110-d2d5-0a84f0ffa7d2"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "58ea2bd3-9463-079d-6f87-3c6cbc930056"
+											mesh_resource: "ff4f36e0-a621-6d64-cdd4-73dae31de563"
+										}
+										materials: [
+											{
+												__uuid: "8a426b3f-b0f3-457b-47db-0b9744ed9896"
+												name: "Cylinder_022"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "8ec7bd48-f72e-70a0-39e1-70665a52da07"
+						name: "CP_Button_RadioManagement_VOR_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "2149755d-972f-0b2d-95ea-9fd90b0b4e49"
+								local_position_double: {
+									__uuid: "30be5dfc-8c52-744b-d7c6-ec3b55d41291"
+									x: -0.95934724807739258
+									y: 0.37341797351837158
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "3e0fed21-75c5-7045-f850-a29585f97664"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "b7cb6668-504a-a1d2-2151-f2c14e88fc48"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "49bc3c81-3835-bb90-e221-ed7d6be292ff"
+								name: "CP_Button_RadioManagement_VOR_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "b022222e-63d1-0474-f276-2c3ca1ba16b8"
+										local_position_double: {
+											__uuid: "637f7f67-a7ff-a894-824c-5d1da9e1ad84"
+										}
+										local_rotation: {
+											__uuid: "b705e6b7-5397-dec6-9a89-fa6c7ff56de0"
+										}
+										local_scale: {
+											__uuid: "f4807800-1b2c-f0c4-e1ca-804ca94d97fe"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "abaa4174-cba4-7ea0-82e6-535ca3dca2f7"
+										skeleton_hierarchy: "69b711a5-2433-ab1b-5351-1139fdfd4cad"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "098b8713-0292-73b4-d3d9-f74be40f83f8"
+						name: "CP_Rotate_RadioManagement_MLS_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "140f0cea-b3de-81f8-3f31-cf5cc15b9bd3"
+								local_position_double: {
+									__uuid: "559606b5-92dc-e574-f210-e30c2180aa2d"
+									x: 0.45685195922851563
+									y: -2.1530749797821045
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "8bf579cd-cda7-b0b3-c93a-991399b6d3bc"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "ce3eec48-6025-fcce-2211-a13b7db70866"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "954328ad-2f2f-c9b6-93ee-29712ed7f23e"
+								name: "CP_Rotate_RadioManagement_MLS_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "23c0191d-228e-a252-81d5-2aa93f271dcf"
+										local_position_double: {
+											__uuid: "51d5e697-3c32-a044-05a8-97f9c3584673"
+										}
+										local_rotation: {
+											__uuid: "096670db-bb67-a011-2454-a5e4d20ae3a5"
+										}
+										local_scale: {
+											__uuid: "b9059074-c8e3-1e86-513c-6a95bf35fec2"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "def37846-3b6e-0758-085d-991771958bdf"
+										skeleton_hierarchy: "1d7265cd-ee73-f614-5fd0-ee11a0b55930"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "19784ba9-2b1f-0bdd-0548-78a685f0e972"
+						name: "CP_Indicator_RadioManagement_SignRadILS"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "645eff86-0ab5-2e70-10e7-698119c7a2d3"
+								local_position_double: {
+									__uuid: "033e48f0-df2b-6c50-6d7f-a2d91b6a626f"
+									x: -0.72341728210449219
+									y: 0.3563765287399292
+									z: 0.092403709888458252
+								}
+								local_rotation: {
+									__uuid: "3ab9b991-d668-a8eb-cd0e-c3efdc983675"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "cf0d9ae6-ce59-4cda-23e7-11d4d6e4e2bd"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "47ee046d-b61e-a547-cd57-c11df0cd8778"
+								name: "Cylinder_016"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "90a74ae9-f3bc-4b9f-50a4-783061dcab5f"
+										local_position_double: {
+											__uuid: "3323a016-0114-2a06-820b-a292886edc8b"
+										}
+										local_rotation: {
+											__uuid: "4ed08754-d515-d45f-2ad6-02b70bae39dc"
+										}
+										local_scale: {
+											__uuid: "bd3004ad-6ad0-c941-6aa4-aabe802b7a9b"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "7bfe7130-357c-484e-2953-0202364d754d"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "bd8794b0-8470-6705-f583-b4a73bf26d43"
+											mesh_resource: "aa754d59-f535-7669-2d28-8cc62e7a8139"
+										}
+										materials: [
+											{
+												__uuid: "0779682a-90bc-3e95-c46d-ca7b0cc88cca"
+												name: "Cylinder_016"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "b1373170-46d9-cb74-66fb-e6d7065effa3"
+						name: "CP_RadioManagement_StbyScreen"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "b2c12a20-72ef-1603-6d13-0b7f1fed7be6"
+								local_position_double: {
+									__uuid: "ad2e58de-9690-bc8a-4bbb-4486e38ed826"
+									x: 0.95550537109375
+									y: 2.0355663299560547
+									z: 0.068728357553482056
+								}
+								local_rotation: {
+									__uuid: "dbdc0cec-2499-c001-cf55-b4c0bd0354e6"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "452d905d-e11f-595c-e4f4-cb1368759ce9"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "768999be-82f4-9f47-b627-0fc9437d3843"
+								name: "Cube_134"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "aacb26ab-6833-ad2a-0795-2a4eba5a8b1c"
+										local_position_double: {
+											__uuid: "2d81a7e0-742c-3bb6-05c6-6df7a0f9c572"
+										}
+										local_rotation: {
+											__uuid: "69618122-e54b-cbf9-0758-5856b83c3b19"
+										}
+										local_scale: {
+											__uuid: "b234df06-ae4b-3c20-ef3b-f4123852e4b5"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "5ff538a0-a7ce-9b41-1941-ec79c8772250"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "01fd382c-56ac-951a-4daa-e544c0f07779"
+											mesh_resource: "e300edcc-a68e-d309-0638-ee066c615ba8"
+										}
+										materials: [
+											{
+												__uuid: "ad5bbf4f-b840-51fc-0f81-7adcc00a2917"
+												name: "Cube_134"
+												material: "4760fd9b-4e53-fccc-061a-7a04175e7fef"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "712e8237-d7e2-e4ad-668d-1541b978f1ec"
+						name: "CP_Button_RadioManagement_HF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "b5c59878-fe76-3c5a-d417-c188f19635ed"
+								local_position_double: {
+									__uuid: "4c907793-8a99-54cc-d8fb-5a170c6889fd"
+									x: -0.49796247482299805
+									y: 0.98080652952194214
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "89cebdac-a8f2-f7c0-8daa-7b774519c14f"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "42e93ad2-e3ba-8294-6b7e-81ec86e7694c"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "797fd9fa-ca95-9872-e9eb-1361c8b66be9"
+								name: "CP_Button_RadioManagement_HF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "a61a4780-ea08-3936-e85f-4b7e5e262108"
+										local_position_double: {
+											__uuid: "a1391203-6ae2-536f-def4-d5205ab88aad"
+										}
+										local_rotation: {
+											__uuid: "815d05d3-188d-3550-5420-80071476c1e4"
+										}
+										local_scale: {
+											__uuid: "e2525818-6600-68da-3751-35ed9e3bccf7"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "c475420c-f781-1673-d024-6f063562deb5"
+										skeleton_hierarchy: "90c6b166-eb69-7cdb-0e6b-7bd8dc0e7cff"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "84872bd3-8b2b-e001-760f-4c950825806d"
+						name: "CP_Rotate_RadioManagement_VOR2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "99e8f716-b43e-2dfa-955d-535d6e356d8f"
+								local_position_double: {
+									__uuid: "6a79fe26-a60c-d6b5-e1de-aae44440255d"
+									x: -0.94726276397705078
+									y: -2.1530752182006836
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "8802445d-73a2-f710-1a34-bf4601f332d7"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "5e1aa043-984c-0039-d2f4-251b84fa2b32"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "14b3b378-3a9e-17fd-46a5-f37f9c4f6ee7"
+								name: "CP_Rotate_RadioManagement_VOR2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "0808fb14-1bb4-95fd-9179-299b3f0dafea"
+										local_position_double: {
+											__uuid: "c1e65b67-02ec-cc65-9bf8-d5e3b52a12a6"
+										}
+										local_rotation: {
+											__uuid: "fe464396-3ff3-993a-c7df-de96ffd3b581"
+										}
+										local_scale: {
+											__uuid: "c5b26027-6813-5199-b6f1-8e25f999ea21"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "fbaf6898-6cce-e23e-8cc8-b684b0d32b09"
+										skeleton_hierarchy: "6849211f-54fd-3560-5b2b-4df08b41b672"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "cfc6a65d-a430-591a-2c74-107e7ffcf474"
+						name: "CP_Button_RadioManagement_Reset_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "f33b6242-3a9c-7d93-050c-1065a74ca38c"
+								local_position_double: {
+									__uuid: "4a1c35b2-0390-715f-8de0-443b737d8a96"
+									x: 0.023011207580566406
+									y: -1.3933409452438355
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "e7227526-00d4-1088-433a-19433e091c3f"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "29d424c1-3bc8-8f16-f546-5ef70f195dab"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "ce7beec0-9449-6491-7b7b-b6642fe2a3b9"
+								name: "CP_Button_RadioManagement_Reset_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "592be245-d135-d802-abe9-6ad7f3ac16cc"
+										local_position_double: {
+											__uuid: "40e244c4-d8a6-59bf-07ce-b915d96ce953"
+										}
+										local_rotation: {
+											__uuid: "78f61caa-c29d-28a6-b757-03d6ee3519f8"
+										}
+										local_scale: {
+											__uuid: "fe660a1f-0783-baa8-d3ce-c303cce9c038"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "61473e5d-9072-8028-fe29-94632fd5e6eb"
+										skeleton_hierarchy: "91285e09-040f-85bd-3066-9beea430d852"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "4efb4865-027d-85e3-1e56-c6856e3a4feb"
+						name: "CP_Rotate_RadioManagement_INT_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "b5e82f0f-3ae3-b722-6bd0-0bdc7b2ff88d"
+								local_position_double: {
+									__uuid: "8db88f38-819c-1907-f6f7-8ec569913e1f"
+									x: 0.92489004135131836
+									y: -0.83271408081054688
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "58eb721f-46c9-eddd-105b-e6d56d69adeb"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "effc688a-0b54-e6e1-3c4e-0a695b69c332"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "08a75ea9-5f92-94be-f7fe-8a6a75f74814"
+								name: "CP_Rotate_RadioManagement_INT_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "fc3ae262-7454-c004-cb9b-bc8ce96e5149"
+										local_position_double: {
+											__uuid: "dee47a48-a58e-ab30-fda8-38e960210b85"
+										}
+										local_rotation: {
+											__uuid: "14c928d1-2cea-c50d-0466-ece42b47a928"
+										}
+										local_scale: {
+											__uuid: "eb18060e-cc1f-9a4e-7c5b-45c256a1f09f"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "509cc09b-7d86-381b-0580-a74ce727b586"
+										skeleton_hierarchy: "6f80a636-70be-0033-f8f5-0fcc1a3b7701"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "e6ee87de-c70c-d0c6-84ab-217215bda249"
+						name: "CP_Button_RadioManagement_VHF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "c366dc94-ff2a-1131-e764-0394efad9bb9"
+								local_position_double: {
+									__uuid: "09b12fee-7b87-668c-865f-52540e220b69"
+									x: -0.96479606628417969
+									y: 1.4119408130645752
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "e512ee02-e468-af52-2372-badec5ed3ad5"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "e7386531-ffe1-83fa-25a6-928b892dc5f7"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "c769865d-ad90-d111-5328-8a0f44cfcacf"
+								name: "CP_Button_RadioManagement_VHF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "48f90e66-be37-3815-6a62-1afd2058786c"
+										local_position_double: {
+											__uuid: "0edbad5e-a78c-ddf2-ebb5-642649cef8d3"
+										}
+										local_rotation: {
+											__uuid: "c5a66bf7-5d94-2a8a-74f9-d3798f412bad"
+										}
+										local_scale: {
+											__uuid: "4933bc12-858d-c5b0-c8d5-55b933a9da23"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "e9a142ac-60b0-b708-ef09-deaa14011692"
+										skeleton_hierarchy: "aa43be91-96d7-33c4-6fed-37370185e10c"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "a5baf268-2fec-9ae0-1600-5cd8f2fab794"
+						name: "CP_Button_RadioManagement_CallVHF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "0bbb19fa-d3be-d13c-6b59-4869fb8181c8"
+								local_position_double: {
+									__uuid: "f5c0e90a-5f71-ecc3-4ade-e737aadf97b2"
+									x: -0.9340214729309082
+									y: -0.26433998346328735
+									z: 0.10088630020618439
+								}
+								local_rotation: {
+									__uuid: "6c96c8f9-b08a-df4b-0d88-9fb0bb965635"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "f140f0ce-1646-2baa-4dcb-8c0671eb41af"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "d2099acf-e305-d8d9-0d51-7868392d86c3"
+								name: "CP_Button_RadioManagement_CallVHF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "7e6661df-eb6d-d03e-0965-3fbc2d1a5bff"
+										local_position_double: {
+											__uuid: "b46bedaf-de82-7d1d-adc6-3bcdc860daa3"
+										}
+										local_rotation: {
+											__uuid: "fb891ae7-7d29-1989-d0a0-7324d2ff95a5"
+										}
+										local_scale: {
+											__uuid: "eb705750-fcf9-fd0c-e898-0dc981695f05"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "b1f766b4-0d9f-667b-afd0-4493e9ea10ab"
+										skeleton_hierarchy: "70061e6a-4e88-116f-9b93-421bbd5853e3"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "7e27a973-7253-2875-0828-ba0339389587"
+						name: "CP_Button_RadioManagement_SEL_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "3bfe5800-294a-07e0-b773-b23cf96bea73"
+								local_position_double: {
+									__uuid: "19863427-4a17-c735-33a0-5b105c253d87"
+									x: -0.96690559387207031
+									y: 0.97373497486114502
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "3bcc04b2-5daf-6d16-d681-3e8d751f62b2"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "2923db15-3967-cc5e-6a66-3945fa6ef94f"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "b0b0b9df-87ea-01ef-b5cb-dbdd88c21a90"
+								name: "CP_Button_RadioManagement_SEL_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "0153dc85-8702-eddf-7a6b-af64c3b36d91"
+										local_position_double: {
+											__uuid: "d369d551-5907-b191-8c7c-cd09fcabfaa9"
+										}
+										local_rotation: {
+											__uuid: "11c01007-0f65-caf5-e18e-41167976670c"
+										}
+										local_scale: {
+											__uuid: "ceae0d4f-7d21-dc93-0f96-700f4626814a"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "9eadc1b4-be39-e312-749b-ee2a6872b1ea"
+										skeleton_hierarchy: "34ab9e8a-3384-dec1-83e5-cd63a7c7ad8c"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "d5e544f6-2523-7539-d023-273a1961c836"
+						name: "CP_Indicator_RadioManagement_SignRadVOR"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "c2984217-20b2-a804-1392-fef05cde0958"
+								local_position_double: {
+									__uuid: "907086d9-4bd9-e409-274e-30a03fdfc2f0"
+									x: -1.1100378036499024
+									y: 0.55996900796890259
+									z: 0.092403635382652283
+								}
+								local_rotation: {
+									__uuid: "9b8fdc3b-8a2c-9b40-dae1-e8a29edf02c0"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "2cf7089b-e9b8-66e3-f3a0-8ac46e2a8aef"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "a3f30053-85b8-0022-2e19-12ed95e2ca26"
+								name: "Cylinder_017"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "5ebc26fa-b0d5-d623-0d6e-1f4733d7d159"
+										local_position_double: {
+											__uuid: "558d314c-17d1-255b-a17f-c004f60c3877"
+										}
+										local_rotation: {
+											__uuid: "245d6bdc-9657-e577-964f-ad52b9a7273c"
+										}
+										local_scale: {
+											__uuid: "557e1d21-d843-8204-ccbc-d7ca10a527b5"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "088e4ace-2198-28b5-0516-2609e7850c77"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "3444ea69-09a9-a4cf-0b29-318eaed9b24f"
+											mesh_resource: "aa54c04f-25ba-576f-dfd5-00eff807e399"
+										}
+										materials: [
+											{
+												__uuid: "c1c414cb-77cc-97a8-70f4-76598c18eb40"
+												name: "Cylinder_017"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "5983ad59-a663-17c6-ad94-d5b4aa313441"
+						name: "CP_Rotate_RadioManagement_ADF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "43a16f43-30b2-6a3c-63db-3443228dd278"
+								local_position_double: {
+									__uuid: "3eb86049-0a6f-5e1e-a968-f8f6c727a5ed"
+									x: 1.3929283618927002
+									y: -2.1530752182006836
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "d96d45ca-b2af-0482-d50b-6c515131cd17"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "b1d4ebf8-32e3-c9cb-e0f2-7309beae178c"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "c18fa2c6-7847-45ea-9356-35c2d653d9e1"
+								name: "CP_Rotate_RadioManagement_ADF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "d31d4f19-54a4-7d6a-b31e-fcdf3e78a906"
+										local_position_double: {
+											__uuid: "54044f3f-d2b0-741c-bddc-64f2841f3883"
+										}
+										local_rotation: {
+											__uuid: "07c71294-2233-c0bf-f022-f479c970d610"
+										}
+										local_scale: {
+											__uuid: "40a1311a-6c30-de36-183d-99bfb91a6976"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "dcb108e6-a78d-7cbe-6f93-e01c18b0eef9"
+										skeleton_hierarchy: "961a3a38-efeb-8f77-3ca2-8a8b98ca1349"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "ca1bb596-31fa-0b8a-1549-5a10cd1a47b2"
+						name: "CP_RadioManagement_ActiveScreen"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "7172f441-387d-7b1c-9265-e4431e91c292"
+								local_position_double: {
+									__uuid: "21cd77f4-3a72-6fb6-311e-ef36e64326d2"
+									x: -0.97816133499145508
+									y: 2.0357596874237061
+									z: 0.068728387355804443
+								}
+								local_rotation: {
+									__uuid: "dc433dd6-5942-1b05-7e94-989f8017ed5d"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "e725e4aa-3ac1-bd55-7705-56ddd6ff7905"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "d7cf6d87-e4a4-e87e-2f59-870c9e7214be"
+								name: "Cube_135"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "7c013d0f-3022-5afa-0fd3-cb59a00c44c2"
+										local_position_double: {
+											__uuid: "ad222c5f-cde6-3d39-288d-735a3a3da382"
+										}
+										local_rotation: {
+											__uuid: "a4997238-310e-0cd6-15b6-573effb4f66a"
+										}
+										local_scale: {
+											__uuid: "f5f58000-1939-c3a3-fbdf-78b6243fa3ce"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "ac099a27-3bfa-6315-72cb-b7cfe34176d7"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "d6bae6e3-7c8a-2624-d49b-9a72d67e04af"
+											mesh_resource: "1d175c8c-b338-00c8-7f5b-9d318913c571"
+										}
+										materials: [
+											{
+												__uuid: "78df4f8d-d426-1049-3234-4bc7d05f7e98"
+												name: "Cube_135"
+												material: "4760fd9b-4e53-fccc-061a-7a04175e7fef"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "6087d41a-3260-2e64-1d85-bed1d4f10a54"
+						name: "CP_Button_RadioManagement_BFO_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "434b9895-fb7d-2881-2463-1b5dc3f37b8e"
+								local_position_double: {
+									__uuid: "ed426029-97af-cf02-7c18-6ee3dc517abe"
+									x: 0.94823217391967773
+									y: 0.3734179437160492
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "b0c07607-21d4-6a6b-096b-cfdb64cadfb0"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "8c1a2655-bd8d-e023-8363-efa6f40aceee"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "e819a4f4-6aef-7dd3-d165-5d2c55fb5093"
+								name: "CP_Button_RadioManagement_BFO_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "de9bca22-da4a-2ce2-3d74-8756288f7fd7"
+										local_position_double: {
+											__uuid: "c6d430e5-74f6-a6a4-a4e1-f6eb7362386c"
+										}
+										local_rotation: {
+											__uuid: "4cbd2859-fd04-59c8-1977-6434391c6a55"
+										}
+										local_scale: {
+											__uuid: "7bd8d42b-a36a-9e48-6b63-e270a587ecb5"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "ae2370d2-bbec-72c3-a9d5-259b25c2f54e"
+										skeleton_hierarchy: "6e91b31a-d5b1-d24a-cd16-3909a5960bef"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "2adc1eb3-d73b-798d-c21e-b41fa790b79f"
+						name: "CP_Rotate_RadioManagement_HF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "6a330c38-e3af-a16c-8a6d-9eb12e548943"
+								local_position_double: {
+									__uuid: "bf6ab0ad-2edd-7797-ca6c-a66a910bf3f2"
+									x: -0.011186599731445313
+									y: -0.83271420001983643
+									z: 0.095273301005363464
+								}
+								local_rotation: {
+									__uuid: "efefec23-6c37-ae9a-d8c1-09ebb61f8184"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "af12ac84-6753-432a-4908-229ca9256052"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "31d24d7a-66c6-e50c-75e3-1b98404f1edc"
+								name: "CP_Rotate_RadioManagement_HF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "a61fb0e0-a764-7b9d-f6fc-1bad47ab218e"
+										local_position_double: {
+											__uuid: "08d3d482-46be-67e5-47f1-2af1c899b701"
+										}
+										local_rotation: {
+											__uuid: "ae381f57-d533-7a58-0435-fc822973ec70"
+										}
+										local_scale: {
+											__uuid: "65d015f1-d945-7ce3-c0b7-265e726ee855"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "03f5e18b-e96b-c8de-671b-8c6c086df7c9"
+										skeleton_hierarchy: "723ef43b-38af-b817-4e3e-054640362d39"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "893e2d5e-e749-e164-442c-f283b0931b4f"
+						name: "CP_RadioManagement_Board"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "f908accd-d6fd-455a-552b-5944985066aa"
+								local_position_double: {
+									__uuid: "215947ab-c6b2-9931-228f-ac2fdf67fcd2"
+									x: -1.4507908821105957
+									y: 0.75695258378982544
+									z: 0.10125856101512909
+								}
+								local_rotation: {
+									__uuid: "afb6f3e3-632d-92f7-6f5e-e0fd3e1a4ffa"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "43ce9d0e-0e29-bb8f-d05a-92ed28296d93"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "f2c34e6a-f8bd-a0c9-5bf6-5f86e9a77406"
+								name: "Cylinder_027"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "e990515a-8f23-ac91-b14a-0157f72d9e00"
+										local_position_double: {
+											__uuid: "865a75ba-a7ad-8369-5223-44e4a9aa24c2"
+										}
+										local_rotation: {
+											__uuid: "90767e36-5b40-7c84-865a-4281fc96eded"
+										}
+										local_scale: {
+											__uuid: "46249c77-2d51-f654-14fd-da125ca967df"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "d8a803ba-086a-d3bc-bf73-26d59a885d21"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "01ff4305-c204-e640-06da-f7a1037e11e6"
+											mesh_resource: "14880769-d071-102d-d513-3ea9ed7e9f3e"
+										}
+										materials: [
+											{
+												__uuid: "1f45a4a9-6a14-2b46-7481-5b3d1deff45b"
+												name: "Cylinder_027"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "dc743c9e-6268-fcce-1320-c1ae2311c28f"
+						name: "CP_Switch_RadioManagement_Power_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "b557ec53-cee2-c157-06a6-dc9388d00bce"
+								local_position_double: {
+									__uuid: "be4ba383-b0dc-7f1d-d39d-235d24434011"
+									x: 1.42295241355896
+									y: 0.49025452136993408
+									z: 0.089703455567359924
+								}
+								local_rotation: {
+									__uuid: "81e595bd-d8fd-f509-a11d-f5e5e9534510"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "0a858432-8e3f-1855-ace0-dd0db0a759bc"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "5c5232df-c181-3641-ad95-8f5201157ed1"
+								name: "CP_Switch_RadioManagement_Power_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "996706c3-8fe1-7a89-aee5-a10788710601"
+										local_position_double: {
+											__uuid: "5152f201-ee38-ee59-1ba0-713097cca070"
+										}
+										local_rotation: {
+											__uuid: "dfb99f2b-803f-9e58-d2a6-1a92944565c8"
+										}
+										local_scale: {
+											__uuid: "fdabe741-0032-490d-5e77-c143e3169d6c"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "43d95126-2a01-3d51-c210-5b5e6153a932"
+										skeleton_hierarchy: "680896b3-fe2b-61f6-33b8-b80823f4dfcc"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "75633e97-93ad-7d6f-7eb4-8e2ea39794f1"
+						name: "CP_Button_RadioManagement_CallHF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "9c13ce64-0b2e-3277-0847-3135b0df5c26"
+								local_position_double: {
+									__uuid: "6583de36-985e-69c9-0e1f-632a01617092"
+									x: 0.47995233535766602
+									y: -0.26433998346328735
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "aa7dec53-57a6-d2af-9d91-57e6223d13b0"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "e5dc4b6c-fb9a-a6e0-ba67-de091d5a41d7"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "c7181771-cbcf-8f22-4cdb-aa178d289926"
+								name: "CP_Button_RadioManagement_CallHF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "c2a907b9-916b-3dcd-5aa1-97e802414b5c"
+										local_position_double: {
+											__uuid: "c3d652fe-d4e5-0a5b-ed49-acecdfec836b"
+										}
+										local_rotation: {
+											__uuid: "e263d327-3b83-5776-1cc4-587063511dff"
+										}
+										local_scale: {
+											__uuid: "c6b769da-7331-2ea0-a8f7-6fdfc7fd7e00"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "1dd80818-0569-be0b-7092-bff32200417d"
+										skeleton_hierarchy: "0038f371-07f5-555d-491b-853353b25618"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "5f121189-9eec-dec8-d70d-7bb44c304d8d"
+						name: "CP_Button_RadioManagement_ILS_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "89afe3db-c1e1-3913-8026-c2228a4bca34"
+								local_position_double: {
+									__uuid: "a284b170-79f9-f11a-77be-f8769caebf11"
+									x: -0.48672199249267578
+									y: 0.37341797351837158
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "30289c80-1472-fde0-5445-6222b73c1cbf"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "74ddb3fe-aeb1-69bb-7580-bb5ef3a880c7"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "c641b221-e6b5-12e6-b741-55371d1b6766"
+								name: "CP_Button_RadioManagement_ILS_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "a75112fe-364a-983e-f739-ba3acb99d02f"
+										local_position_double: {
+											__uuid: "265a67ac-2046-8232-03fb-75bb613553cc"
+										}
+										local_rotation: {
+											__uuid: "d369c1b6-b3c1-4011-53de-69ee073ffff6"
+										}
+										local_scale: {
+											__uuid: "06e65e02-5f38-db5a-eed8-09c5be3e3d76"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "0a5012e9-1a63-bda8-2060-428a43549bc1"
+										skeleton_hierarchy: "993f7301-3086-a4ac-71c7-37a0ba9d1460"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "a2242927-c314-fed1-645e-7c402add47d6"
+						name: "CP_Indicator_RadioManagement_SignRadMLS"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "416fa09a-61e1-7166-eba5-671827ba56d4"
+								local_position_double: {
+									__uuid: "093efc77-16a1-7448-ded2-1947ad167640"
+									x: -0.24836874008178711
+									y: 0.3563765287399292
+									z: 0.092403717339038849
+								}
+								local_rotation: {
+									__uuid: "26dc6c65-252f-b3d8-0b8f-cd4a646397a6"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "a20f7c50-a5e5-4135-d87e-125aecf61c91"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "0791c5a5-f4cf-3f78-8cce-e2bafad72aa4"
+								name: "Cylinder_015"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "88edbaf1-410c-5de8-017b-e90bc400a6b0"
+										local_position_double: {
+											__uuid: "d4b50ce3-cf48-0b96-f891-99dc39bdacc3"
+										}
+										local_rotation: {
+											__uuid: "5bfeabbe-708e-540a-18e4-05d8578be6e3"
+										}
+										local_scale: {
+											__uuid: "97f72c9a-dabd-e406-87dd-ddfd53d25319"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "169afd7c-92b0-87d8-6447-e62baab12bbc"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "4734440e-04f1-032e-5e3f-a3a15a8851ae"
+											mesh_resource: "c88e2fca-df74-34e5-bfcb-1bdeccc98ec4"
+										}
+										materials: [
+											{
+												__uuid: "56510fd0-7afd-11eb-bdd4-a9a455f9507c"
+												name: "Cylinder_015"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "d6862b16-ed12-26f2-d174-af39e5d58971"
+						name: "CP_Indicator_RadioManagement_SignRadHF1"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "aabb7a2f-94c4-f4f8-9ee1-5998945e7f53"
+								local_position_double: {
+									__uuid: "0ac64a27-b7ae-f718-6463-aed9a26135c7"
+									x: -1.6924362182617188
+									y: 0.96962201595306396
+									z: 0.092403687536716461
+								}
+								local_rotation: {
+									__uuid: "cda80223-f9ff-1515-c865-4d876fb48cc4"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "bd2b3c02-1476-557a-7468-9635f3ff9585"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "b0366803-66f1-47f2-0789-1769989553e9"
+								name: "Cylinder_018"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "f9c8cf90-5e2f-b4ba-3d80-880503017e5b"
+										local_position_double: {
+											__uuid: "35923a02-3f07-c05a-43e7-505b65aebd56"
+										}
+										local_rotation: {
+											__uuid: "32d02fcf-00a4-48e9-3341-855787e20a1b"
+										}
+										local_scale: {
+											__uuid: "30ebc5a5-c918-480c-77bc-04e7d3f05469"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "208fed18-41da-eaa7-5739-1782b37375e3"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "dd68340b-68e7-2708-ec6b-a865244ba517"
+											mesh_resource: "7788c404-f3f0-16cb-0d57-74db424b4ac9"
+										}
+										materials: [
+											{
+												__uuid: "c7655c0d-8580-be6f-2d4b-dd26ea1a40f4"
+												name: "Cylinder_018"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "4d0bd170-c1c0-b330-c59e-3593c0b94415"
+						name: "CP_Rotate_RadioManagement_ADF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "cddc72d2-8cf3-3ff9-848f-0765e190c075"
+								local_position_double: {
+									__uuid: "c3ea1862-e27e-4b30-3f38-9ca66665fc82"
+									x: 0.92489004135131836
+									y: -2.1530749797821045
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "148d92a0-6e62-54f0-431a-50d135c9ee9c"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "55f74fc7-6a02-8492-249f-73728497ac59"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "00ea4eba-8dcc-2fd3-a174-55c928f6539f"
+								name: "CP_Rotate_RadioManagement_ADF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "66038167-9f80-d02f-4aaf-1dad9d84a41d"
+										local_position_double: {
+											__uuid: "d45c22b9-e293-641a-00ea-5d19e781371d"
+										}
+										local_rotation: {
+											__uuid: "9cbf7a06-572a-db59-1a2d-c79d1c39e291"
+										}
+										local_scale: {
+											__uuid: "62153779-e995-fa83-9a2c-56a2a0129393"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "aeba6bab-c592-24df-dcf6-5684acb7946b"
+										skeleton_hierarchy: "563dc9db-b1c1-c011-3ca9-a561bab4104d"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "496606b7-5a61-bfef-7054-c282c667873a"
+						name: "CP_Button_RadioManagement_IntRad_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "5e16fbf4-5278-89d4-67b3-57e28cc3bb76"
+								local_position_double: {
+									__uuid: "061606a4-e948-a361-ffdc-9d2fa23f93dc"
+									x: -1.2220773696899414
+									y: -1.3958621025085449
+									z: 0.089645415544509888
+								}
+								local_rotation: {
+									__uuid: "bc86c6a0-8587-fcb7-b02a-6a50a69a5b4c"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "b69a7e8f-5ba9-b514-a432-3bd918b6b381"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "c8bf20b2-23eb-549c-a96f-4b9ce0911e2c"
+								name: "CP_Switch_RadioManagement_IntRad_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "76b8d97a-df52-a643-147e-8a83999ee166"
+										local_position_double: {
+											__uuid: "980945d1-ea73-37ce-2242-2c1ef36f0c8d"
+										}
+										local_rotation: {
+											__uuid: "abb376e1-68ad-787c-9ad2-e6182cd733d3"
+										}
+										local_scale: {
+											__uuid: "57fc1395-1b5f-4a4a-f28d-a424f9847afc"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "7c96053d-8fc7-4df2-de25-d237c2af8626"
+										skeleton_hierarchy: "2e2273c9-a4e8-fd18-a8b9-7b9f37ff4845"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "8ec23421-e31f-1b19-98d2-594f1dc1f16c"
+						name: "CP_Button_RadioManagement_HF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "c8489b0e-c318-3b9e-3d8b-e1085ff32f3e"
+								local_position_double: {
+									__uuid: "0d9cdf20-bcd3-85c8-acfe-9397c0873356"
+									x: -1.4481053352355957
+									y: 0.98080658912658691
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "68a1b46d-cdc5-299b-cb0b-561d9a1c65f2"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "eb7efc77-ea1f-27d3-5290-d7e7174e2ca6"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "1ddeef0e-d0d4-abd4-2e71-bcb7b87ed43f"
+								name: "CP_Button_RadioManagement_HF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "dd580b80-fbbd-0f05-df7d-68614ba64b45"
+										local_position_double: {
+											__uuid: "d3ba4bb3-07d0-5b59-68f1-b444bb04064b"
+										}
+										local_rotation: {
+											__uuid: "07fe05d2-58ce-2ae8-e1df-56e7648c496f"
+										}
+										local_scale: {
+											__uuid: "9d6db27f-5a01-87c8-b643-ccf3c4778ab8"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "83bd25e8-64ac-bbfe-6978-5cae39a2f506"
+										skeleton_hierarchy: "9d747879-f833-c361-a889-036f1db4f680"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "65820d10-7dcf-ff4c-1a39-0ce97ea34474"
+						name: "CP_Rotate_RadioManagement_PA_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "8fa0f548-04bf-74cf-479d-09f47b520105"
+								local_position_double: {
+									__uuid: "b87ec6dd-8fac-8a70-1a63-8616bcc65ffa"
+									x: 0.62518119812011719
+									y: -1.3951812982559204
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "773ae597-f5d6-fbe7-33c8-0d1abea501fd"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "c9881359-0d4a-aa14-95b6-5af9938d23a9"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "44bf86ae-a35a-e6e1-227a-2c259de065fb"
+								name: "CP_Rotate_RadioManagement_PA_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "ca8a0980-e781-f385-25b2-eab635dd4dc5"
+										local_position_double: {
+											__uuid: "ea76dbb6-6969-ec74-16c3-1ed6708c03cf"
+										}
+										local_rotation: {
+											__uuid: "89cd841f-2aea-914b-bf69-d06bbd289f89"
+										}
+										local_scale: {
+											__uuid: "069ff29c-13cf-d6c6-f020-a6faa9630d35"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "af319ae5-5034-9741-bda4-7fa13c462c16"
+										skeleton_hierarchy: "2f25abb6-ae50-2429-6690-e8da36bb5ae5"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "12664e4f-a707-a4d1-c50d-7ebfc2f83b44"
+						name: "CP_Button_RadioManagement_PA_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "93071d89-fb76-fac1-f90f-3bd14543e273"
+								local_position_double: {
+									__uuid: "8707e755-34d1-9a6d-b1af-8f6e2377aa38"
+									x: 1.4257092475891113
+									y: -1.3933409452438355
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "6046d5fe-72d1-f304-08c1-854699bdae0e"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "4e62f27b-5b88-6c0f-c116-75c2175d2a79"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "5ef54e70-5411-9aa9-f064-236640eaa1ed"
+								name: "CP_Button_RadioManagement_PA_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "8f86bfbe-aaae-cdd6-2614-78a614e8a4ef"
+										local_position_double: {
+											__uuid: "b44730f0-9139-3488-0a81-8ce681ddcaa7"
+										}
+										local_rotation: {
+											__uuid: "fbf1eff1-5e2c-bb17-1b3f-22b9b1554b4b"
+										}
+										local_scale: {
+											__uuid: "85904560-ab90-a543-84de-97db8f3966ac"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "d7b0a63a-dfc0-7c13-6647-4dc9b1ca0b23"
+										skeleton_hierarchy: "29f23f36-032e-5577-2b96-ab80ddd0f6ca"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "3b1b3711-a648-3fd8-a4d2-18aa182998c0"
+						name: "CP_Button_RadioManagement_VHF3_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "8c29bb26-259d-cd52-0df3-924270ea32fc"
+								local_position_double: {
+									__uuid: "9182663d-d14e-c424-b2ef-a5eaf1cd9f91"
+									x: -0.49521636962890625
+									y: 1.4119409322738648
+									z: 0.10088625550270081
+								}
+								local_rotation: {
+									__uuid: "7e274b9f-7b67-4260-43cf-828fc3f43b4f"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "1c7e550f-b943-efaf-7342-ba35b3163f72"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "78ed2aa5-da30-7018-3e5f-d84daa9f604d"
+								name: "CP_Button_RadioManagement_VHF3_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "68c0e91f-fd40-23f1-41a4-25fab9870a91"
+										local_position_double: {
+											__uuid: "7941f371-1c5d-99f0-a90e-cf56c89c047c"
+										}
+										local_rotation: {
+											__uuid: "0cf9436e-e703-6abf-f0a8-6a70f5ff3fc5"
+										}
+										local_scale: {
+											__uuid: "1a65d1e9-715c-d94c-0be3-e749f4648baa"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "112661e2-3d3e-637a-cabd-c53383f00685"
+										skeleton_hierarchy: "658834bd-946d-1ada-7c7c-cdc7892c6274"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "64568c2a-b347-b1ff-2b86-08e11542d412"
+						name: "CP_Indicator_RadioManagement_SignRadVHF1"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "4b3f388d-8dab-9b5a-d439-b3c994423b5a"
+								local_position_double: {
+									__uuid: "503563b1-5cab-4837-1d28-cb7ef6398756"
+									x: -1.6973714828491211
+									y: 1.4138240814208984
+									z: 0.092403694987297058
+								}
+								local_rotation: {
+									__uuid: "b8209156-7b5b-e4ed-cd10-4f26ebeec19a"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "875dcab2-371e-c8d2-819f-f97f0d76c062"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "75335202-9030-cddd-9792-b0c23db13f5f"
+								name: "Cylinder_019"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "3ee0c47d-9e9e-c4d0-6062-4b112a7e9187"
+										local_position_double: {
+											__uuid: "2e66d23d-f03a-f960-f100-af18b1a3a2b6"
+										}
+										local_rotation: {
+											__uuid: "6b081faa-28b2-da3c-ff02-eb4570842fc7"
+										}
+										local_scale: {
+											__uuid: "0427fd3a-c539-89eb-845f-d8e32c71807e"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "579b6b76-0297-8645-3e06-dd45465f2fbc"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "9b10f8be-5251-eec3-b292-52aaceb4cd04"
+											mesh_resource: "372d61f3-9183-36ca-58a8-d854df849543"
+										}
+										materials: [
+											{
+												__uuid: "1c2f9b15-80a3-35b1-0a87-41150bbecba4"
+												name: "Cylinder_019"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "26e6b9c9-cf8e-d8e6-2399-5e0ce84a0b12"
+						name: "CP_Button_RadioManagement_CallVHF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "2cb455ac-4b63-c783-3a18-a56bfd8c01d4"
+								local_position_double: {
+									__uuid: "bb48eaf9-4a59-69f3-3d72-f2a15f51debf"
+									x: -1.4053459167480469
+									y: -0.26433998346328735
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "ab6d066f-c580-2299-09df-b6aa29375b61"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "2899ebca-8935-30e7-1db3-0e4e389da80d"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "0cd67803-0ada-3821-1e41-7a950ad695f3"
+								name: "CP_Button_RadioManagement_CallVHF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "f272107a-3adc-83e9-8079-8b863ac9858c"
+										local_position_double: {
+											__uuid: "6bedf085-6bcb-e155-3b5b-486158f111bf"
+										}
+										local_rotation: {
+											__uuid: "cefbd895-8f7d-dc16-72b1-12b913ce2f63"
+										}
+										local_scale: {
+											__uuid: "ea25a0ca-c837-a7f1-c98d-e842cfc60e78"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "973ae6fe-963a-435d-5875-92c9f4eab631"
+										skeleton_hierarchy: "6a13a8bb-ad16-ccc7-4819-7830c283b599"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "ecf92df3-f509-1bc0-1990-2980b689c208"
+						name: "CP_Rotate_RadioManagement_VHF2_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "50fe5f64-b061-b815-ccbc-cb76fa6aabcc"
+								local_position_double: {
+									__uuid: "1c312325-f482-f912-c871-2bc1b830c005"
+									x: -0.94726276397705078
+									y: -0.83271420001983643
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "c602707b-0de4-cf20-2acd-9c7d399a22fe"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "fd0a94ac-0b0e-80d4-92de-1db208ab030e"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "0796f10b-e89c-c6df-1d7d-6405bf8103d4"
+								name: "CP_Rotate_RadioManagement_VHF2_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "662842c7-cd75-5c77-7c53-d5fa157d429f"
+										local_position_double: {
+											__uuid: "72840869-29c3-3ef2-0197-04def76404f2"
+										}
+										local_rotation: {
+											__uuid: "c7b002ad-ffcd-6b9b-f81f-4be33f796949"
+										}
+										local_scale: {
+											__uuid: "3afebbb7-3479-55e1-5f7d-6f6807aa08ff"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "a02fa335-6d53-d0dc-066e-8b69a39ff94a"
+										skeleton_hierarchy: "cf41101e-3280-727d-3aee-5ba00365ef3c"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "b202923e-9e30-e063-0214-ed506717a142"
+						name: "CP_Rotate_RadioManagement_MKR_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "d6860fef-5bd0-7598-d160-d2d992fbca51"
+								local_position_double: {
+									__uuid: "8da36c15-d940-6293-ea26-fc428962ff71"
+									x: -0.47922468185424805
+									y: -2.1530749797821045
+									z: 0.095273226499557495
+								}
+								local_rotation: {
+									__uuid: "96ef5f95-d693-34d6-1231-0b7dd00bf1cb"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "5901fbe3-fec1-cd96-7e4d-1ccfbcb915d1"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "5cc4b256-7abd-5888-f616-7ac9afa0f316"
+								name: "CP_Rotate_RadioManagement_MKR_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "453abe98-7a73-17b2-de0e-83957fe338a3"
+										local_position_double: {
+											__uuid: "953482b2-4b27-01c4-3c0a-f24da26adfcb"
+										}
+										local_rotation: {
+											__uuid: "e9815ef7-61c8-bddb-4a4c-e7eaa85f3608"
+										}
+										local_scale: {
+											__uuid: "c7c157cf-1b7c-d224-89ec-0f4c042c9af5"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "abb51aee-dcfc-e583-c412-ce3ff6503b10"
+										skeleton_hierarchy: "20aaa761-b861-c571-3d7a-ea41630a256c"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "34ae45ed-85da-0d87-535a-7fbc396fabd7"
+						name: "CP_Button_RadioManagement_CallHF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "c1847c8a-1977-9d10-8ee8-a7d6f68513f9"
+								local_position_double: {
+									__uuid: "f73cc6a3-7f80-aa94-f7a2-b5a6bdc66e32"
+									x: 0.0086278915405273438
+									y: -0.26434004306793213
+									z: 0.10088630020618439
+								}
+								local_rotation: {
+									__uuid: "82b5f105-f011-131b-f7c7-9febed6e58b9"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "e6b0fa85-4731-ec5d-4b19-909d5272a092"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "d3ff5f73-b33f-5a1a-15a2-08505416c55f"
+								name: "CP_Button_RadioManagement_CallHF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "d42d8105-b061-394e-46ad-56dc34fdff6a"
+										local_position_double: {
+											__uuid: "24847b29-e179-f1ef-3b33-101d896eea7c"
+										}
+										local_rotation: {
+											__uuid: "25bfa794-3498-8c36-ff75-ae790e29762e"
+										}
+										local_scale: {
+											__uuid: "877253ea-271e-9677-3b8f-7cd442091b9f"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "152c603e-3fbc-a19a-8663-ce00b0b74997"
+										skeleton_hierarchy: "fc852f8d-0c5e-995e-375b-78554d8be495"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "38682855-7d83-aef6-a079-1db2ec9c077c"
+						name: "CP_Rotate_RadioManagement_Tuning_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "bbfe7699-9fa4-8af9-d367-c8be62b2c02e"
+								local_position_double: {
+									__uuid: "431d4500-7f06-fe24-c0b8-9887b2746aea"
+									x: 0.72042942047119141
+									y: 1.1547989845275879
+									z: 0.12390618026256561
+								}
+								local_rotation: {
+									__uuid: "28c322ad-9e5d-38f1-5533-13a802f92cac"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "ee0330ad-3079-fbbe-5d05-6514a794510c"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "0a0fbdd7-dde7-f6f3-5569-2a531c229356"
+								name: "CP_Rotate_RadioManagement_Tuning_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "cd09ae9b-dd11-d637-db4b-5a3bef5dc956"
+										local_position_double: {
+											__uuid: "d254c170-374a-f482-51c2-17b44042b0a3"
+										}
+										local_rotation: {
+											__uuid: "2c3bb6f8-404f-95f9-8591-84e22995eb1d"
+										}
+										local_scale: {
+											__uuid: "d495b502-a212-298b-b07c-9e93bfb27d75"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "c66e8c66-d5ac-e5f1-22e1-a33ee4ea340e"
+										skeleton_hierarchy: "72ec53f7-b158-7ce2-bf60-477f4bf63ffb"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "e3dc662c-9e08-24e8-f531-84550f3c1bc5"
+						name: "CP_Indicator_RadioManagement_SignNAV"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "46cdd13a-57c7-0875-b432-4bba81fe2b39"
+								local_position_double: {
+									__uuid: "12e99396-e716-e6d5-e651-051de0f78c67"
+									x: -1.7872138023376465
+									y: 0.28497382998466492
+									z: 0.092403694987297058
+								}
+								local_rotation: {
+									__uuid: "e0ab5173-5eea-3707-094f-7c89b7f25976"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "3896c3ee-0397-34f3-b902-0aca0dae9dbd"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "b43df820-0a6a-e13d-875b-f010ad7e96e5"
+								name: "Cylinder_030"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "732e0dba-98b2-a064-7771-e5dc0b18135f"
+										local_position_double: {
+											__uuid: "552593e7-4318-e844-e529-d2b265ca42a2"
+										}
+										local_rotation: {
+											__uuid: "308e0f37-a7ca-0128-92a1-0303702799b3"
+										}
+										local_scale: {
+											__uuid: "f4fc7d2b-73e3-d770-40c6-0a31469e8889"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "576fbb5a-d734-11fe-e6e3-5afadc3e17d2"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "e5b07e8c-cec0-a1f3-0ef0-15b2684a93f1"
+											mesh_resource: "8cd98755-80ee-f2f3-f526-d807d98f98f7"
+										}
+										materials: [
+											{
+												__uuid: "4d77add3-8a0f-bd22-94ae-722b647d0b9d"
+												name: "Cylinder_030"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "c9b8b2c1-e9af-7ae9-2bbf-18bc3e9c34d5"
+						name: "CP_Button_RadioManagement_AttCAB_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "5df642a1-b415-f1ee-5939-ded700419443"
+								local_position_double: {
+									__uuid: "cfc93319-9b0c-dc38-a506-21fa861a8af7"
+									x: 1.4208567142486572
+									y: -0.26434004306793213
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "05c99e0c-41f6-00f2-c379-2f1fbbc02022"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "61189eda-0838-fa83-7bd4-6779dc100488"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "4ced0dd4-013b-0cda-aded-9f06d5132c20"
+								name: "CP_Button_RadioManagement_AttCAB_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "bf69c13e-028a-f844-a655-116a9f8b6ebf"
+										local_position_double: {
+											__uuid: "608014a0-c31f-0942-061b-df52cd527357"
+										}
+										local_rotation: {
+											__uuid: "44214272-dab7-5726-4edd-273bba55f5e5"
+										}
+										local_scale: {
+											__uuid: "b91ad666-f08d-f1cd-9073-62b72097b339"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "8f5ed31d-b206-c6b1-d7d9-1e3d976da6d4"
+										skeleton_hierarchy: "4010d990-0a91-a093-6360-458281a31f95"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "daa07d5e-4d85-f594-dc47-159ca0c4f5cd"
+						name: "CP_Rotate_RadioManagement_SafetyNAV_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "6c34b41e-4226-1f29-1f21-503bac287c16"
+								local_position_double: {
+									__uuid: "c7ed3d2f-bb30-855e-2ef4-873b86294858"
+									x: -1.3415064811706543
+									y: 0.75648093223571777
+									z: 0.10085507482290268
+								}
+								local_rotation: {
+									__uuid: "271c8b20-ccc3-0ab9-1e0b-52dfb149c3bb"
+									x: -8.8817841970012523e-16
+									y: -0.70710670948028565
+									z: -8.8817831382100683e-16
+									w: 0.7071068286895752
+								}
+								local_scale: {
+									__uuid: "ceb132bb-10b5-eabe-12fc-500f6ca993ed"
+									x: 0.37509384751319885
+									y: 0.37509384751319885
+									z: 0.37509387731552124
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "15c6ca8e-47be-9c19-5e7f-927a7a589764"
+								name: "CP_Rotate_RadioManagement_SafetyNAV_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "eca614d1-df57-537d-66da-57d847450498"
+										local_position_double: {
+											__uuid: "1c4e0016-7fbb-a1a9-5fdc-93c6fae4b77f"
+										}
+										local_rotation: {
+											__uuid: "6355a5c1-0fdd-1c12-873c-f691593c851c"
+										}
+										local_scale: {
+											__uuid: "594dc057-2354-5a66-9255-9acfaf59b017"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "efae2cfb-beb7-3630-79ba-09843a08464d"
+										skeleton_hierarchy: "68eb7709-6455-afe4-0951-1d4a37870a05"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "70432213-3804-29ed-d07e-32084b3cc255"
+						name: "CP_Indicator_RadioManagement_SignRadAM"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "19d6eaea-cc6e-f96a-db19-796f51b3a11e"
+								local_position_double: {
+									__uuid: "af23aec4-fff8-ba37-21b4-d2a7c8eb918b"
+									x: -0.24137592315673828
+									y: 0.96715420484542847
+									z: 0.092403687536716461
+								}
+								local_rotation: {
+									__uuid: "c865a5b1-1eb3-a5dc-2c41-5c53537dd746"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "1aaeb1fb-c4ee-16ba-5cfb-9cf90dea6688"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "1c2240dc-8b37-e60f-af3c-2fbccd6f1062"
+								name: "Cylinder_023"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "42f3dd4c-bbb2-2e98-fd88-e9755a51a02d"
+										local_position_double: {
+											__uuid: "c9f13c7d-69b2-c822-5084-4b4fe7a212e1"
+										}
+										local_rotation: {
+											__uuid: "a3a045c2-225a-c588-4026-94c2bddf77d1"
+										}
+										local_scale: {
+											__uuid: "5804518c-3660-501c-29e1-23ef19cf02bb"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "cb845f33-f192-ed85-0ccd-d3f185b6c55a"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "cb029eb2-370a-d2b9-d690-a88bed2735a1"
+											mesh_resource: "12d9d6d0-27d8-27c6-24dd-9b0cb6aecd35"
+										}
+										materials: [
+											{
+												__uuid: "e699e498-858c-f03b-d2d8-f1512b140779"
+												name: "Cylinder_023"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "d1a8d06d-99b3-3594-9e25-0cfdb451f941"
+						name: "CP_Button_RadioManagement_MLS_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "743ce2fd-694c-558c-9242-84cd4983c972"
+								local_position_double: {
+									__uuid: "2fc08a77-5986-8e53-63ba-e7d038429421"
+									x: -0.010302543640136719
+									y: 0.37341797351837158
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "8e889875-6a2e-d7f8-6677-1f1672353eec"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "6419a382-9e85-ab9a-18a8-7122ea033b17"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "a0deb3c2-0c79-a0ad-a72e-70aaebe2bf26"
+								name: "CP_Button_RadioManagement_MLS_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "92712b46-8e80-3025-ad56-f342f8173a32"
+										local_position_double: {
+											__uuid: "f05ca51a-a380-1e54-720c-cb3494b2f984"
+										}
+										local_rotation: {
+											__uuid: "32cfcd5d-aea5-362a-de31-817a2d1560cf"
+										}
+										local_scale: {
+											__uuid: "f3a0926e-1585-fb87-7f9e-533518f3e739"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "c3b1a9f7-c922-badf-a00b-d1157f0dbf52"
+										skeleton_hierarchy: "a0d73116-9b18-e4c6-2d81-a65ffc83a00f"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "07486802-8bcc-5c03-f17d-bb024786ae7e"
+						name: "CP_Rotate_RadioManagement_VHF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "fba04f1a-75c8-dc79-9f8c-c790dacb703b"
+								local_position_double: {
+									__uuid: "e0f32b8b-70f5-1d72-812f-cc0005fac5f2"
+									x: -1.4153013229370117
+									y: -0.83271420001983643
+									z: 0.095273301005363464
+								}
+								local_rotation: {
+									__uuid: "1c612569-cbaf-adc9-798d-29f31cfef68e"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "54aec8ca-f011-f4f2-20d9-01adf4c7f6d4"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "70731d97-7d5f-19e6-f1ee-8577396779ef"
+								name: "CP_Rotate_RadioManagement_VHF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "52d0622c-9226-9701-22e5-4ec86d9de149"
+										local_position_double: {
+											__uuid: "784cd65c-8420-93ab-fbb1-71f104954ea1"
+										}
+										local_rotation: {
+											__uuid: "6067c0c7-1313-1551-fa6b-50d293e98b9a"
+										}
+										local_scale: {
+											__uuid: "d223b09d-6be6-ff21-043a-d89239ee7769"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "398cba44-27c8-886c-9cf6-fdaf4cdaaca9"
+										skeleton_hierarchy: "0cbfa656-7008-8634-d633-acb1aca1547c"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "a4bac0e6-46cd-9e4c-c612-5c17de66c0ff"
+						name: "CP_Rotate_RadioManagement_VOR1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "c8e753e0-23ab-db2c-c7e9-4bbf1329e913"
+								local_position_double: {
+									__uuid: "4ea4f0df-4f64-f2e7-04c4-6fc3420288a4"
+									x: -1.4153013229370117
+									y: -2.1530752182006836
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "29fd7ab3-8138-65eb-d00c-82878e9ecaa8"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "61631045-dfdc-26aa-117b-9fb684a2ca62"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "23e90a41-7c85-28c1-26d5-fc766e068eaa"
+								name: "CP_Rotate_RadioManagement_VOR1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "5d4d6e7a-2aa7-e1ff-1d03-7077dbe04d58"
+										local_position_double: {
+											__uuid: "b82024c7-915b-3a17-0e2e-724beaefaa62"
+										}
+										local_rotation: {
+											__uuid: "1f50c61b-e5ee-4c71-013c-9636781588fb"
+										}
+										local_scale: {
+											__uuid: "6c93f0e8-41a6-8d39-93cf-3da36147a7cc"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "fe9662cc-c1a0-f72a-adf7-7d8c1ae2ba8d"
+										skeleton_hierarchy: "546334fb-078f-1170-907c-7df72d9cb586"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "e42bfb6e-7ab8-10ef-591f-ea4211a5594c"
+						name: "CP_Button_RadioManagement_VHF1_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "ef74b9ac-ebc6-97a1-7bcf-163bcfbaf16b"
+								local_position_double: {
+									__uuid: "3e9f72b9-9165-45e3-5fb4-277005074007"
+									x: -1.4508514404296875
+									y: 1.4119409322738648
+									z: 0.100886270403862
+								}
+								local_rotation: {
+									__uuid: "dffdde2f-7cfa-646f-1c06-38c741438b5e"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "36f460ba-0e0f-a4af-8830-48324f72bfb9"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "0d09750b-6ff8-73bb-3e7a-93d86bd370d5"
+								name: "CP_Button_RadioManagement_VHF1_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "260a367c-0473-5f73-e17b-1b72a6efedbd"
+										local_position_double: {
+											__uuid: "3a069178-a9ee-47b9-fdcf-3de43a88d4b6"
+										}
+										local_rotation: {
+											__uuid: "9ddb2100-5442-3ce7-1d62-dcb73a321290"
+										}
+										local_scale: {
+											__uuid: "74007239-c701-baef-6da0-211ca5dca0bf"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "f332c243-5622-8ce3-e35c-8aafbd009b8f"
+										skeleton_hierarchy: "362164b7-629f-86c7-0c9d-52c3fb5eca01"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "92d7de91-5e47-5078-1881-912253352d16"
+						name: "CP_Button_RadioManagement_NAV_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "81ff304c-e97f-165c-91b0-bfe0d0d53518"
+								local_position_double: {
+									__uuid: "78a60964-e884-02f5-48c5-8ddd1fec26ab"
+									x: -1.4528508186340332
+									y: 0.3734179437160492
+									z: 0.10088630765676498
+								}
+								local_rotation: {
+									__uuid: "dc448506-9a0f-83f7-4895-550902f1e156"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "084c7e79-f406-8e9c-b4df-8f7ed3c1ac03"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "1507e034-edbb-80d8-b665-ae44499cc1da"
+								name: "CP_Button_RadioManagement_NAV_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "5c28403a-73c4-a5c7-bac7-0864effc5f6e"
+										local_position_double: {
+											__uuid: "bb459abf-d9f9-f7e2-72dd-0c07d9d95626"
+										}
+										local_rotation: {
+											__uuid: "c9f5f9c1-44d3-96d3-c632-b8f2d33775b0"
+										}
+										local_scale: {
+											__uuid: "b0774d95-e8a4-c171-56e8-4ef34a7e2a85"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "2a16b9f7-f109-74df-9f95-6a3e509ab8ab"
+										skeleton_hierarchy: "232f80b9-a20f-d967-2d93-f3f8a117b78b"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "549750a6-fb87-11e9-aa31-4d554228abf0"
+						name: "CP_Indicator_RadioManagement_SignRadVHF2"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "cc4b4687-3822-06aa-5c9d-9df115177092"
+								local_position_double: {
+									__uuid: "bf05a9ce-c1f8-c5b1-ab7a-a38d382caacc"
+									x: -1.2062816619873047
+									y: 1.4064207077026367
+									z: 0.092403680086135864
+								}
+								local_rotation: {
+									__uuid: "9b9c5890-30d0-10f3-e7f2-972d6b2742a8"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "f546c7d9-942c-856a-ba71-63e54a4a0019"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "0fd9a4e3-3ee2-91a3-1880-76be5e5bd54a"
+								name: "Cylinder_020"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "efa8acc4-074f-ae02-ce0b-d7f003fd2712"
+										local_position_double: {
+											__uuid: "767840f4-3c71-0970-7c18-d30516c4a227"
+										}
+										local_rotation: {
+											__uuid: "06ab600b-b881-0467-eb8c-27676f68bb4a"
+										}
+										local_scale: {
+											__uuid: "7776ad8f-5c91-8121-3535-f6f8d4e1944d"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "c824fe55-dad2-4f9f-e638-c17f4ff5bf58"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "9a756155-58aa-157f-1f55-9ba1f20f31f9"
+											mesh_resource: "568de010-a301-19b1-6e76-71cadea59084"
+										}
+										materials: [
+											{
+												__uuid: "6f9f6411-f74f-bc57-6c5a-6f8149c9a140"
+												name: "Cylinder_020"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "1342157e-a329-76e4-da2b-ef38a364b0d4"
+						name: "CP_Indicator_RadioManagement_SignRadADF"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "d16c1257-a334-77c3-53e4-709cffcb6c9f"
+								local_position_double: {
+									__uuid: "66839c2c-92c7-2986-fada-efa24e4a78d1"
+									x: 0.22668075561523438
+									y: 0.35637655854225159
+									z: 0.092403709888458252
+								}
+								local_rotation: {
+									__uuid: "c28c596c-b25e-81b7-569c-acbafecca24b"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "827c2126-934b-b575-7834-4233ca762a5d"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "4f685525-ebe9-0cea-7759-7344b26b90f0"
+								name: "Cylinder_010"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "e8538b6f-4321-cf59-d3d4-c61b6088db53"
+										local_position_double: {
+											__uuid: "f8bb5ce3-ab3a-a36b-0fe3-27bd987db675"
+										}
+										local_rotation: {
+											__uuid: "e9145ee9-a530-908d-d1ce-c8dc9e0b7205"
+										}
+										local_scale: {
+											__uuid: "f7e11304-1961-688d-66f9-8fa3f609740f"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "33b0492a-24c8-2ece-ffac-c413199f2117"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "3fb85f8b-e65e-7681-9522-8c6e1f928e04"
+											mesh_resource: "222dfec0-66fc-d4cc-0aeb-d3c1007aff2c"
+										}
+										materials: [
+											{
+												__uuid: "c58c3008-5e95-6a71-5ed3-b1e63f2c6989"
+												name: "Cylinder_010"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "a2282cfb-2751-e0da-66b3-68b8c3f155eb"
+						name: "CP_Indicator_RadioManagement_SignRadBFO"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "01da0d93-b6e5-d8f4-d049-ae3397f97c32"
+								local_position_double: {
+									__uuid: "e7b2cb32-892b-a646-8b0f-cc76a10db80f"
+									x: 0.70173025131225586
+									y: 0.3563765287399292
+									z: 0.092403709888458252
+								}
+								local_rotation: {
+									__uuid: "3f582fcb-b025-1f7d-a706-a27eaeba05b1"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "34e99a60-fae2-220f-a038-e9f77829bb32"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "ad306dcd-e5f1-7b3c-eebb-b17e098ef547"
+								name: "Cylinder_009"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "4f4fbea8-a2ee-a93a-a892-7b9c469850a8"
+										local_position_double: {
+											__uuid: "e968dd2b-e8c8-4c09-b723-8b27c52c027f"
+										}
+										local_rotation: {
+											__uuid: "3ebba5e8-49a2-2363-d007-57dbdedeeb02"
+										}
+										local_scale: {
+											__uuid: "6fb541b7-3e2f-2a77-2d19-f54bda9cbdfc"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "d6af2b07-a997-5138-a6ae-e710cefce386"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "0e82e141-48e0-a090-9cea-31d62b13a8ff"
+											mesh_resource: "275b591c-f7fb-0b74-fa3f-9db5b7499429"
+										}
+										materials: [
+											{
+												__uuid: "60b7e508-19bf-e5d2-c8e9-e5c473da2fa3"
+												name: "Cylinder_009"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "979b19d9-406d-601c-d401-35cb58593630"
+						name: "CP_Button_RadioManagement_AM_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "039ac5e0-5c0a-d2fb-c56e-93a7fdbe2463"
+								local_position_double: {
+									__uuid: "9f5c6e68-ef7c-35ae-66ae-94d7e6b50e48"
+									x: 0.0045695304870605469
+									y: 0.98080652952194214
+									z: 0.10088630020618439
+								}
+								local_rotation: {
+									__uuid: "220bcbbe-10a9-50b8-4dda-bc0ad5c28c95"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "5aca1615-7543-3715-185f-adfb1fcffa2c"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "9f6fdd39-461f-09d3-3cb5-5570f082d122"
+								name: "CP_Button_RadioManagement_AM_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "12ca1db1-3101-9f94-97ca-a07cf3f0bded"
+										local_position_double: {
+											__uuid: "4c6da119-5fcb-522a-0c75-aa3b693ef075"
+										}
+										local_rotation: {
+											__uuid: "64a9e412-3721-61f6-274e-61de93754965"
+										}
+										local_scale: {
+											__uuid: "2e3993c7-b475-d6aa-36f4-48a1e8c0b89f"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "596c334d-df06-9c8e-0048-812fa2522cc0"
+										skeleton_hierarchy: "10cc5797-eb28-8e40-d3dd-a9e9d43ace7d"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "9c52dc05-b094-9cce-03f2-c0b1a8d77e06"
+						name: "CP_Rotate_RadioManagement_CAB_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "f561bf12-b939-ae27-5b09-448448035871"
+								local_position_double: {
+									__uuid: "ed5a3c1e-fee0-566c-a113-f268e9a2cb22"
+									x: 1.3929281234741211
+									y: -0.83271408081054688
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "b46ef5b5-7cc0-42f2-7a46-22f068cb48ef"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "63d3c6dc-8ae0-b3af-575b-f5b8a3c50cf3"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "785ec0b1-7f64-7733-4e3a-c8a2a702ab39"
+								name: "CP_Rotate_RadioManagement_CAB_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "5fa0611b-c9fa-ade8-dcc4-914425d5ed0c"
+										local_position_double: {
+											__uuid: "391d98eb-587f-6036-d94a-eab2d8f693b7"
+										}
+										local_rotation: {
+											__uuid: "a4d16f6b-5f67-e1b8-d37f-31e4745d8e05"
+										}
+										local_scale: {
+											__uuid: "2ec64e95-f515-a278-3a40-8bf7810defb1"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "9c330ded-8286-8113-0039-9c858e7e81cb"
+										skeleton_hierarchy: "31e8dcc3-07f0-6ada-6cb6-7dffa7064f8e"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "064904cc-7371-5e58-ce80-b38dad9dbf43"
+						name: "CP_Button_RadioManagement_Voice_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "cfd3a4d0-77ce-d7e6-f0eb-f8a2c476ee27"
+								local_position_double: {
+									__uuid: "9d45fabf-d2cb-a8f4-0c41-805483a7b450"
+									x: -0.44740533828735352
+									y: -1.3933409452438355
+									z: 0.10088628530502319
+								}
+								local_rotation: {
+									__uuid: "fd1d5bc8-911c-401e-0f78-f2bc17cb113f"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "3625ba39-2355-3241-927d-52ea5132f106"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "ea3dfa74-43a4-b671-635a-a75a42215411"
+								name: "CP_Button_RadioManagement_Voice_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "7a17091f-0814-6357-7fe9-e3de3709d3b8"
+										local_position_double: {
+											__uuid: "6f1d8e2e-a895-951e-68ed-34db11d14cf4"
+										}
+										local_rotation: {
+											__uuid: "7d472f86-b294-dd3e-936f-29eed35175fd"
+										}
+										local_scale: {
+											__uuid: "29aaa079-b9d8-7bc4-e0ea-92309c06cbfe"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "59d923a5-b0fd-caeb-6fea-74b7301a9a03"
+										skeleton_hierarchy: "45cf9a05-77e9-fef1-4886-7fd80f367103"
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "8baa7a85-552a-f88c-82f6-378a76e0fc57"
+						name: "CP_Indicator_RadioManagement_SignRadVHF3"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "7ac895fc-da0e-2327-b48d-6429711ab3b7"
+								local_position_double: {
+									__uuid: "b5f095a1-c798-13af-46e1-7e8610c4cec1"
+									x: -0.72999811172485352
+									y: 1.4064207077026367
+									z: 0.09240366518497467
+								}
+								local_rotation: {
+									__uuid: "2dcc3fc4-5dff-daf2-539b-07835da82e43"
+									x: 7.4505797087454084e-09
+									y: -5.6672893976108542e-16
+									z: -6.8326184005509054e-17
+								}
+								local_scale: {
+									__uuid: "4d01fa6f-c834-5b58-ee13-2d5164f8db52"
+									x: 1.0000001192092896
+									y: 1.0000001192092896
+									z: 1.0000001192092896
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "440db2da-343f-83a1-5b8a-e334160a235d"
+								name: "Cylinder_021"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "3d097927-68aa-8cdf-bd89-49cc12df2ef4"
+										local_position_double: {
+											__uuid: "72ae78e2-db6f-3822-3476-c0cf735086dc"
+										}
+										local_rotation: {
+											__uuid: "5063023c-ad42-c8a7-b1d3-9dca0e5a08b6"
+										}
+										local_scale: {
+											__uuid: "8a3b7263-6dde-ea3f-7cfc-335441801655"
+										}
+									}
+									{
+										__type: "tm_model_component"
+										__uuid: "c784fb54-291c-d568-64bf-5d0aef8994f3"
+										mesh_resource: {
+											__type: "tm_mesh_resource_reference"
+											__uuid: "fd2fbacb-3f57-7032-0a5b-fd5657803ba5"
+											mesh_resource: "269cde94-b282-ee75-0432-5c9791329f96"
+										}
+										materials: [
+											{
+												__uuid: "7ee9c672-8d5d-3699-c893-4635126ec7df"
+												name: "Cylinder_021"
+												material: "eb8a12d2-237a-080f-c3b6-3e3d50ceab0b"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+					{
+						__uuid: "9b32fe87-7f11-6bfb-f56f-d26a763fb1a1"
+						name: "CP_Rotate_RadioManagement_VHF3_Rig"
+						components: [
+							{
+								__type: "tm_transform_component"
+								__uuid: "e3c4ebc9-03e7-a45d-99e2-d9d6fea00498"
+								local_position_double: {
+									__uuid: "ef34d44f-2d27-d335-5668-888165b71047"
+									x: -0.47922468185424805
+									y: -0.83271420001983643
+									z: 0.095273286104202271
+								}
+								local_rotation: {
+									__uuid: "02535dce-a54b-87ba-182c-0e5a47bdd004"
+									x: 1.8488927466117464e-32
+									y: 3.2037176286255672e-16
+									z: -3.3841159925793789e-17
+								}
+								local_scale: {
+									__uuid: "13cf4c53-073f-4782-62cf-5f5c98781d6b"
+									x: 0.62122684717178345
+									y: 0.62122684717178345
+									z: 0.62122684717178345
+								}
+							}
+						]
+						children: [
+							{
+								__uuid: "8e55ce40-0264-af35-5a85-98e2061efbe8"
+								name: "CP_Rotate_RadioManagement_VHF3_Root"
+								components: [
+									{
+										__type: "tm_transform_component"
+										__uuid: "bb783a70-ca0a-5004-1a11-c756b5f53de7"
+										local_position_double: {
+											__uuid: "2cbc2abd-9101-bcf2-1b64-9a5cdf14b3d2"
+										}
+										local_rotation: {
+											__uuid: "47564ddb-5ba6-8064-0437-302b18eef0d9"
+										}
+										local_scale: {
+											__uuid: "d115eaeb-47f3-9fb8-5369-47e33ba92d32"
+										}
+									}
+									{
+										__type: "tm_skeleton_component"
+										__uuid: "34b9b4aa-fee1-a98c-e304-cfbcb727de4e"
+										skeleton_hierarchy: "dde94ea9-afe4-80f7-3a8f-cb52c2da33a0"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
+__asset_uuid: "342ad828-3f46-55da-8bcd-4a057a379a4c"
+__asset_labels: [
+	"2cbc16a459dc040f"
+]

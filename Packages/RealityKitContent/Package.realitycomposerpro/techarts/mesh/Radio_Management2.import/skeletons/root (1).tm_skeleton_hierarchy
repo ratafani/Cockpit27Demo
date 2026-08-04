@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "610311f9-8bf4-8ef2-6d22-b85832ccd17e"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_CallHF1_Rig/CP_Button_RadioManagement_CallHF1_Root"
+joints: [
+	{
+		__uuid: "1eead541-ad58-3c92-0732-1ecaebe08316"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "5aea34cd-1eaa-18f9-baf1-12ee002397b6"
+			position: {
+				__uuid: "e7d956e3-9d41-3c02-a54c-6f52454038ff"
+			}
+			rotation: {
+				__uuid: "4d5d9d12-e2ff-0bc0-6fab-b13a1ca6c0b7"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "7ba39ab2-be88-1bed-3a82-2cd119592c97"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "18cc0db8-aaa2-fd7e-096e-049c93c1e3de"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "22894ca0-677f-f83c-18d6-0408992f1d12"

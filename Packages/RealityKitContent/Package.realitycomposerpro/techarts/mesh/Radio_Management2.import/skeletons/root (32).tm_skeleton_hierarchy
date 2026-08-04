@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "799b4890-0daf-7f8d-0b47-d75818c7796d"
+name: "root/CP_RadioManagement_Parent/CP_Rotate_RadioManagement_VOR2_Rig/CP_Rotate_RadioManagement_VOR2_Root"
+joints: [
+	{
+		__uuid: "f2b6b442-75ae-9272-7e1b-faea7d56dedd"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "94970b6c-a9fd-b120-9816-d48b6c0fa099"
+			position: {
+				__uuid: "cbd9b4c7-e101-56d2-a7d6-50a9f465b8ec"
+			}
+			rotation: {
+				__uuid: "c527b015-e991-85f8-d306-2d2cd09fd698"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "8c15812c-6e3a-d581-ca6c-faa4d5f8da69"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "5a46459c-a06c-d53b-c793-d5feddf0b734"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "44ced900-1c98-9b5e-e28e-77ba49e9fe6f"

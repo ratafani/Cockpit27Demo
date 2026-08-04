@@ -484,6 +484,112 @@ children__instantiated: [
 								]
 							}
 						]
+						child_sort_values: [
+							{
+								__uuid: "6eac3d99-ff09-0f78-efbb-1418604826f5"
+								child: "5129a6d5-c6f8-7764-72c0-9c64c8341f10"
+							}
+							{
+								__uuid: "ffe35794-3118-b277-d00f-93f415f6c49a"
+								child: "1a69bda9-f96d-3418-2155-a29d7a80651a"
+								value: 1
+							}
+							{
+								__uuid: "cdfddb38-7633-beb0-f8aa-6e7f35ba520a"
+								child: "a776af23-a9cb-eb71-a249-80bc1abc7bb3"
+								value: 2
+							}
+							{
+								__uuid: "9ce09930-5da1-7eaf-7617-dd08be91dfe0"
+								child: "cb4fc197-4fd6-1159-59c4-6576645340d1"
+								value: 3
+							}
+							{
+								__uuid: "cf97c2bd-6478-f2ec-b447-9b81c8ea38a4"
+								child: "3b7c2b94-67c0-d9ce-6c28-2f9f9b5a92e6"
+								value: 4
+							}
+							{
+								__uuid: "23bc9d90-78e5-c8ad-a864-4f591b2ad476"
+								child: "04734a62-9e7b-45b6-f557-b2be84dbd8db"
+								value: 5
+							}
+							{
+								__uuid: "7f3c0762-ad40-90e7-70ba-2d43b2c1ada2"
+								child: "d1f48e09-e7fb-c4df-f434-f9c1c7349e2a"
+								value: 6
+							}
+							{
+								__uuid: "9bf4096f-335e-150f-9788-947f487f31fe"
+								child: "684291ec-4331-093d-b515-c9c8e728ce49"
+								value: 7
+							}
+							{
+								__uuid: "9f88e30f-0574-5284-2770-849fdc97d0ba"
+								child: "459ba7ea-324b-1702-2035-1edae42cd361"
+								value: 8
+							}
+							{
+								__uuid: "56c54649-a0fa-85cc-af45-d5e3d38e51d2"
+								child: "a39cc1f8-2830-b27f-a038-d7a2c3732b75"
+								value: 9
+							}
+							{
+								__uuid: "b7fb9c89-8c2e-70cd-f3d8-309c5f19ac0e"
+								child: "c429fc9a-3aed-2750-b3b1-94abb06696fe"
+								value: 10
+							}
+							{
+								__uuid: "f435938e-5837-9e18-2569-31a2d1e9cfa3"
+								child: "e3cd3ecf-63d0-337c-7e56-660707d2a973"
+								value: 11
+							}
+							{
+								__uuid: "9269883d-3b61-c3f5-1ad4-44a6d04a0331"
+								child: "ce842d86-1e2c-f6cd-1cf7-e213a8173548"
+								value: 12
+							}
+							{
+								__uuid: "cf91b5a0-d3bf-cf79-512f-182b9b4427fb"
+								child: "2a3e2efd-bca6-2412-3262-1694e1d2873d"
+								value: 13
+							}
+							{
+								__uuid: "14b41739-76b2-9eba-c148-8b1f16833670"
+								child: "0c042ed0-df71-1ea3-b0b9-9c8063d01647"
+								value: 14
+							}
+							{
+								__uuid: "d39d2251-5e2a-4171-65b1-c30c5ff39b7c"
+								child: "cc4cc00e-a796-50aa-33b1-f627f9d48269"
+								value: 15
+							}
+							{
+								__uuid: "6c23469f-abd8-f6f6-6953-07237ebe81af"
+								child: "80e4443f-808e-a460-05dd-c4f43f9370d7"
+								value: 16
+							}
+							{
+								__uuid: "3735a441-4c50-a4b5-5836-2f0e073a797f"
+								child: "eb9f54cc-8f9e-dc51-8410-95e7692f446c"
+								value: 17
+							}
+							{
+								__uuid: "0303ef47-3bce-c40e-efaf-c7ed3d88e3c7"
+								child: "dbcd0315-a159-a721-6ef7-29c67e8e46cd"
+								value: 18
+							}
+							{
+								__uuid: "641efd4a-9c14-bcbd-08a2-922371e34cb0"
+								child: "2d3b5eb3-bc03-e7a2-dce8-ed467e70b045"
+								value: 19
+							}
+							{
+								__uuid: "b6f67923-8e8e-b591-a043-2c0fb76d97ab"
+								child: "e4f0a370-e130-bfd8-24fd-a79d481b759f"
+								value: 20
+							}
+						]
 					}
 				]
 			}

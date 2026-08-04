@@ -1,0 +1,31 @@
+__type: "tm_texture"
+__uuid: "26d5b79a-b193-f762-f49d-093abfb736a5"
+source_filename: "../../../../../../Downloads/Radio_Management/Radio_Management_TX/CP_RadioManagement_TextureMap_Opacity.1001.png"
+source_texture: "6d52e418-cf36-1b82-0283-5174df2a9d21"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "5de3f691-eb0a-a719-7dba-18f2836b59e4"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "9eee8001-52a4-671e-193e-13b33cb6c233"
+	graph: {
+		__uuid: "abcca647-aae8-ddb3-048d-f479e12a574d"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "311e84c2-053c-4beb-0569-d8aac8083cd2"
+		interface: {
+			__uuid: "888cd8af-5a8c-57b5-9004-a0259a1447d2"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "80ed42b0-003f-1504-072c-3ea14241dccf"
+		}
+	}
+}
+color_space: {
+	__uuid: "1a1d53ad-6eb0-26c1-8a94-0318d839b9a2"
+	transfer_function: 1
+}
+__asset_uuid: "b2b0a5bf-f099-26f5-9c9a-84793146d508"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "a2697675-e706-caef-498a-17ec68a257b2"
+}

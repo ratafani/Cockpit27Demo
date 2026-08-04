@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "2ac01e18-cad6-3b77-0454-c5aadce07156"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_BFO_Rig/CP_Button_RadioManagement_BFO_Root"
+joints: [
+	{
+		__uuid: "e16db811-02a7-793a-e06e-a47e719596d6"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "89d769d0-2f82-6b02-6fdf-98d707035425"
+			position: {
+				__uuid: "9fbc25d9-ed73-580a-3299-7bd767d4221a"
+			}
+			rotation: {
+				__uuid: "9cb9f018-016e-fff1-7ab1-2b086e518153"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "7aee44d6-6a2f-cc72-5f87-737876b7eed2"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "345d5681-fc3f-ea56-4992-be90b0e8deb7"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "c0187ab5-3cce-1f9b-059a-3adbb9ae02e1"

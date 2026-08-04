@@ -1,0 +1,32 @@
+__type: "tm_skeleton_hierarchy"
+__uuid: "232f80b9-a20f-d967-2d93-f3f8a117b78b"
+name: "root/CP_RadioManagement_Parent/CP_Button_RadioManagement_NAV_Rig/CP_Button_RadioManagement_NAV_Root"
+joints: [
+	{
+		__uuid: "a2e776b4-b423-9625-b5b2-f50689fa1dd8"
+		name: "Bone"
+		local_rest_pose: {
+			__uuid: "902b50c3-e52d-f0e9-9a8f-e427ea30ddfb"
+			position: {
+				__uuid: "a197b229-9dd1-01c1-97dc-eda908627c48"
+			}
+			rotation: {
+				__uuid: "7b9edb8f-a91f-b14c-01a1-0ea5c2ab55be"
+				x: 0.70710676908493042
+				w: 0.70710676908493042
+			}
+			scale: {
+				__uuid: "db3793be-2655-0c66-35ca-376c842bcf5f"
+			}
+		}
+		inverse_bind_pose_mat43: {
+			__uuid: "76be7b93-3fe9-6d04-9cfc-5eb82829b7b4"
+			yy: 0
+			yz: -1
+			zy: 1
+			zz: 0
+		}
+		parent_index: 4294967295
+	}
+]
+__asset_uuid: "9019e228-89c7-4eb9-cf93-e227e3865cbb"
