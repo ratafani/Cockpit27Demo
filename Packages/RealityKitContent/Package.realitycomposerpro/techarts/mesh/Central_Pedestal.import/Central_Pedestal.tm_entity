@@ -36,7 +36,7 @@ children__instantiated: [
 		children: [
 			{
 				__uuid: "1a69bda9-f96d-3418-2155-a29d7a80651a"
-				name: "CP_MCDUL_Parent (1)"
+				name: "CP_MCDUL_Parent_Right"
 				components: [
 					{
 						__type: "tm_transform_component"
@@ -9066,12 +9066,64 @@ children__instantiated: [
 						}
 					}
 				]
+				children__instantiated: [
+					{
+						__uuid: "ea622aec-5525-ed94-3fc2-d767b320b333"
+						__prototype_type: "tm_entity"
+						__prototype_uuid: "1c0d1aef-cc9a-fe11-84ee-f39738e62bf1"
+						children__instantiated: [
+							{
+								__uuid: "fab66aa1-c8ac-60db-beac-de1ee88fcacb"
+								__prototype_type: "tm_entity"
+								__prototype_uuid: "2c834640-3830-7230-139c-5c1cfe00b7b2"
+								children__instantiated: [
+									{
+										__uuid: "e5bab1e5-fec4-c810-8db5-18b3ba319738"
+										__prototype_type: "tm_entity"
+										__prototype_uuid: "660b4e60-0249-f810-0fbb-0b959b941f77"
+										children__instantiated: [
+											{
+												__uuid: "b11a4d1b-3d96-2040-d6a2-637a9366828f"
+												__prototype_type: "tm_entity"
+												__prototype_uuid: "fbd7e297-f9a1-9502-3a56-63c9f9391ab0"
+												components__instantiated: [
+													{
+														__type: "tm_transform_component"
+														__uuid: "564c71e4-3b77-3210-c6ad-72e2a3bb717d"
+														__prototype_type: "tm_transform_component"
+														__prototype_uuid: "ad87c73f-760b-994e-caf6-a8d93b66c87c"
+														local_position_double: {
+															__uuid: "ceac387f-11b1-eef3-930d-98fa01b9e0c6"
+															__prototype_type: "tm_position_double"
+															__prototype_uuid: "1ebfd5c4-a8bd-2606-1a11-aae0dc3246c1"
+															x: 0.0030000000260770321
+														}
+														local_rotation: {
+															__uuid: "6a380ea2-2935-2bc7-a840-2818c69bc1d1"
+															__prototype_type: "tm_rotation"
+															__prototype_uuid: "083ef09b-2668-1321-8eec-08b71436e6b9"
+														}
+														local_scale: {
+															__uuid: "a3f2890f-ff1f-9b32-7601-11fc34d98bd7"
+															__prototype_type: "tm_scale"
+															__prototype_uuid: "557dfde1-905c-e706-11e8-3256abb1ff9c"
+														}
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
 			}
 			{
 				__uuid: "e4f0a370-e130-bfd8-24fd-a79d481b759f"
 				__prototype_type: "tm_entity"
 				__prototype_uuid: "ad736f88-8394-e5d6-cd79-1194a2205949"
-				name: "Radio_Management2 (1)"
+				name: "Radio_Management2_Right"
 				components__instantiated: [
 					{
 						__type: "tm_transform_component"

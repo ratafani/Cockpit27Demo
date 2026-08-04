@@ -19,7 +19,6 @@ shader_graph: {
 			{
 				__uuid: "b43a49a7-11b7-786f-d89e-4b76a8763146"
 				type: "ND_image_vector3"
-				label: ""
 				position: {
 					__uuid: "b712921a-6f76-8a6d-4355-f393cd1ee643"
 					x: 331.33514404296875
@@ -29,7 +28,6 @@ shader_graph: {
 			{
 				__uuid: "dba67457-4c26-7088-82cc-a8140fa10469"
 				type: "ND_normalize_vector3"
-				label: ""
 				position: {
 					__uuid: "7941f78d-de86-eaf5-6be2-499576069dc9"
 					x: 673.73773193359375
@@ -39,7 +37,6 @@ shader_graph: {
 			{
 				__uuid: "b71e4abf-9297-0a16-3035-a432a93cfa2d"
 				type: "ND_normalmap"
-				label: ""
 				position: {
 					__uuid: "09e08840-10e2-aa19-4b15-c1be7a511041"
 					x: 673.73773193359375
@@ -49,7 +46,6 @@ shader_graph: {
 			{
 				__uuid: "acf9b772-dce3-91ce-a0b1-a813b7832c14"
 				type: "ND_invert_vector3"
-				label: ""
 				position: {
 					__uuid: "8295148b-2a1b-78c5-180e-ec104e5f4d43"
 					x: 678.23773193359375
@@ -59,7 +55,6 @@ shader_graph: {
 			{
 				__uuid: "767837d6-909c-d848-6a58-9c966dbfaacc"
 				type: "ND_transformnormal_vector3"
-				label: ""
 				position: {
 					__uuid: "c0bc1754-d134-addc-3ef2-4215b56dc89d"
 					x: 627.63128662109375

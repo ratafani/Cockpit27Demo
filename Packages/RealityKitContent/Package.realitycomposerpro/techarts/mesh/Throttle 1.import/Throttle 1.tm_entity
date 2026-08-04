@@ -2,6 +2,10 @@ __type: "tm_entity"
 __uuid: "d3212320-4d9e-84f7-8946-84608c6a14fe"
 __prototype_type: "tm_entity"
 __prototype_uuid: "6238d4ca-70e0-f7b5-d5e5-289b84778691"
-components: [
+child_sort_values: [
+	{
+		__uuid: "9aaef31f-214d-232f-9c56-93feca827d63"
+		child: "f3b8dc5f-76f9-1d1c-9fe5-1473e7654587"
+	}
 ]
 __asset_uuid: "36ab375e-2d9f-f243-5bc1-59c57e9122a8"

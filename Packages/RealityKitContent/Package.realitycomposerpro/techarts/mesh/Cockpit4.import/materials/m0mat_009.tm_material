@@ -450,3 +450,6 @@ descriptor: {
 	__uuid: "bcdcd85c-ddcf-d7ca-7447-bd88dfbbfbce"
 }
 __asset_uuid: "a3da2e7d-6f37-705e-8f51-c22c4573a64a"
+__asset_thumbnail: {
+	__uuid: "3a61d6e5-acec-6373-027b-c278c0d5922e"
+}

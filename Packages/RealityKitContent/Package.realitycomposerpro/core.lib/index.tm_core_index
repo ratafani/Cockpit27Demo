@@ -386,5 +386,47 @@ entries: [
 		object__type: "tm_named_layer_asset"
 		version: 1
 	}
+	{
+		__uuid: "8a2c07df-2d91-491c-c7ea-0b8edaecea6d"
+		core_id: "1b1ef0b960dba630"
+		object: "c64e553d-10b6-82e9-c18f-7df382b23ccb"
+		object__type: "tm_texture"
+		version: 1
+	}
+	{
+		__uuid: "6f26c81c-05b5-d208-5b16-77cca6a6d376"
+		core_id: "3d71f68268491880"
+		object: "3c34a9b7-d66b-db61-c250-f6ea6b5c3ea2"
+		object__type: "tm_texture"
+		version: 1
+	}
+	{
+		__uuid: "855a5dc1-2bee-1f1c-5eb2-d613cbff31e1"
+		core_id: "073dd218cac3c4d3"
+		object: "36218515-16cd-cbe4-2c73-bdd42cb651ea"
+		object__type: "tm_texture"
+		version: 1
+	}
+	{
+		__uuid: "b6ed3185-607d-f3ac-c7f4-7115f3584076"
+		core_id: "5e0af1bb829013ec"
+		object: "791bd43b-0913-4335-24c0-aa2f6849b043"
+		object__type: "tm_texture"
+		version: 1
+	}
+	{
+		__uuid: "00e1b3d0-b1fd-df30-dc8e-441c745b7e51"
+		core_id: "032d224d37c4ba50"
+		object: "d30dce4d-e0ad-e360-281f-4c486aab890e"
+		object__type: "tm_texture"
+		version: 1
+	}
+	{
+		__uuid: "8e8208a8-c239-2c4f-6403-4fc4dc54a9e0"
+		core_id: "1e9a5a6eb2be2630"
+		object: "b8a01bb6-adcd-7925-d2cd-7b1aafd8b7ac"
+		object__type: "tm_texture"
+		version: 1
+	}
 ]
 __asset_uuid: "2634e38a-c1ed-c42a-8615-a8ca5f3711c8"

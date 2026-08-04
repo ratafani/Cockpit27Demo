@@ -12,7 +12,6 @@ shader_graph: {
 			{
 				__uuid: "de9bedac-4a2c-48d6-aa79-24860a4f4a78"
 				type: "tm_output_node"
-				label: ""
 				position: {
 					__uuid: "e4f81e78-c7c7-3a05-31ab-190399110648"
 					x: -125
@@ -389,3 +388,6 @@ descriptor: {
 	__uuid: "aea0281d-4559-b40e-292b-209ae60e7537"
 }
 __asset_uuid: "94ab5676-7d56-922a-30d6-91ebc41bbd31"
+__asset_thumbnail: {
+	__uuid: "941c39d9-86b3-985d-8072-2dc0a56065ce"
+}

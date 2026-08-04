@@ -11,7 +11,6 @@ shader_graph: {
 			{
 				__uuid: "623c4569-cfb7-f3ce-1e5f-c9c1187ddb9b"
 				type: "tm_input_node"
-				label: ""
 				position: {
 					__uuid: "8347288e-8a8b-83b7-6d66-53bd3159c449"
 					x: -1250
@@ -21,7 +20,6 @@ shader_graph: {
 			{
 				__uuid: "950c6179-2f20-81de-9cd6-29d4cf3b5c02"
 				type: "tm_output_node"
-				label: ""
 				position: {
 					__uuid: "d642e47d-d348-ebcd-70c8-1da38093df00"
 					x: 30.943271636962891
@@ -79,7 +77,6 @@ shader_graph: {
 								{
 									__uuid: "ea6833eb-b2a9-457a-e418-156405ac4ab4"
 									type: "tm_input_node"
-									label: ""
 									position: {
 										__uuid: "5ce81943-b827-f50b-23dd-e618d95168a2"
 										x: -375
@@ -89,11 +86,10 @@ shader_graph: {
 								{
 									__uuid: "b88b6d1c-e89b-dab8-082a-8e3935686d83"
 									type: "tm_output_node"
-									label: ""
 									position: {
 										__uuid: "2b9cb3b7-157b-b49c-a849-d0d1fd8603f0"
-										x: 970.44293212890625
-										y: 52
+										x: 845.9447021484375
+										y: 97.5
 									}
 								}
 								{
@@ -102,8 +98,8 @@ shader_graph: {
 									label: "Separate4"
 									position: {
 										__uuid: "26e0de41-e7ea-4db5-d5e4-a84a5bb592e6"
-										x: 733.657958984375
-										y: 26
+										x: 587.1519775390625
+										y: 97.5
 									}
 								}
 								{
@@ -112,7 +108,8 @@ shader_graph: {
 									label: "Image2D"
 									position: {
 										__uuid: "c258d252-af0c-fa94-29be-d03d975c7c26"
-										x: 375
+										x: 233.15484619140625
+										y: 26
 									}
 								}
 							]
@@ -207,6 +204,7 @@ shader_graph: {
 										id: "outputs:Metal"
 										type_hash: "6d0a4e744c45523b"
 										edit_type_hash: "6d0a4e744c45523b"
+										order: 0.5
 									}
 									{
 										__uuid: "75b4ce82-46ec-5b9c-29d8-4e8ff5944c8f"
@@ -283,7 +281,6 @@ shader_graph: {
 			{
 				__uuid: "d35f0e0c-4207-05e2-f9df-09a7e29d9593"
 				type: "ND_image_float"
-				label: ""
 				position: {
 					__uuid: "b4d512dd-e42a-1020-89f9-0cb9cab3ebed"
 					x: -949.359375

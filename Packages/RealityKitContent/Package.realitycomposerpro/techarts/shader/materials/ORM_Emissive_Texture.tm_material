@@ -11,7 +11,6 @@ shader_graph: {
 			{
 				__uuid: "45c6d9ea-fe9b-fed6-9c9a-873c8ae9a916"
 				type: "tm_input_node"
-				label: ""
 				position: {
 					__uuid: "c9f7c27b-84f4-b775-e93a-458b10723ac7"
 					x: -1250
@@ -21,7 +20,6 @@ shader_graph: {
 			{
 				__uuid: "73087e00-5e8a-a496-78f3-fdfda0694bc1"
 				type: "tm_output_node"
-				label: ""
 				position: {
 					__uuid: "f6e4adde-69e9-9fc7-67fa-be690d4b0239"
 					x: 30.943271636962891
@@ -79,7 +77,6 @@ shader_graph: {
 								{
 									__uuid: "a884ec10-59c8-467a-952e-285f14276c35"
 									type: "tm_input_node"
-									label: ""
 									position: {
 										__uuid: "0f482c0c-2fa3-c1c9-e0e0-c31e29724669"
 										x: -375
@@ -89,7 +86,6 @@ shader_graph: {
 								{
 									__uuid: "05284dc7-302b-a181-7c56-b4c8ea0d3c8b"
 									type: "tm_output_node"
-									label: ""
 									position: {
 										__uuid: "d9ce4a9c-95bc-381b-d19c-c12d324a5ba7"
 										x: 970.44293212890625

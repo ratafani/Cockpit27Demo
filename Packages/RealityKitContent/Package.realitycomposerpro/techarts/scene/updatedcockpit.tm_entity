@@ -56,7 +56,7 @@ children: [
 				__uuid: "30136aa6-0263-6146-2604-74703689c42d"
 				__prototype_type: "tm_entity"
 				__prototype_uuid: "38b20379-35ea-042d-9f24-5f4dabcaa027"
-				name: "LightTengah (1)"
+				name: "LightTengahKanan"
 				components__removed: [
 					"dc6c2f50-8b86-6b84-667a-84784ce0f895"
 				]
@@ -515,9 +515,9 @@ children: [
 					__uuid: "8882b503-05e8-af63-f9f4-0db576a2b9c9"
 					__prototype_type: "tm_position_double"
 					__prototype_uuid: "3ac3855d-a753-ed5e-7217-b0f82932d85c"
-					x: 0.46900001168251038
+					x: 0.56400001049041748
 					y: -0.16300000250339508
-					z: -2.0160000324249268
+					z: -1.7680000066757202
 				}
 				local_rotation: {
 					__uuid: "2f99a516-59c9-cfa0-b683-2b15a0972205"
@@ -528,6 +528,9 @@ children: [
 					__uuid: "0d6aca84-6eee-5e3d-6348-c9b869de3a15"
 					__prototype_type: "tm_scale"
 					__prototype_uuid: "168bee59-1061-b09d-9f34-de65b8d67eea"
+					x: 1
+					y: 1
+					z: 0.5
 				}
 			}
 			{
