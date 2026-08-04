@@ -13,10 +13,6 @@ let package = Package(
     targets: [
         .target(
             name: "RealityKitContent",
-            dependencies: [],
-            resources: [
-                .process("updatedcockpit.reality")
-            ]
-        )
+            dependencies: [])
     ]
 )
